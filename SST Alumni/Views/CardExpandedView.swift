@@ -33,22 +33,23 @@ struct CardExpandedView: View {
                     .matchedGeometryEffect(id: "sstaalogo", in: namespace)
             }
             
-            VStack {
-                Text("15 Sep 2023")
-                    .font(.system(size: 40, weight: .heavy))
-                
-                Text("9:41 AM")
-                    .font(.system(size: 40, weight: .semibold))
-                
-                Text("Alumnus")
-                    .font(.system(size: 32, weight: .regular))
-            }
-            .foregroundStyle(.black)
-            .padding()
-            .padding(.vertical)
-            .frame(maxWidth: .infinity)
-            .background(.white)
-            .clipShape(RoundedRectangle(cornerRadius: 16))
+            RoundedRectangle(cornerRadius: 8)
+                .fill(.white)
+                .aspectRatio(1, contentMode: .fit)
+                .overlay {
+                    VStack {
+                        Text("15 Sep 2023")
+                            .font(.system(size: 40, weight: .heavy))
+                        
+                        Text("9:41 AM")
+                            .font(.system(size: 40, weight: .semibold))
+                        
+                        Text("Alumnus")
+                            .font(.system(size: 32, weight: .regular))
+                    }
+                    .foregroundStyle(.black)
+                    .padding()
+                }
         }
         .foregroundStyle(.white)
         .padding(21)

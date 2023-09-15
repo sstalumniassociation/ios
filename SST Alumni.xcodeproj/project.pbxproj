@@ -18,8 +18,8 @@
 		32410F582AB4C42F00A9184B /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F572AB4C42F00A9184B /* EventsView.swift */; };
 		32410F5A2AB4C48A00A9184B /* AlumniServicesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F592AB4C48A00A9184B /* AlumniServicesRowView.swift */; };
 		32410F5C2AB4C9E700A9184B /* SSTAARSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F5B2AB4C9E700A9184B /* SSTAARSView.swift */; };
-		32410F5E2AB4CAF400A9184B /* SSTAARSConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F5D2AB4CAF400A9184B /* SSTAARSConfirmationView.swift */; };
 		32410F602AB4D0F200A9184B /* CardExpandedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F5F2AB4D0F200A9184B /* CardExpandedView.swift */; };
+		32410F642AB4D7AB00A9184B /* SSTAARSEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F632AB4D7AB00A9184B /* SSTAARSEventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +35,8 @@
 		32410F572AB4C42F00A9184B /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		32410F592AB4C48A00A9184B /* AlumniServicesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlumniServicesRowView.swift; sourceTree = "<group>"; };
 		32410F5B2AB4C9E700A9184B /* SSTAARSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAARSView.swift; sourceTree = "<group>"; };
-		32410F5D2AB4CAF400A9184B /* SSTAARSConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAARSConfirmationView.swift; sourceTree = "<group>"; };
 		32410F5F2AB4D0F200A9184B /* CardExpandedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardExpandedView.swift; sourceTree = "<group>"; };
+		32410F632AB4D7AB00A9184B /* SSTAARSEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAARSEventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				32410F5B2AB4C9E700A9184B /* SSTAARSView.swift */,
-				32410F5D2AB4CAF400A9184B /* SSTAARSConfirmationView.swift */,
+				32410F632AB4D7AB00A9184B /* SSTAARSEventView.swift */,
 			);
 			path = SSTAARS;
 			sourceTree = "<group>";
@@ -180,13 +180,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32410F642AB4D7AB00A9184B /* SSTAARSEventView.swift in Sources */,
 				32410F522AB4BA7E00A9184B /* User.swift in Sources */,
 				32410F582AB4C42F00A9184B /* EventsView.swift in Sources */,
 				32410F602AB4D0F200A9184B /* CardExpandedView.swift in Sources */,
 				32410F442AB4B9C900A9184B /* ContentView.swift in Sources */,
 				32410F5A2AB4C48A00A9184B /* AlumniServicesRowView.swift in Sources */,
 				32410F502AB4B9DD00A9184B /* CardView.swift in Sources */,
-				32410F5E2AB4CAF400A9184B /* SSTAARSConfirmationView.swift in Sources */,
 				32410F542AB4BFAC00A9184B /* HomeView.swift in Sources */,
 				32410F5C2AB4C9E700A9184B /* SSTAARSView.swift in Sources */,
 				32410F562AB4C3F500A9184B /* AlumniServicesView.swift in Sources */,
@@ -324,7 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SST Alumni/Preview Content\"";
-				DEVELOPMENT_TEAM = 9W63WN9LG4;
+				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -353,7 +353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SST Alumni/Preview Content\"";
-				DEVELOPMENT_TEAM = 9W63WN9LG4;
+				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

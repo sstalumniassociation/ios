@@ -34,7 +34,7 @@ struct HomeView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding()
                         }
-                        .foregroundStyle(.black)
+                        .foregroundStyle(Color(uiColor: .label))
                         .multilineTextAlignment(.leading)
                         .background {
                             RoundedRectangle(cornerRadius: 16)
@@ -84,7 +84,7 @@ struct HomeView: View {
                         RoundedRectangle(cornerRadius: 16)
                             .fill(Color(uiColor: .systemGray6))
                     }
-                    .padding(.horizontal)
+                    .padding([.horizontal, .bottom])
                 } else {
                     CardExpandedView(user: User(name: "Qin Guan", graduationYear: "2020", memberType: .associateMember), namespace: namespace)
                 }

@@ -31,11 +31,7 @@ struct SSTAARSView: View {
                 
                 Section("Events") {
                     NavigationLink("SST Homecoming 2024") {
-                        List {
-                            Text("Lol")
-                        }
-                        .navigationTitle("SST Homecoming 2024")
-                        .searchable(text: .constant(""), prompt: Text("Search Attendees"))
+                        SSTAARSEventView()
                     }
                 }
             }

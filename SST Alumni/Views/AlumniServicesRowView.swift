@@ -45,18 +45,17 @@ struct AlumniServicesRowView<Content: View>: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 0) {
             if let image {
-                Rectangle()
-                    .fill(.clear)
-                    .aspectRatio(2/1, contentMode: .fit)
-                    .background {
-                        image
-                            .resizable()
-                            .scaledToFill()
-                    }
-                    .clipped()
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                GeometryReader { proxy in
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: proxy.size.width, height: proxy.size.height)
+                }
+                .aspectRatio(2/1, contentMode: .fit)
+                .clipped()
+                .clipShape(RoundedRectangle(cornerRadius: 16))
             }
             
             VStack(alignment: .leading) {
