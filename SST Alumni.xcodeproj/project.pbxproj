@@ -70,15 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				32410F412AB4B9C900A9184B /* SST_AlumniApp.swift */,
-				32410F432AB4B9C900A9184B /* ContentView.swift */,
-				32410F532AB4BFAC00A9184B /* HomeView.swift */,
-				32410F5F2AB4D0F200A9184B /* CardExpandedView.swift */,
-				32410F552AB4C3F500A9184B /* AlumniServicesView.swift */,
-				32410F5B2AB4C9E700A9184B /* SSTAARSView.swift */,
-				32410F5D2AB4CAF400A9184B /* SSTAARSConfirmationView.swift */,
-				32410F592AB4C48A00A9184B /* AlumniServicesRowView.swift */,
-				32410F572AB4C42F00A9184B /* EventsView.swift */,
-				32410F4F2AB4B9DD00A9184B /* CardView.swift */,
+				32410F612AB4D74100A9184B /* Views */,
 				32410F512AB4BA7E00A9184B /* User.swift */,
 				32410F452AB4B9CA00A9184B /* Assets.xcassets */,
 				32410F472AB4B9CA00A9184B /* Preview Content */,
@@ -92,6 +84,30 @@
 				32410F482AB4B9CA00A9184B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		32410F612AB4D74100A9184B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				32410F432AB4B9C900A9184B /* ContentView.swift */,
+				32410F532AB4BFAC00A9184B /* HomeView.swift */,
+				32410F5F2AB4D0F200A9184B /* CardExpandedView.swift */,
+				32410F552AB4C3F500A9184B /* AlumniServicesView.swift */,
+				32410F592AB4C48A00A9184B /* AlumniServicesRowView.swift */,
+				32410F572AB4C42F00A9184B /* EventsView.swift */,
+				32410F4F2AB4B9DD00A9184B /* CardView.swift */,
+				32410F622AB4D74800A9184B /* SSTAARS */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		32410F622AB4D74800A9184B /* SSTAARS */ = {
+			isa = PBXGroup;
+			children = (
+				32410F5B2AB4C9E700A9184B /* SSTAARSView.swift */,
+				32410F5D2AB4CAF400A9184B /* SSTAARSConfirmationView.swift */,
+			);
+			path = SSTAARS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
