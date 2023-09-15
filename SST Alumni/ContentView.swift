@@ -20,7 +20,7 @@ struct ContentView: View {
                     Label("Services", systemImage: "sparkles")
                 }
             
-            Text("Events/Bookings")
+            EventsView()
                 .tabItem {
                     Label("Events", systemImage: "calendar")
                 }

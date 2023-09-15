@@ -10,8 +10,15 @@ import SwiftUI
 struct AlumniServicesView: View {
     var body: some View {
         NavigationStack {
-            Text("")
-                .navigationTitle("Alumni Services")
+            List {
+                AlumniServicesRowView(image: Image(.sampleField), title: "Loan-a-Venue", description: "Need some space for a badminton match? As an alumnus, you can book a venue within SST!", ctaTitle: "Book", actionURL: URL(string: "https://sst.edu.sg")!)
+                
+                AlumniServicesRowView(title: "SSTAA Registration System (SSTAARS)", description: "Helping out with an SSTAA event? Access the Event Registration System here.", ctaTitle: "Access Tool") {
+                    SSTAARSView()
+                }
+            }
+            .listStyle(.plain)
+            .navigationTitle("Alumni Services")
         }
     }
 }

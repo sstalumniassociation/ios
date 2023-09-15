@@ -1,5 +1,5 @@
 //
-//  CardView.swift
+//  CardExpandedView.swift
 //  SST Alumni
 //
 //  Created by Jia Chen Yee on 16/9/23.
@@ -7,26 +7,23 @@
 
 import SwiftUI
 
-struct CardView: View {
-    
-    var namespace: Namespace.ID
+struct CardExpandedView: View {
     
     var user: User
+    var namespace: Namespace.ID
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Qin Guan")
-                .font(.title)
-                .fontWeight(.bold)
-                .fontWidth(.expanded)
-                .matchedGeometryEffect(id: "name", in: namespace)
-            Spacer()
-            HStack(alignment: .bottom) {
+            HStack(alignment: .top) {
                 VStack(alignment: .leading) {
+                    Text("Qin Guan")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .fontWidth(.expanded)
+                        .matchedGeometryEffect(id: "name", in: namespace)
                     Text("Class of \(user.graduationYear)")
                         .fontWeight(.semibold)
                         .matchedGeometryEffect(id: "batchyear", in: namespace)
-                    Text("\(user.memberType.description)")
-                        .fontWeight(.regular)
                 }
                 Spacer()
                 Image(.logoWhite)
@@ -35,6 +32,23 @@ struct CardView: View {
                     .frame(height: 48)
                     .matchedGeometryEffect(id: "sstaalogo", in: namespace)
             }
+            
+            VStack {
+                Text("15 Sep 2023")
+                    .font(.system(size: 40, weight: .heavy))
+                
+                Text("9:41 AM")
+                    .font(.system(size: 40, weight: .semibold))
+                
+                Text("Alumnus")
+                    .font(.system(size: 32, weight: .regular))
+            }
+            .foregroundStyle(.black)
+            .padding()
+            .padding(.vertical)
+            .frame(maxWidth: .infinity)
+            .background(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 16))
         }
         .foregroundStyle(.white)
         .padding(21)
@@ -42,8 +56,7 @@ struct CardView: View {
         .background {
             RoundedRectangle(cornerRadius: 16).fill(LinearGradient(colors: [.red, .orange], startPoint: .topLeading, endPoint: .bottomTrailing))
                 .matchedGeometryEffect(id: "gradientbackground", in: namespace)
-                .shadow(color: .orange.opacity(0.5), radius: 10)
         }
-        .aspectRatio(1.8, contentMode: .fit)
+        .padding()
     }
 }
