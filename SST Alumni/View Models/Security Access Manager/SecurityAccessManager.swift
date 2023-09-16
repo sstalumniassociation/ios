@@ -44,7 +44,9 @@ class SecurityAccessManager: ObservableObject {
                 return
             }
             
-            securityAccessState = .admitted
+            await MainActor.run {
+                securityAccessState = .admitted
+            }
         }
     }
 }
