@@ -16,7 +16,7 @@ class SecurityAccessManager: ObservableObject {
     }
     
     var authorizationRequestTimeString: String {
-        authorizationRequestDate.formatted(date: .omitted, time: .standard)
+        authorizationRequestDate.formatted(date: .omitted, time: .shortened)
     }
     
     @Published var securityAccessState = SecurityAccessState.processing

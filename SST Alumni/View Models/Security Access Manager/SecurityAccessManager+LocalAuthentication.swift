@@ -15,7 +15,7 @@ extension SecurityAccessManager {
         
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
             do {
-                let authentication = try await context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "")
+                let authentication = try await context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Please verify you are the device owner.")
                 
                 return authentication ? .approved : .biometricsFailure
             } catch {
