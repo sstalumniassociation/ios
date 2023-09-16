@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum MemberType: Codable {
+enum MemberType: Codable, Equatable {
     case exco
     case ordinary
     case associate
@@ -25,7 +25,7 @@ enum MemberType: Codable {
         case .ordinary:
             return "Ordinary Member"
         case .exco:
-            return "ExCo"
+            return "SSTAA ExCo"
         case .revoked:
             return "Revoked"
         case .unknown(let value):

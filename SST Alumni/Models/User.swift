@@ -19,5 +19,5 @@ struct User {
     
     var memberType: MemberType
     
-    static let sample = User(id: "2136245678", name: "Qin Guan", memberId: "OR2022029", graduationYear: "2020", memberType: .revoked)
+    static let sample = User(id: "2136245678", name: "Qin Guan", memberId: "OR2022029", graduationYear: "2020", memberType: .exco)
 }

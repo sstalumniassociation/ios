@@ -35,7 +35,7 @@ struct SSTAARSEventView: View {
                 }
                 .padding(.vertical)
             }
-            .listSectionSpacing(.compact)
+//            .listSectionSpacing(.compact)
             
             Section {
                 HStack {

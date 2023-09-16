@@ -13,22 +13,34 @@ struct HomeView: View {
     
     @Namespace var namespace
     
+    @EnvironmentObject var userManager: UserManager
+    
     var body: some View {
         ZStack {
             ScrollView {
                 if !isCardExpanded {
                     Button {
-                        withAnimation(.easeInOut) {
-                            isCardExpanded = true
+                        if userManager.user.memberType != .revoked {
+                            withAnimation(.easeInOut) {
+                                isCardExpanded = true
+                            }
                         }
                     } label: {
                         VStack(spacing: 0) {
-                            CardView(namespace: namespace, user: .sample)
+                            CardView(namespace: namespace, user: userManager.user)
+                            
                             VStack(alignment: .leading) {
-                                Text("Coming Back?")
-                                    .font(.headline)
-                                    .fontWeight(.bold)
-                                Text("Tap on this card and present it to the security at the front gate.")
+                                if userManager.user.memberType != .revoked {
+                                    Text("Coming Back?")
+                                        .font(.headline)
+                                        .fontWeight(.bold)
+                                    Text("Tap on this card and present it to the security at the front gate.")
+                                } else {
+                                    Text("Contact SST Alumni Association")
+                                        .font(.headline)
+                                        .fontWeight(.bold)
+                                    Text("If you intend on returning to SST as an alumnus, email [alumnisst.sg@gmail.com](mailto:alumnisst.sg@gmail.com).")
+                                }
                             }
                             .foregroundStyle(.secondary)
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -46,7 +58,7 @@ struct HomeView: View {
                     
                     NewsArticleSectionView()
                 } else {
-                    CardExpandedView(user: .sample, namespace: namespace)
+                    CardExpandedView(user: userManager.user, namespace: namespace)
                 }
             }
             

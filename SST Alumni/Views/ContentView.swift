@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var userManager = UserManager()
+    
     var body: some View {
         TabView {
             HomeView()
@@ -30,6 +33,7 @@ struct ContentView: View {
                     Label("Profile", systemImage: "person.crop.circle.fill")
                 }
         }
+        .environmentObject(userManager)
     }
 }
 

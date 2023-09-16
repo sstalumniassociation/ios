@@ -52,6 +52,7 @@
 		32410FA22AB58B0300A9184B /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 32410FA12AB58B0300A9184B /* FirebaseStorageCombine-Community */; };
 		32410FA42AB58B6200A9184B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32410FA32AB58B6200A9184B /* GoogleService-Info.plist */; };
 		32410FA62AB5EBBA00A9184B /* MemberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FA52AB5EBBA00A9184B /* MemberType.swift */; };
+		32410FA92AB5F51B00A9184B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FA82AB5F51B00A9184B /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		32410F6A2AB569FB00A9184B /* NewsArticleSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleSectionView.swift; sourceTree = "<group>"; };
 		32410FA32AB58B6200A9184B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		32410FA52AB5EBBA00A9184B /* MemberType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberType.swift; sourceTree = "<group>"; };
+		32410FA82AB5F51B00A9184B /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				32410F612AB4D74100A9184B /* Views */,
 				32410F672AB5694900A9184B /* Models */,
 				32410F452AB4B9CA00A9184B /* Assets.xcassets */,
+				32410FA82AB5F51B00A9184B /* UserManager.swift */,
 				32410FA32AB58B6200A9184B /* GoogleService-Info.plist */,
 				32410F472AB4B9CA00A9184B /* Preview Content */,
 			);
@@ -155,10 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				32410F432AB4B9C900A9184B /* ContentView.swift */,
-				32410F532AB4BFAC00A9184B /* HomeView.swift */,
-				32410F6A2AB569FB00A9184B /* NewsArticleSectionView.swift */,
-				32410F682AB5695E00A9184B /* NewsArticleView.swift */,
-				32410F5F2AB4D0F200A9184B /* CardExpandedView.swift */,
+				32410FA72AB5F41800A9184B /* Home */,
 				32410F552AB4C3F500A9184B /* AlumniServicesView.swift */,
 				32410F592AB4C48A00A9184B /* AlumniServicesRowView.swift */,
 				32410F572AB4C42F00A9184B /* EventsView.swift */,
@@ -185,6 +185,17 @@
 				32410F652AB568D400A9184B /* NewsArticle.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		32410FA72AB5F41800A9184B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				32410F532AB4BFAC00A9184B /* HomeView.swift */,
+				32410F6A2AB569FB00A9184B /* NewsArticleSectionView.swift */,
+				32410F682AB5695E00A9184B /* NewsArticleView.swift */,
+				32410F5F2AB4D0F200A9184B /* CardExpandedView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +307,7 @@
 				32410F582AB4C42F00A9184B /* EventsView.swift in Sources */,
 				32410F602AB4D0F200A9184B /* CardExpandedView.swift in Sources */,
 				32410F442AB4B9C900A9184B /* ContentView.swift in Sources */,
+				32410FA92AB5F51B00A9184B /* UserManager.swift in Sources */,
 				32410F6B2AB569FB00A9184B /* NewsArticleSectionView.swift in Sources */,
 				32410F692AB5695E00A9184B /* NewsArticleView.swift in Sources */,
 				32410F5A2AB4C48A00A9184B /* AlumniServicesRowView.swift in Sources */,
@@ -446,6 +458,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,6 +488,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
