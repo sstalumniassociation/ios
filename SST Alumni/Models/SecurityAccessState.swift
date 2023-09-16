@@ -13,20 +13,7 @@ enum SecurityAccessState {
     case admitted
     
     enum DeniedReason {
-        /// Device does not have biometrics enabled
-        case noBiometrics
-        
-        /// Failed to authenticate with biometrics
-        case biometricsFailure
-        
-        /// User is not in SST
-        case location
+        case biometrics(BiometricAuthenticationState)
+        case location(LocationValidationState)
     }
-}
-
-enum BiometricAuthenticationState {
-    case noData
-    case noBiometrics
-    case biometricsFailure
-    case approved
 }

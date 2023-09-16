@@ -56,6 +56,10 @@
 		32410FAC2AB6002E00A9184B /* SecurityAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FAB2AB6002E00A9184B /* SecurityAccessManager.swift */; };
 		32410FAE2AB6004400A9184B /* SecurityAccessState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FAD2AB6004400A9184B /* SecurityAccessState.swift */; };
 		32410FB02AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FAF2AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift */; };
+		32410FB32AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FB22AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift */; };
+		32410FB52AB60C2A00A9184B /* LocationValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FB42AB60C2A00A9184B /* LocationValidationManager.swift */; };
+		32410FB82AB60D1C00A9184B /* BiometricAuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FB72AB60D1C00A9184B /* BiometricAuthenticationState.swift */; };
+		32410FBA2AB60D2C00A9184B /* LocationValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FB92AB60D2C00A9184B /* LocationValidationState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +86,10 @@
 		32410FAB2AB6002E00A9184B /* SecurityAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessManager.swift; sourceTree = "<group>"; };
 		32410FAD2AB6004400A9184B /* SecurityAccessState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessState.swift; sourceTree = "<group>"; };
 		32410FAF2AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecurityAccessManager+LocalAuthentication.swift"; sourceTree = "<group>"; };
+		32410FB22AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+CLLocationCoordinate2D.swift"; sourceTree = "<group>"; };
+		32410FB42AB60C2A00A9184B /* LocationValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationValidationManager.swift; sourceTree = "<group>"; };
+		32410FB72AB60D1C00A9184B /* BiometricAuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthenticationState.swift; sourceTree = "<group>"; };
+		32410FB92AB60D2C00A9184B /* LocationValidationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationValidationState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				32410F412AB4B9C900A9184B /* SST_AlumniApp.swift */,
+				32410FB12AB6050200A9184B /* Constants */,
 				32410F612AB4D74100A9184B /* Views */,
 				32410F672AB5694900A9184B /* Models */,
 				32410F452AB4B9CA00A9184B /* Assets.xcassets */,
@@ -190,6 +199,8 @@
 				32410FA52AB5EBBA00A9184B /* MemberType.swift */,
 				32410F652AB568D400A9184B /* NewsArticle.swift */,
 				32410FAD2AB6004400A9184B /* SecurityAccessState.swift */,
+				32410FB92AB60D2C00A9184B /* LocationValidationState.swift */,
+				32410FB72AB60D1C00A9184B /* BiometricAuthenticationState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,10 +220,27 @@
 			isa = PBXGroup;
 			children = (
 				32410FA82AB5F51B00A9184B /* UserManager.swift */,
-				32410FAB2AB6002E00A9184B /* SecurityAccessManager.swift */,
-				32410FAF2AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift */,
+				32410FB62AB60C3800A9184B /* Security Access Manager */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		32410FB12AB6050200A9184B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				32410FB22AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		32410FB62AB60C3800A9184B /* Security Access Manager */ = {
+			isa = PBXGroup;
+			children = (
+				32410FAB2AB6002E00A9184B /* SecurityAccessManager.swift */,
+				32410FAF2AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift */,
+				32410FB42AB60C2A00A9184B /* LocationValidationManager.swift */,
+			);
+			path = "Security Access Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,7 +346,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32410FBA2AB60D2C00A9184B /* LocationValidationState.swift in Sources */,
+				32410FB82AB60D1C00A9184B /* BiometricAuthenticationState.swift in Sources */,
 				32410F642AB4D7AB00A9184B /* SSTAARSEventView.swift in Sources */,
+				32410FB52AB60C2A00A9184B /* LocationValidationManager.swift in Sources */,
 				32410F662AB568D400A9184B /* NewsArticle.swift in Sources */,
 				32410F522AB4BA7E00A9184B /* User.swift in Sources */,
 				32410F582AB4C42F00A9184B /* EventsView.swift in Sources */,
@@ -337,6 +368,7 @@
 				32410FB02AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift in Sources */,
 				32410F562AB4C3F500A9184B /* AlumniServicesView.swift in Sources */,
 				32410F422AB4B9C900A9184B /* SST_AlumniApp.swift in Sources */,
+				32410FB32AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +505,7 @@
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Security card can only be accessed while on campus.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -503,6 +536,7 @@
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Security card can only be accessed while on campus.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
