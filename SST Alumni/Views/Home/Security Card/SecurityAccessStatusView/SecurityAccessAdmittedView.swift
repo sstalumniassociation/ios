@@ -10,6 +10,8 @@ import SwiftUI
 struct SecurityAccessAdmittedView: View {
     
     @ObservedObject var securityAccessManager: SecurityAccessManager
+    @State private var originalBrightnessValue = UIScreen.main.brightness
+    @Environment(\.scenePhase) private var scenePhase
     
     var body: some View {
         ScreenCaptureRedactionView {
@@ -26,5 +28,16 @@ struct SecurityAccessAdmittedView: View {
         }
         .foregroundStyle(.black)
         .padding()
+        .onAppear {
+            UIScreen.main.brightness = 1
+        }
+        .onDisappear {
+            UIScreen.main.brightness = originalBrightnessValue
+        }
+        .onChange(of: scenePhase) { newValue in
+            if newValue != .active {
+                UIScreen.main.brightness = originalBrightnessValue
+            }
+        }
     }
 }
