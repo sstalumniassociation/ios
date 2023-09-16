@@ -139,7 +139,7 @@
 				32410F612AB4D74100A9184B /* Views */,
 				32410F672AB5694900A9184B /* Models */,
 				32410F452AB4B9CA00A9184B /* Assets.xcassets */,
-				32410FA82AB5F51B00A9184B /* UserManager.swift */,
+				32410FAA2AB5FFEA00A9184B /* View Models */,
 				32410FA32AB58B6200A9184B /* GoogleService-Info.plist */,
 				32410F472AB4B9CA00A9184B /* Preview Content */,
 			);
@@ -196,6 +196,14 @@
 				32410F5F2AB4D0F200A9184B /* CardExpandedView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		32410FAA2AB5FFEA00A9184B /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				32410FA82AB5F51B00A9184B /* UserManager.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
