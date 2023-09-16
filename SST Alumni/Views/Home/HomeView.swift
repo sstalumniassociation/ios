@@ -64,7 +64,7 @@ struct HomeView: View {
             
             if isCardExpanded {
                 Button {
-                    withAnimation {
+                    withAnimation(.easeInOut) {
                         isCardExpanded.toggle()
                     }
                 } label: {
