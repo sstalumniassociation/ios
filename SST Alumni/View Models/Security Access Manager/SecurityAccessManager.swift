@@ -10,6 +10,7 @@ import Foundation
 class SecurityAccessManager: ObservableObject {
     
     @Published var authorizationRequestDate = Date.now
+    @Published var isTimedOut = false
     
     var authorizationRequestDateString: String {
         authorizationRequestDate.formatted(date: .abbreviated, time: .omitted)
@@ -46,6 +47,12 @@ class SecurityAccessManager: ObservableObject {
             
             await MainActor.run {
                 securityAccessState = .admitted
+            }
+            
+            try await Task.sleep(for: .seconds(30))
+            
+            await MainActor.run {
+                isTimedOut = true
             }
         }
     }

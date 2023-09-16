@@ -11,6 +11,8 @@ struct CardExpandedView: View {
     
     @StateObject var securityAccessManager = SecurityAccessManager()
     
+    @Binding var isCardExpanded: Bool
+    
     var user: User
     var namespace: Namespace.ID
     
@@ -47,6 +49,13 @@ struct CardExpandedView: View {
         .padding()
         .onAppear {
             securityAccessManager.performCheck()
+        }
+        .onChange(of: securityAccessManager.isTimedOut) { newValue in
+            if newValue {
+                withAnimation(.easeInOut) {
+                    isCardExpanded = false
+                }
+            }
         }
     }
 }

@@ -58,7 +58,7 @@ struct HomeView: View {
                     
                     NewsArticleSectionView()
                 } else {
-                    CardExpandedView(user: userManager.user, namespace: namespace)
+                    CardExpandedView(isCardExpanded: $isCardExpanded, user: userManager.user, namespace: namespace)
                 }
             }
             
