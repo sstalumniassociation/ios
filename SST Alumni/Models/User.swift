@@ -6,29 +6,18 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct User {
+    /// From Firebase user ID
+    var id: String
+    
+    /// From CloudFlare
     var name: String
-    var userId: String
+    var memberId: String
     var graduationYear: String
+    
     var memberType: MemberType
     
-    enum MemberType {
-        case associateMember
-        case member
-        case exco
-        
-        var description: String {
-            switch self {
-            case .associateMember:
-                return "Associate Member"
-            case .member:
-                return "Member"
-            case .exco:
-                return "ExCo"
-            }
-        }
-    }
-    
-    static let sample = User(name: "Qin Guan", userId: "OR2022029", graduationYear: "2020", memberType: .associateMember)
+    static let sample = User(id: "2136245678", name: "Qin Guan", memberId: "OR2022029", graduationYear: "2020", memberType: .revoked)
 }

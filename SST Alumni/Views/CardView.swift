@@ -20,7 +20,7 @@ struct CardView: View {
                 .fontWidth(.expanded)
                 .matchedGeometryEffect(id: "name", in: namespace)
             
-            Text(user.userId)
+            Text(user.id)
                 .monospaced()
                 .matchedGeometryEffect(id: "membershipnumber", in: namespace)
             
@@ -45,9 +45,12 @@ struct CardView: View {
         .padding(21)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .background {
-            RoundedRectangle(cornerRadius: 16).fill(LinearGradient(colors: [.red, .orange], startPoint: .topLeading, endPoint: .bottomTrailing))
+            RoundedRectangle(cornerRadius: 16)
+                .fill(LinearGradient(colors: user.memberType.gradientColors,
+                                     startPoint: .topLeading,
+                                     endPoint: .bottomTrailing))
                 .matchedGeometryEffect(id: "gradientbackground", in: namespace)
-                .shadow(color: .orange.opacity(0.5), radius: 10)
+                .shadow(color: user.memberType.gradientColors.first!.opacity(0.5), radius: 10)
         }
         .aspectRatio(1.8, contentMode: .fit)
     }

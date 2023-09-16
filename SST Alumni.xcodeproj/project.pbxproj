@@ -51,6 +51,7 @@
 		32410FA02AB58B0300A9184B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 32410F9F2AB58B0300A9184B /* FirebaseStorage */; };
 		32410FA22AB58B0300A9184B /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 32410FA12AB58B0300A9184B /* FirebaseStorageCombine-Community */; };
 		32410FA42AB58B6200A9184B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32410FA32AB58B6200A9184B /* GoogleService-Info.plist */; };
+		32410FA62AB5EBBA00A9184B /* MemberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FA52AB5EBBA00A9184B /* MemberType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		32410F682AB5695E00A9184B /* NewsArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleView.swift; sourceTree = "<group>"; };
 		32410F6A2AB569FB00A9184B /* NewsArticleSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleSectionView.swift; sourceTree = "<group>"; };
 		32410FA32AB58B6200A9184B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		32410FA52AB5EBBA00A9184B /* MemberType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				32410F512AB4BA7E00A9184B /* User.swift */,
+				32410FA52AB5EBBA00A9184B /* MemberType.swift */,
 				32410F652AB568D400A9184B /* NewsArticle.swift */,
 			);
 			path = Models;
@@ -298,6 +301,7 @@
 				32410F5A2AB4C48A00A9184B /* AlumniServicesRowView.swift in Sources */,
 				32410F502AB4B9DD00A9184B /* CardView.swift in Sources */,
 				32410F542AB4BFAC00A9184B /* HomeView.swift in Sources */,
+				32410FA62AB5EBBA00A9184B /* MemberType.swift in Sources */,
 				32410F5C2AB4C9E700A9184B /* SSTAARSView.swift in Sources */,
 				32410F562AB4C3F500A9184B /* AlumniServicesView.swift in Sources */,
 				32410F422AB4B9C900A9184B /* SST_AlumniApp.swift in Sources */,

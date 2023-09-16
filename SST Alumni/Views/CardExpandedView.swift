@@ -55,7 +55,7 @@ struct CardExpandedView: View {
         .padding(21)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .background {
-            RoundedRectangle(cornerRadius: 16).fill(LinearGradient(colors: [.red, .orange], startPoint: .topLeading, endPoint: .bottomTrailing))
+            RoundedRectangle(cornerRadius: 16).fill(LinearGradient(colors: user.memberType.gradientColors, startPoint: .topLeading, endPoint: .bottomTrailing))
                 .matchedGeometryEffect(id: "gradientbackground", in: namespace)
         }
         .padding()
