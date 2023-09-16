@@ -30,7 +30,7 @@ struct NewsArticleView: View {
                     .fontWeight(.bold)
                 Text("Registration is now open! See you on 24 January 2024, Wednesday!")
                 
-                Link(destination: article.url) {
+                Link(destination: article.ctaURL) {
                     Text("Learn More & Register")
                 }
                 .buttonStyle(.borderedProminent)

@@ -14,5 +14,5 @@ struct NewsArticle {
     var heroImageURL: URL?
     
     var ctaTitle: String
-    var url: URL
+    var ctaURL: URL
 }
