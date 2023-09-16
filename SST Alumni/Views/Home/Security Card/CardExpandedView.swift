@@ -18,12 +18,12 @@ struct CardExpandedView: View {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
-                    Text("Qin Guan")
+                    Text(user.name)
                         .font(.title)
                         .fontWeight(.bold)
                         .fontWidth(.expanded)
                         .matchedGeometryEffect(id: "name", in: namespace)
-                    Text("OR2022029")
+                    Text(user.memberId)
                         .monospaced()
                         .matchedGeometryEffect(id: "membershipnumber", in: namespace)
                 }
