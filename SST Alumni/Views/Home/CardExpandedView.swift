@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CardExpandedView: View {
     
+    @StateObject var securityAccessManager = SecurityAccessManager()
+    
     var user: User
     var namespace: Namespace.ID
     
@@ -37,18 +39,40 @@ struct CardExpandedView: View {
                 .fill(.white)
                 .aspectRatio(1, contentMode: .fit)
                 .overlay {
-                    VStack {
-                        Text("15 Sep 2023")
-                            .font(.system(size: 40, weight: .heavy))
-                        
-                        Text("9:41 AM")
-                            .font(.system(size: 40, weight: .semibold))
-                        
-                        Text("Alumnus")
-                            .font(.system(size: 32, weight: .regular))
+                    switch securityAccessManager.securityAccessState {
+                    case .admitted:
+                        VStack {
+                            Text(securityAccessManager.authorizationRequestDateString)
+                                .font(.system(size: 40, weight: .heavy))
+                            
+                            Text(securityAccessManager.authorizationRequestTimeString)
+                                .font(.system(size: 40, weight: .semibold))
+                            
+                            Text("Alumnus")
+                                .font(.system(size: 32, weight: .regular))
+                        }
+                        .foregroundStyle(.black)
+                        .padding()
+                    case .denied(let reason):
+                        VStack {
+                            Image(systemName: "nosign")
+                                .font(.system(size: 40, weight: .heavy))
+                                .foregroundStyle(.red)
+                            
+                            Text("Entry Denied")
+                                .font(.system(size: 40, weight: .bold))
+                                .foregroundStyle(.red)
+                            
+                            Text(reason.description)
+                                .font(.system(size: 21, weight: .regular))
+                                .multilineTextAlignment(.center)
+                        }
+                        .foregroundStyle(.black)
+                        .padding()
+                    case .processing:
+                        ProgressView()
+                            .tint(.black)
                     }
-                    .foregroundStyle(.black)
-                    .padding()
                 }
         }
         .foregroundStyle(.white)
@@ -59,5 +83,8 @@ struct CardExpandedView: View {
                 .matchedGeometryEffect(id: "gradientbackground", in: namespace)
         }
         .padding()
+        .onAppear {
+            securityAccessManager.performCheck()
+        }
     }
 }

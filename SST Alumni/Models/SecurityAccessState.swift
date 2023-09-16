@@ -15,5 +15,12 @@ enum SecurityAccessState {
     enum DeniedReason {
         case biometrics(BiometricAuthenticationState)
         case location(LocationValidationState)
+        
+        var description: String {
+            switch self {
+            case .biometrics(let state): return state.description
+            case .location(let state): return state.description
+            }
+        }
     }
 }

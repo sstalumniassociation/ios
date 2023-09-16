@@ -8,8 +8,15 @@
 import Foundation
 
 enum LocationValidationState {
-    case notDetermined
     case notAuthorized
     case notInRange
     case approved
+    
+    var description: String {
+        switch self {
+        case .notAuthorized: return "Enable location access in Settings."
+        case .notInRange: return "You must be on campus to access this feature."
+        case .approved: return "Approved"
+        }
+    }
 }
