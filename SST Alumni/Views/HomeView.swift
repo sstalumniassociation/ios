@@ -23,7 +23,7 @@ struct HomeView: View {
                         }
                     } label: {
                         VStack(spacing: 0) {
-                            CardView(namespace: namespace, user: User(name: "Qin Guan", graduationYear: "2020", memberType: .associateMember))
+                            CardView(namespace: namespace, user: .sample)
                             VStack(alignment: .leading) {
                                 Text("Coming Back?")
                                     .font(.headline)
@@ -44,49 +44,9 @@ struct HomeView: View {
                     }
                     .padding()
                     
-                    HStack {
-                        Image(systemName: "newspaper")
-                        Text("What’s Happening")
-                    }
-                    .font(.headline)
-                    .padding(.top)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal)
-                    
-                    VStack(spacing: 0) {
-                        Rectangle()
-                            .fill(.clear)
-                            .aspectRatio(2/1, contentMode: .fit)
-                            .background {
-                                Image(.samplePhoto)
-                                    .resizable()
-                                    .scaledToFill()
-                            }
-                            .clipped()
-                            .clipShape(RoundedRectangle(cornerRadius: 16))
-                        
-                        VStack(alignment: .leading) {
-                            Text("SST Homecoming 2024")
-                                .font(.title3)
-                                .fontWeight(.bold)
-                            Text("Registration is now open! See you on 24 January 2024, Wednesday!")
-                            
-                            Button("Learn More & Register") {
-                                
-                            }
-                            .buttonStyle(.borderedProminent)
-                            .padding(.top)
-                        }
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding()
-                    }
-                    .background {
-                        RoundedRectangle(cornerRadius: 16)
-                            .fill(Color(uiColor: .systemGray6))
-                    }
-                    .padding([.horizontal, .bottom])
+                    NewsArticleSectionView()
                 } else {
-                    CardExpandedView(user: User(name: "Qin Guan", graduationYear: "2020", memberType: .associateMember), namespace: namespace)
+                    CardExpandedView(user: .sample, namespace: namespace)
                 }
             }
             

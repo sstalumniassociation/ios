@@ -21,9 +21,9 @@ struct CardExpandedView: View {
                         .fontWeight(.bold)
                         .fontWidth(.expanded)
                         .matchedGeometryEffect(id: "name", in: namespace)
-                    Text("Class of \(user.graduationYear)")
-                        .fontWeight(.semibold)
-                        .matchedGeometryEffect(id: "batchyear", in: namespace)
+                    Text("OR2022029")
+                        .monospaced()
+                        .matchedGeometryEffect(id: "membershipnumber", in: namespace)
                 }
                 Spacer()
                 Image(.logoWhite)

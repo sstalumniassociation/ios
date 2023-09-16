@@ -13,52 +13,49 @@ struct SSTAARSEventView: View {
     
     var body: some View {
         List {
-            HStack {
-                Image(systemName: "person.3.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 64)
-                    .foregroundStyle(Color.accentColor)
-                
-                HStack(alignment: .lastTextBaseline, spacing: 0) {
-                    Text("123")
-                        .font(.title)
-                        .fontWeight(.bold)
-                    
-                    Text("/400")
-                        .font(.title2)
-                        .fontWeight(.medium)
-                    
-                    Text(" checked in")
+            Section {
+                HStack {
+                    Image(systemName: "person.3.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 64)
+                        .foregroundStyle(Color.accentColor)
+                    HStack(alignment: .lastTextBaseline, spacing: 0) {
+                        Text("123")
+                            .font(.title)
+                            .fontWeight(.bold)
+                        
+                        Text("/400")
+                            .font(.title2)
+                            .fontWeight(.medium)
+                        
+                        Text(" checked in")
+                    }
+                    .padding(.leading)
                 }
-                .padding(.leading)
-                Spacer()
+                .padding(.vertical)
             }
-            .padding()
-            .background(Color(uiColor: .systemGray5))
-            .clipShape(RoundedRectangle(cornerRadius: 16))
-            .listRowSeparator(.hidden)
+            .listSectionSpacing(.compact)
             
-            HStack {
-                Image(systemName: "qrcode.viewfinder")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 64)
-                    .foregroundStyle(Color.accentColor)
-                
-                VStack(alignment: .leading) {
-                    Text("Scan QR Code")
-                        .font(.headline)
+            Section {
+                HStack {
+                    Image(systemName: "qrcode.viewfinder")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 64)
+                        .foregroundStyle(Color.accentColor)
                     
-                    Text("Check an attendee in by scanning their QR code.")
+                    VStack(alignment: .leading) {
+                        Text("Scan QR Code")
+                            .font(.headline)
+                        
+                        Text("Check an attendee in by scanning their QR code.")
+                    }
+                    .padding(.leading)
                 }
-                .padding(.leading)
-                Spacer()
+                .padding(.vertical)
             }
-            .padding()
-            .background(Color(uiColor: .systemGray5))
-            .clipShape(RoundedRectangle(cornerRadius: 16))
-            .listRowSeparator(.hidden)
+            
             
             Section("Attendees") {
                 VStack(alignment: .leading) {
@@ -76,7 +73,7 @@ struct SSTAARSEventView: View {
         .refreshable {
             
         }
-        .searchable(text: $searchText, prompt: Text("Search Attendees"))
+        .searchable(text: $searchText, prompt: "Search Attendees")
     }
 }
 

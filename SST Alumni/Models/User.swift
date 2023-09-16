@@ -9,6 +9,7 @@ import Foundation
 
 struct User {
     var name: String
+    var userId: String
     var graduationYear: String
     var memberType: MemberType
     
@@ -28,4 +29,6 @@ struct User {
             }
         }
     }
+    
+    static let sample = User(name: "Qin Guan", userId: "OR2022029", graduationYear: "2020", memberType: .associateMember)
 }

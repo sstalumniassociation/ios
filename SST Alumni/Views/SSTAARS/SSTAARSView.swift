@@ -29,7 +29,7 @@ struct SSTAARSView: View {
                     }
                 }
                 
-                Section("Events") {
+                Section("My Events") {
                     NavigationLink("SST Homecoming 2024") {
                         SSTAARSEventView()
                     }

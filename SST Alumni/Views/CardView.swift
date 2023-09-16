@@ -14,11 +14,16 @@ struct CardView: View {
     var user: User
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Qin Guan")
+            Text(user.name)
                 .font(.title)
                 .fontWeight(.bold)
                 .fontWidth(.expanded)
                 .matchedGeometryEffect(id: "name", in: namespace)
+            
+            Text(user.userId)
+                .monospaced()
+                .matchedGeometryEffect(id: "membershipnumber", in: namespace)
+            
             Spacer()
             HStack(alignment: .bottom) {
                 VStack(alignment: .leading) {

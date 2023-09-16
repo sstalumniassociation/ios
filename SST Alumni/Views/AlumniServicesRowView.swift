@@ -45,43 +45,31 @@ struct AlumniServicesRowView<Content: View>: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            if let image {
-                GeometryReader { proxy in
-                    image
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: proxy.size.width, height: proxy.size.height)
-                }
-                .aspectRatio(2/1, contentMode: .fit)
-                .clipped()
-                .clipShape(RoundedRectangle(cornerRadius: 16))
-            }
-            
-            VStack(alignment: .leading) {
-                Text(title)
-                    .font(.headline)
-                Text(description)
-                
-                if let actionURL, let ctaTitle {
-                    Link(ctaTitle, destination: actionURL)
-                        .buttonStyle(.borderedProminent)
-                        .padding(.top)
+        ConditionalLink(actionURL: actionURL,
+                        ctaTitle: ctaTitle) {
+            VStack(alignment: .leading, spacing: 0) {
+                if let image {
+                    GeometryReader { proxy in
+                        image
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: proxy.size.width, height: proxy.size.height)
+                    }
+                    .aspectRatio(2/1, contentMode: .fit)
+                    .clipped()
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
                 }
                 
-                if let ctaTitle, !(content is EmptyView) {
-                    Button(ctaTitle) {
-                        isContentSheetPresented.toggle()
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .padding(.top)
-                    .sheet(isPresented: $isContentSheetPresented) {
-                        content
-                    }
+                VStack(alignment: .leading) {
+                    Text(title)
+                        .font(.headline)
+                    Text(description)
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding()
+        } sheetContent: {
+            content
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .background {
@@ -89,5 +77,62 @@ struct AlumniServicesRowView<Content: View>: View {
                 .fill(Color(uiColor: .systemGray6))
         }
         .listRowSeparator(.hidden)
+    }
+}
+
+struct ConditionalLink<Content: View, SheetContent: View>: View {
+    
+    var actionURL: URL?
+    var ctaTitle: String?
+    
+    @ViewBuilder
+    var content: (() -> Content)
+    
+    @ViewBuilder
+    var sheetContent: (() -> SheetContent)
+    
+    @State private var isContentSheetPresented = false
+    
+    var body: some View {
+        if let actionURL, let ctaTitle {
+            Link(destination: actionURL) {
+                VStack(spacing: 0) {
+                    content()
+                    
+                    Divider()
+                    
+                    HStack {
+                        Text(ctaTitle)
+                        Spacer()
+                        Image(systemName: "safari")
+                    }
+                    .foregroundStyle(.blue)
+                    .padding()
+                }
+            }
+            .buttonStyle(.plain)
+        } else if let ctaTitle {
+            Button {
+                isContentSheetPresented.toggle()
+            } label: {
+                VStack(spacing: 0) {
+                    content()
+                    
+                    Divider()
+                    
+                    HStack {
+                        Text(ctaTitle)
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                    }
+                    .foregroundStyle(.blue)
+                    .padding()
+                }
+            }
+            .buttonStyle(.plain)
+            .sheet(isPresented: $isContentSheetPresented) {
+                sheetContent()
+            }
+        }
     }
 }
