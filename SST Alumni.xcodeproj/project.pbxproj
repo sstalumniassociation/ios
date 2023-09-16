@@ -53,6 +53,9 @@
 		32410FA42AB58B6200A9184B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32410FA32AB58B6200A9184B /* GoogleService-Info.plist */; };
 		32410FA62AB5EBBA00A9184B /* MemberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FA52AB5EBBA00A9184B /* MemberType.swift */; };
 		32410FA92AB5F51B00A9184B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FA82AB5F51B00A9184B /* UserManager.swift */; };
+		32410FAC2AB6002E00A9184B /* SecurityAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FAB2AB6002E00A9184B /* SecurityAccessManager.swift */; };
+		32410FAE2AB6004400A9184B /* SecurityAccessState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FAD2AB6004400A9184B /* SecurityAccessState.swift */; };
+		32410FB02AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FAF2AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +79,9 @@
 		32410FA32AB58B6200A9184B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		32410FA52AB5EBBA00A9184B /* MemberType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberType.swift; sourceTree = "<group>"; };
 		32410FA82AB5F51B00A9184B /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		32410FAB2AB6002E00A9184B /* SecurityAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessManager.swift; sourceTree = "<group>"; };
+		32410FAD2AB6004400A9184B /* SecurityAccessState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessState.swift; sourceTree = "<group>"; };
+		32410FAF2AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecurityAccessManager+LocalAuthentication.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +189,7 @@
 				32410F512AB4BA7E00A9184B /* User.swift */,
 				32410FA52AB5EBBA00A9184B /* MemberType.swift */,
 				32410F652AB568D400A9184B /* NewsArticle.swift */,
+				32410FAD2AB6004400A9184B /* SecurityAccessState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				32410FA82AB5F51B00A9184B /* UserManager.swift */,
+				32410FAB2AB6002E00A9184B /* SecurityAccessManager.swift */,
+				32410FAF2AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -314,6 +323,7 @@
 				32410F522AB4BA7E00A9184B /* User.swift in Sources */,
 				32410F582AB4C42F00A9184B /* EventsView.swift in Sources */,
 				32410F602AB4D0F200A9184B /* CardExpandedView.swift in Sources */,
+				32410FAE2AB6004400A9184B /* SecurityAccessState.swift in Sources */,
 				32410F442AB4B9C900A9184B /* ContentView.swift in Sources */,
 				32410FA92AB5F51B00A9184B /* UserManager.swift in Sources */,
 				32410F6B2AB569FB00A9184B /* NewsArticleSectionView.swift in Sources */,
@@ -323,6 +333,8 @@
 				32410F542AB4BFAC00A9184B /* HomeView.swift in Sources */,
 				32410FA62AB5EBBA00A9184B /* MemberType.swift in Sources */,
 				32410F5C2AB4C9E700A9184B /* SSTAARSView.swift in Sources */,
+				32410FAC2AB6002E00A9184B /* SecurityAccessManager.swift in Sources */,
+				32410FB02AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift in Sources */,
 				32410F562AB4C3F500A9184B /* AlumniServicesView.swift in Sources */,
 				32410F422AB4B9C900A9184B /* SST_AlumniApp.swift in Sources */,
 			);
