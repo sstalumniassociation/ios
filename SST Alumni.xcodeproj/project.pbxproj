@@ -63,6 +63,7 @@
 		32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */; };
 		32F3B6472AB629D80075F5D7 /* SecurityAccessAdmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */; };
 		32F3B6492AB62A240075F5D7 /* SecurityAccessDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */; };
+		32F3B64D2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B64C2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessStatusView.swift; sourceTree = "<group>"; };
 		32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessAdmittedView.swift; sourceTree = "<group>"; };
 		32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessDeniedView.swift; sourceTree = "<group>"; };
+		32F3B64C2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCaptureRedactionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 				32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */,
 				32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */,
 				32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */,
+				32F3B64C2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift */,
 			);
 			path = SecurityAccessStatusView;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				32410F642AB4D7AB00A9184B /* SSTAARSEventView.swift in Sources */,
 				32410FB52AB60C2A00A9184B /* LocationValidationManager.swift in Sources */,
 				32410F662AB568D400A9184B /* NewsArticle.swift in Sources */,
+				32F3B64D2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift in Sources */,
 				32410F522AB4BA7E00A9184B /* User.swift in Sources */,
 				32410F582AB4C42F00A9184B /* EventsView.swift in Sources */,
 				32410F602AB4D0F200A9184B /* CardExpandedView.swift in Sources */,

@@ -12,15 +12,17 @@ struct SecurityAccessAdmittedView: View {
     @ObservedObject var securityAccessManager: SecurityAccessManager
     
     var body: some View {
-        VStack {
-            Text(securityAccessManager.authorizationRequestDateString)
-                .font(.system(size: 40, weight: .heavy))
-            
-            Text(securityAccessManager.authorizationRequestTimeString)
-                .font(.system(size: 40, weight: .semibold))
-            
-            Text("Alumnus")
-                .font(.system(size: 32, weight: .regular))
+        ScreenCaptureRedactionView {
+            VStack {
+                Text(securityAccessManager.authorizationRequestDateString)
+                    .font(.system(size: 40, weight: .heavy))
+                
+                Text(securityAccessManager.authorizationRequestTimeString)
+                    .font(.system(size: 40, weight: .semibold))
+                
+                Text("Alumnus")
+                    .font(.system(size: 32, weight: .regular))
+            }
         }
         .foregroundStyle(.black)
         .padding()
