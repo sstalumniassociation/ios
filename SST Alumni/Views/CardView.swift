@@ -20,7 +20,7 @@ struct CardView: View {
                 .fontWidth(.expanded)
                 .matchedGeometryEffect(id: "name", in: namespace)
             
-            Text(user.id)
+            Text(user.memberId)
                 .monospaced()
                 .matchedGeometryEffect(id: "membershipnumber", in: namespace)
             
