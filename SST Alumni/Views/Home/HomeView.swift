@@ -9,11 +9,11 @@ import SwiftUI
 
 struct HomeView: View {
     
+    var user: UserData
+    
     @State private var isCardExpanded = false
     
     @Namespace var namespace
-    
-    @EnvironmentObject var userManager: UserManager
     
     @State private var isConfettiAnimating = false
     
@@ -28,17 +28,17 @@ struct HomeView: View {
             ScrollView {
                 if !isCardExpanded {
                     Button {
-                        if userManager.user.memberType != .revoked {
+                        if user.memberType != .revoked {
                             withAnimation(.easeInOut) {
                                 isCardExpanded = true
                             }
                         }
                     } label: {
                         VStack(spacing: 0) {
-                            CardView(namespace: namespace, user: userManager.user)
+                            CardView(namespace: namespace, user: user)
                             
                             VStack(alignment: .leading) {
-                                if userManager.user.memberType != .revoked {
+                                if user.memberType != .revoked {
                                     Text("Coming Back?")
                                         .font(.headline)
                                         .fontWeight(.bold)
@@ -66,7 +66,7 @@ struct HomeView: View {
                     
                     NewsArticleSectionView()
                 } else {
-                    CardExpandedView(isConfettiAnimating: $isConfettiAnimating, isCardExpanded: $isCardExpanded, user: userManager.user, namespace: namespace)
+                    CardExpandedView(isConfettiAnimating: $isConfettiAnimating, isCardExpanded: $isCardExpanded, user: user, namespace: namespace)
                 }
             }
             
@@ -86,8 +86,4 @@ struct HomeView: View {
             }
         }
     }
-}
-
-#Preview {
-    HomeView()
 }

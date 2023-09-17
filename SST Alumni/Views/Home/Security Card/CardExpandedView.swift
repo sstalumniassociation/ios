@@ -14,7 +14,7 @@ struct CardExpandedView: View {
     @Binding var isConfettiAnimating: Bool
     @Binding var isCardExpanded: Bool
     
-    var user: User
+    var user: UserData
     var namespace: Namespace.ID
     
     var body: some View {

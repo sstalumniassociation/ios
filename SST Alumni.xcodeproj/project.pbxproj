@@ -12,7 +12,7 @@
 		32410F462AB4B9CA00A9184B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32410F452AB4B9CA00A9184B /* Assets.xcassets */; };
 		32410F492AB4B9CA00A9184B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32410F482AB4B9CA00A9184B /* Preview Assets.xcassets */; };
 		32410F502AB4B9DD00A9184B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F4F2AB4B9DD00A9184B /* CardView.swift */; };
-		32410F522AB4BA7E00A9184B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F512AB4BA7E00A9184B /* User.swift */; };
+		32410F522AB4BA7E00A9184B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F512AB4BA7E00A9184B /* UserData.swift */; };
 		32410F542AB4BFAC00A9184B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F532AB4BFAC00A9184B /* HomeView.swift */; };
 		32410F562AB4C3F500A9184B /* AlumniServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F552AB4C3F500A9184B /* AlumniServicesView.swift */; };
 		32410F582AB4C42F00A9184B /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F572AB4C42F00A9184B /* EventsView.swift */; };
@@ -68,6 +68,8 @@
 		32F3B6542AB6AEC40075F5D7 /* ConfettiUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6522AB6AEC40075F5D7 /* ConfettiUIView.swift */; };
 		32F3B6552AB6AEC40075F5D7 /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6532AB6AEC40075F5D7 /* ConfettiView.swift */; };
 		32F3B65A2AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6592AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift */; };
+		32F3B65D2AB6B6030075F5D7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 32F3B65C2AB6B6030075F5D7 /* Alamofire */; };
+		32F3B6612AB6BD530075F5D7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6602AB6BD530075F5D7 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,7 +79,7 @@
 		32410F452AB4B9CA00A9184B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32410F482AB4B9CA00A9184B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		32410F4F2AB4B9DD00A9184B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		32410F512AB4BA7E00A9184B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		32410F512AB4BA7E00A9184B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		32410F532AB4BFAC00A9184B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		32410F552AB4C3F500A9184B /* AlumniServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlumniServicesView.swift; sourceTree = "<group>"; };
 		32410F572AB4C42F00A9184B /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		32F3B6532AB6AEC40075F5D7 /* ConfettiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
 		32F3B6572AB6B3A50075F5D7 /* SST Alumni.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SST Alumni.entitlements"; sourceTree = "<group>"; };
 		32F3B6592AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAAAppCheckProviderFactory.swift; sourceTree = "<group>"; };
+		32F3B6602AB6BD530075F5D7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32410F802AB58B0300A9184B /* FirebaseDatabase in Frameworks */,
+				32F3B65D2AB6B6030075F5D7 /* Alamofire in Frameworks */,
 				32410F8E2AB58B0300A9184B /* FirebaseFunctionsCombine-Community in Frameworks */,
 				32410F862AB58B0300A9184B /* FirebaseFirestore in Frameworks */,
 				32410F722AB58B0300A9184B /* FirebaseAnalyticsSwift in Frameworks */,
@@ -192,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				32410F432AB4B9C900A9184B /* ContentView.swift */,
+				32F3B6602AB6BD530075F5D7 /* OnboardingView.swift */,
 				32410FA72AB5F41800A9184B /* Home */,
 				32410F552AB4C3F500A9184B /* AlumniServicesView.swift */,
 				32410F592AB4C48A00A9184B /* AlumniServicesRowView.swift */,
@@ -214,7 +219,7 @@
 		32410F672AB5694900A9184B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				32410F512AB4BA7E00A9184B /* User.swift */,
+				32410F512AB4BA7E00A9184B /* UserData.swift */,
 				32410FA52AB5EBBA00A9184B /* MemberType.swift */,
 				32410F652AB568D400A9184B /* NewsArticle.swift */,
 				32410FAD2AB6004400A9184B /* SecurityAccessState.swift */,
@@ -345,6 +350,7 @@
 				32410F9D2AB58B0300A9184B /* FirebaseRemoteConfigSwift */,
 				32410F9F2AB58B0300A9184B /* FirebaseStorage */,
 				32410FA12AB58B0300A9184B /* FirebaseStorageCombine-Community */,
+				32F3B65C2AB6B6030075F5D7 /* Alamofire */,
 			);
 			productName = "SST Alumni";
 			productReference = 32410F3E2AB4B9C900A9184B /* SST Alumni.app */;
@@ -376,6 +382,7 @@
 			mainGroup = 32410F352AB4B9C900A9184B;
 			packageReferences = (
 				32410F6C2AB58B0300A9184B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				32F3B65B2AB6B6030075F5D7 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 32410F3F2AB4B9C900A9184B /* Products */;
 			projectDirPath = "";
@@ -410,13 +417,14 @@
 				32410FB52AB60C2A00A9184B /* LocationValidationManager.swift in Sources */,
 				32410F662AB568D400A9184B /* NewsArticle.swift in Sources */,
 				32F3B64D2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift in Sources */,
-				32410F522AB4BA7E00A9184B /* User.swift in Sources */,
+				32410F522AB4BA7E00A9184B /* UserData.swift in Sources */,
 				32410F582AB4C42F00A9184B /* EventsView.swift in Sources */,
 				32410F602AB4D0F200A9184B /* CardExpandedView.swift in Sources */,
 				32410FAE2AB6004400A9184B /* SecurityAccessState.swift in Sources */,
 				32410F442AB4B9C900A9184B /* ContentView.swift in Sources */,
 				32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */,
 				32410FA92AB5F51B00A9184B /* UserManager.swift in Sources */,
+				32F3B6612AB6BD530075F5D7 /* OnboardingView.swift in Sources */,
 				32F3B65A2AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift in Sources */,
 				32410F6B2AB569FB00A9184B /* NewsArticleSectionView.swift in Sources */,
 				32410F692AB5695E00A9184B /* NewsArticleView.swift in Sources */,
@@ -658,6 +666,14 @@
 				minimumVersion = 10.15.0;
 			};
 		};
+		32F3B65B2AB6B6030075F5D7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -795,6 +811,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 32410F6C2AB58B0300A9184B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		32F3B65C2AB6B6030075F5D7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32F3B65B2AB6B6030075F5D7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
