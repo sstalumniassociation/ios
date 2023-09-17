@@ -110,6 +110,7 @@
 		32F3B6572AB6B3A50075F5D7 /* SST Alumni.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SST Alumni.entitlements"; sourceTree = "<group>"; };
 		32F3B6592AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAAAppCheckProviderFactory.swift; sourceTree = "<group>"; };
 		32F3B6602AB6BD530075F5D7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		32F3B6622AB6E6E10075F5D7 /* SST-Alumni-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SST-Alumni-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +171,7 @@
 		32410F402AB4B9C900A9184B /* SST Alumni */ = {
 			isa = PBXGroup;
 			children = (
+				32F3B6622AB6E6E10075F5D7 /* SST-Alumni-Info.plist */,
 				32F3B6572AB6B3A50075F5D7 /* SST Alumni.entitlements */,
 				32410F412AB4B9C900A9184B /* SST_AlumniApp.swift */,
 				32F3B6582AB6B3FF0075F5D7 /* App Check */,
@@ -580,6 +582,7 @@
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SST-Alumni-Info.plist";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Face ID is required to access the virtual security access card.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Security card can only be accessed while on campus.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -613,6 +616,7 @@
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SST-Alumni-Info.plist";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Face ID is required to access the virtual security access card.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Security card can only be accessed while on campus.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

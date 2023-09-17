@@ -23,4 +23,16 @@ class UserManager: ObservableObject {
             }
         }
     }
+    
+    func signOut() {
+        do {
+            try auth.signOut()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func signIn() {
+        user = .sample
+    }
 }

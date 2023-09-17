@@ -37,6 +37,7 @@ struct ContentView: View {
             .environmentObject(userManager)
         } else {
             OnboardingView()
+                .environmentObject(userManager)
         }
     }
 }
