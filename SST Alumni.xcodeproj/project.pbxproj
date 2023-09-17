@@ -76,6 +76,7 @@
 		32F3B66A2AB717090075F5D7 /* SSTAARSEventConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6692AB717090075F5D7 /* SSTAARSEventConfirmationView.swift */; };
 		32F3B66C2AB74DD30075F5D7 /* EventAttendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B66B2AB74DD30075F5D7 /* EventAttendee.swift */; };
 		32F3B66E2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B66D2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift */; };
+		32F3B6702AB751540075F5D7 /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B66F2AB751540075F5D7 /* QRCodeScannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +124,7 @@
 		32F3B6692AB717090075F5D7 /* SSTAARSEventConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAARSEventConfirmationView.swift; sourceTree = "<group>"; };
 		32F3B66B2AB74DD30075F5D7 /* EventAttendee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendee.swift; sourceTree = "<group>"; };
 		32F3B66D2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAARSEventConfirmationSuccessView.swift; sourceTree = "<group>"; };
+		32F3B66F2AB751540075F5D7 /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 			children = (
 				32410F5B2AB4C9E700A9184B /* SSTAARSView.swift */,
 				32410F632AB4D7AB00A9184B /* SSTAARSEventView.swift */,
+				32F3B66F2AB751540075F5D7 /* QRCodeScannerView.swift */,
 				32F3B6692AB717090075F5D7 /* SSTAARSEventConfirmationView.swift */,
 				32F3B66D2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift */,
 			);
@@ -448,6 +451,7 @@
 				32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */,
 				32410FA92AB5F51B00A9184B /* UserManager.swift in Sources */,
 				32F3B6612AB6BD530075F5D7 /* OnboardingView.swift in Sources */,
+				32F3B6702AB751540075F5D7 /* QRCodeScannerView.swift in Sources */,
 				32F3B65A2AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift in Sources */,
 				32410F6B2AB569FB00A9184B /* NewsArticleSectionView.swift in Sources */,
 				32410F692AB5695E00A9184B /* NewsArticleView.swift in Sources */,
@@ -607,6 +611,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SST-Alumni-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Scan QR codes";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Face ID is required to access the virtual security access card.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Security card can only be accessed while on campus.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -641,6 +646,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SST-Alumni-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Scan QR codes";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Face ID is required to access the virtual security access card.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Security card can only be accessed while on campus.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

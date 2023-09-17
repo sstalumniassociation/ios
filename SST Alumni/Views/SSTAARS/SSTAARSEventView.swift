@@ -11,6 +11,8 @@ struct SSTAARSEventView: View {
     
     @State private var searchText = ""
     
+    @State private var isQRScannerPresented = false
+    
     var body: some View {
         List {
             Section {
@@ -35,25 +37,28 @@ struct SSTAARSEventView: View {
                 }
                 .padding(.vertical)
             }
-//            .listSectionSpacing(.compact)
             
             Section {
-                HStack {
-                    Image(systemName: "qrcode.viewfinder")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 64)
-                        .foregroundStyle(Color.accentColor)
-                    
-                    VStack(alignment: .leading) {
-                        Text("Scan QR Code")
-                            .font(.headline)
+                Button {
+                    isQRScannerPresented.toggle()
+                } label: {
+                    HStack {
+                        Image(systemName: "qrcode.viewfinder")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 64)
+                            .foregroundStyle(Color.accentColor)
                         
-                        Text("Check an attendee in by scanning their QR code.")
+                        VStack(alignment: .leading) {
+                            Text("Scan QR Code")
+                                .font(.headline)
+                            
+                            Text("Check an attendee in by scanning their QR code.")
+                        }
+                        .padding(.leading)
                     }
-                    .padding(.leading)
+                    .padding(.vertical)
                 }
-                .padding(.vertical)
             }
             
             
@@ -74,6 +79,9 @@ struct SSTAARSEventView: View {
             
         }
         .searchable(text: $searchText, prompt: "Search Attendees")
+        .sheet(isPresented: $isQRScannerPresented) {
+            QRCodeScannerView()
+        }
     }
 }
 
