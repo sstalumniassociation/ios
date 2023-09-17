@@ -56,7 +56,7 @@ struct SSTAARSEventConfirmationSuccessView: View {
                     path.append(event)
                 }
             } label: {
-                Text("Access Event")
+                Text("Accept Invite")
                     .padding(8)
                     .frame(maxWidth: .infinity)
             }
