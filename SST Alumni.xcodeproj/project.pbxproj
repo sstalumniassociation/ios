@@ -70,6 +70,10 @@
 		32F3B65A2AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6592AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift */; };
 		32F3B65D2AB6B6030075F5D7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 32F3B65C2AB6B6030075F5D7 /* Alamofire */; };
 		32F3B6612AB6BD530075F5D7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6602AB6BD530075F5D7 /* OnboardingView.swift */; };
+		32F3B6642AB711910075F5D7 /* SSTAARSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6632AB711910075F5D7 /* SSTAARSManager.swift */; };
+		32F3B6662AB711A10075F5D7 /* Constants+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6652AB711A10075F5D7 /* Constants+URL.swift */; };
+		32F3B6682AB713730075F5D7 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6672AB713730075F5D7 /* Event.swift */; };
+		32F3B66A2AB717090075F5D7 /* SSTAARSEventConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6692AB717090075F5D7 /* SSTAARSEventConfirmationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +115,10 @@
 		32F3B6592AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAAAppCheckProviderFactory.swift; sourceTree = "<group>"; };
 		32F3B6602AB6BD530075F5D7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		32F3B6622AB6E6E10075F5D7 /* SST-Alumni-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SST-Alumni-Info.plist"; sourceTree = SOURCE_ROOT; };
+		32F3B6632AB711910075F5D7 /* SSTAARSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAARSManager.swift; sourceTree = "<group>"; };
+		32F3B6652AB711A10075F5D7 /* Constants+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+URL.swift"; sourceTree = "<group>"; };
+		32F3B6672AB713730075F5D7 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		32F3B6692AB717090075F5D7 /* SSTAARSEventConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAARSEventConfirmationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +222,7 @@
 			children = (
 				32410F5B2AB4C9E700A9184B /* SSTAARSView.swift */,
 				32410F632AB4D7AB00A9184B /* SSTAARSEventView.swift */,
+				32F3B6692AB717090075F5D7 /* SSTAARSEventConfirmationView.swift */,
 			);
 			path = SSTAARS;
 			sourceTree = "<group>";
@@ -227,6 +236,7 @@
 				32410FAD2AB6004400A9184B /* SecurityAccessState.swift */,
 				32410FB92AB60D2C00A9184B /* LocationValidationState.swift */,
 				32410FB72AB60D1C00A9184B /* BiometricAuthenticationState.swift */,
+				32F3B6672AB713730075F5D7 /* Event.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				32410FA82AB5F51B00A9184B /* UserManager.swift */,
+				32F3B6632AB711910075F5D7 /* SSTAARSManager.swift */,
 				32410FB62AB60C3800A9184B /* Security Access Manager */,
 			);
 			path = "View Models";
@@ -255,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				32410FB22AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift */,
+				32F3B6652AB711A10075F5D7 /* Constants+URL.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -417,6 +429,8 @@
 				32410FB82AB60D1C00A9184B /* BiometricAuthenticationState.swift in Sources */,
 				32410F642AB4D7AB00A9184B /* SSTAARSEventView.swift in Sources */,
 				32410FB52AB60C2A00A9184B /* LocationValidationManager.swift in Sources */,
+				32F3B66A2AB717090075F5D7 /* SSTAARSEventConfirmationView.swift in Sources */,
+				32F3B6642AB711910075F5D7 /* SSTAARSManager.swift in Sources */,
 				32410F662AB568D400A9184B /* NewsArticle.swift in Sources */,
 				32F3B64D2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift in Sources */,
 				32410F522AB4BA7E00A9184B /* UserData.swift in Sources */,
@@ -431,8 +445,10 @@
 				32410F6B2AB569FB00A9184B /* NewsArticleSectionView.swift in Sources */,
 				32410F692AB5695E00A9184B /* NewsArticleView.swift in Sources */,
 				32410F5A2AB4C48A00A9184B /* AlumniServicesRowView.swift in Sources */,
+				32F3B6682AB713730075F5D7 /* Event.swift in Sources */,
 				32410F502AB4B9DD00A9184B /* CardView.swift in Sources */,
 				32410F542AB4BFAC00A9184B /* HomeView.swift in Sources */,
+				32F3B6662AB711A10075F5D7 /* Constants+URL.swift in Sources */,
 				32F3B6552AB6AEC40075F5D7 /* ConfettiView.swift in Sources */,
 				32F3B6472AB629D80075F5D7 /* SecurityAccessAdmittedView.swift in Sources */,
 				32410FA62AB5EBBA00A9184B /* MemberType.swift in Sources */,

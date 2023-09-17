@@ -9,7 +9,11 @@ import SwiftUI
 
 struct SSTAARSView: View {
     
+    @StateObject var sstaarsManager = SSTAARSManager()
     @State private var accessCodeAlertPresented = false
+    @State private var isEventConfirmationViewPresented = false
+    
+    @State private var eventCode = ""
     
     var body: some View {
         NavigationStack {
@@ -30,8 +34,10 @@ struct SSTAARSView: View {
                 }
                 
                 Section("My Events") {
-                    NavigationLink("SST Homecoming 2024") {
-                        SSTAARSEventView()
+                    ForEach(sstaarsManager.events) { event in
+                        NavigationLink(event.name) {
+                            SSTAARSEventView()
+                        }
                     }
                 }
             }
@@ -47,19 +53,25 @@ struct SSTAARSView: View {
             .navigationBarTitleDisplayMode(.inline)
         }
         .alert("SSTAARS Access Code", isPresented: $accessCodeAlertPresented) {
-            TextField("", text: .constant(""))
+            TextField("Access Code", text: $eventCode)
             Button(role: .cancel) {
                 
             } label: {
                 Text("Cancel")
             }
 
-            
             Button("Done") {
-                accessCodeAlertPresented.toggle()
+                isEventConfirmationViewPresented = true
+                Task {
+                    await sstaarsManager.retrieveEvent(for: eventCode)
+                }
             }
         } message: {
-            Text("Enter the event's access code.")
+            Text("Enter the event’s access code.")
+        }
+        .sheet(isPresented: $isEventConfirmationViewPresented) {
+            SSTAARSEventConfirmationView(sstaarsManager: sstaarsManager)
+                .presentationDetents([.medium, .large])
         }
     }
 }
