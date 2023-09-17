@@ -273,11 +273,19 @@
 			children = (
 				32410F5F2AB4D0F200A9184B /* CardExpandedView.swift */,
 				32F3B64E2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift */,
-				32F3B6522AB6AEC40075F5D7 /* ConfettiUIView.swift */,
-				32F3B6532AB6AEC40075F5D7 /* ConfettiView.swift */,
+				32F3B6562AB6B0D10075F5D7 /* Confetti */,
 				32F3B64A2AB62A600075F5D7 /* SecurityAccessStatusView */,
 			);
 			path = "Security Card";
+			sourceTree = "<group>";
+		};
+		32F3B6562AB6B0D10075F5D7 /* Confetti */ = {
+			isa = PBXGroup;
+			children = (
+				32F3B6522AB6AEC40075F5D7 /* ConfettiUIView.swift */,
+				32F3B6532AB6AEC40075F5D7 /* ConfettiView.swift */,
+			);
+			path = Confetti;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
