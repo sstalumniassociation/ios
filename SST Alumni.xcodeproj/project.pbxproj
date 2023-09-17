@@ -227,10 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				32410F5B2AB4C9E700A9184B /* SSTAARSView.swift */,
-				32410F632AB4D7AB00A9184B /* SSTAARSEventView.swift */,
-				32F3B66F2AB751540075F5D7 /* QRCodeScannerView.swift */,
-				32F3B6692AB717090075F5D7 /* SSTAARSEventConfirmationView.swift */,
-				32F3B66D2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift */,
+				32F3B6722AB760940075F5D7 /* Event View */,
+				32F3B6712AB7608A0075F5D7 /* Invite Confirmation View */,
 			);
 			path = SSTAARS;
 			sourceTree = "<group>";
@@ -327,6 +325,24 @@
 				32F3B6592AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift */,
 			);
 			path = "App Check";
+			sourceTree = "<group>";
+		};
+		32F3B6712AB7608A0075F5D7 /* Invite Confirmation View */ = {
+			isa = PBXGroup;
+			children = (
+				32F3B6692AB717090075F5D7 /* SSTAARSEventConfirmationView.swift */,
+				32F3B66D2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift */,
+			);
+			path = "Invite Confirmation View";
+			sourceTree = "<group>";
+		};
+		32F3B6722AB760940075F5D7 /* Event View */ = {
+			isa = PBXGroup;
+			children = (
+				32410F632AB4D7AB00A9184B /* SSTAARSEventView.swift */,
+				32F3B66F2AB751540075F5D7 /* QRCodeScannerView.swift */,
+			);
+			path = "Event View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
