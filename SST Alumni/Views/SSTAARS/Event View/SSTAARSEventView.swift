@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SSTAARSEventView: View {
     
+    var event: Event
+    
     @State private var searchText = ""
     
     @State private var isQRScannerPresented = false
@@ -23,11 +25,11 @@ struct SSTAARSEventView: View {
                         .frame(width: 64)
                         .foregroundStyle(Color.accentColor)
                     HStack(alignment: .lastTextBaseline, spacing: 0) {
-                        Text("123")
+                        Text("0")
                             .font(.title)
                             .fontWeight(.bold)
                         
-                        Text("/400")
+                        Text("/\(event.attendees.count)")
                             .font(.title2)
                             .fontWeight(.medium)
                         
@@ -56,6 +58,7 @@ struct SSTAARSEventView: View {
                             Text("Check an attendee in by scanning their QR code.")
                         }
                         .padding(.leading)
+                        .foregroundStyle(Color(uiColor: .label))
                     }
                     .padding(.vertical)
                 }
@@ -63,28 +66,32 @@ struct SSTAARSEventView: View {
             
             
             Section("Attendees") {
-                VStack(alignment: .leading) {
-                    Text("Jia Chen Yee")
-                    HStack {
-                        Image(systemName: "xmark.circle.fill")
-                        Text("Not Checked In")
+                ForEach(0..<400) { item in
+                    VStack(alignment: .leading) {
+                        Text("Jia Chen Yee")
+                        HStack {
+                            Image(systemName: "xmark.circle.fill")
+                            Text("Not Checked In")
+                        }
+                        .foregroundStyle(.secondary)
                     }
-                    .foregroundStyle(.secondary)
                 }
             }
             
         }
-        .navigationTitle("SST Homecoming 2024")
-        .refreshable {
-            
-        }
+        .navigationTitle(event.name)
         .searchable(text: $searchText, prompt: "Search Attendees")
         .sheet(isPresented: $isQRScannerPresented) {
             QRCodeScannerView()
         }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    isQRScannerPresented.toggle()
+                } label: {
+                    Label("Scan QR Code", systemImage: "qrcode.viewfinder")
+                }
+            }
+        }
     }
-}
-
-#Preview {
-    SSTAARSEventView()
 }
