@@ -68,13 +68,9 @@ struct AlumniServicesRowView<Content: View>: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
         } sheetContent: {
             content
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background {
-            RoundedRectangle(cornerRadius: 16)
-                .fill(Color(uiColor: .systemGray6))
         }
         .listRowSeparator(.hidden)
     }
@@ -109,6 +105,10 @@ struct ConditionalLink<Content: View, SheetContent: View>: View {
                     .foregroundStyle(.blue)
                     .padding()
                 }
+                .background {
+                    RoundedRectangle(cornerRadius: 16)
+                        .fill(Color(uiColor: .systemGray6))
+                }
             }
             .buttonStyle(.plain)
         } else if let ctaTitle {
@@ -127,6 +127,10 @@ struct ConditionalLink<Content: View, SheetContent: View>: View {
                     }
                     .foregroundStyle(.blue)
                     .padding()
+                }
+                .background {
+                    RoundedRectangle(cornerRadius: 16)
+                        .fill(Color(uiColor: .systemGray6))
                 }
             }
             .buttonStyle(.plain)
