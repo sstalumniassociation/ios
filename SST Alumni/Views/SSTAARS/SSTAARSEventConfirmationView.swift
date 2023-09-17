@@ -11,10 +11,12 @@ struct SSTAARSEventConfirmationView: View {
     
     @ObservedObject var sstaarsManager: SSTAARSManager
     
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         VStack {
             switch sstaarsManager.eventImportState {
-            case .none: EmptyView()
+            case .none: ProgressView()
             case .verifying: ProgressView()
             case .serverError:
                 VStack(spacing: 16) {
@@ -48,11 +50,59 @@ struct SSTAARSEventConfirmationView: View {
                 .multilineTextAlignment(.center)
             case .success(let event):
                 VStack {
-                    Text(event.name)
-                        .font(.title)
-                    Text(event.description)
-                    Text(event.startDateTime.formatted())
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 16) {
+                            Text(event.name)
+                                .font(.title)
+                                .padding(.top)
+                                .fontWeight(.bold)
+                            Text(event.id)
+                                .font(.caption)
+                                .monospaced()
+                                .foregroundStyle(.secondary)
+                            
+                            HStack {
+                                Image(systemName: "calendar")
+                                    .frame(width: 32)
+                                Text(event.startDateTime.formatted(date: .abbreviated, time: .shortened))
+                            }
+                            .foregroundStyle(.secondary)
+                            
+                            HStack {
+                                Image(systemName: "person.2.fill")
+                                    .frame(width: 32)
+                                Text("\(300) attendees")
+                            }
+                            .foregroundStyle(.secondary)
+                            
+                            Divider()
+                            
+                            Text(event.description)
+                        }
+                    }
+                    
+                    Button {
+                        dismiss()
+                        withAnimation {
+                            sstaarsManager.events.append(event)
+                        }
+                    } label: {
+                        Text("Access Event")
+                            .padding(8)
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    
+                    Button {
+                        dismiss()
+                    } label: {
+                        Text("Cancel")
+                            .padding(.vertical)
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.borderless)
                 }
+                .padding([.horizontal, .top])
             }
         }
     }

@@ -14,6 +14,10 @@ class SSTAARSManager: ObservableObject {
     @Published var eventImportState = EventImportState.none
     
     func retrieveEvent(for id: String) async {
+        await MainActor.run {
+            eventImportState = .verifying
+        }
+        
         var request = URLRequest(url: .cfServer.appendingPathComponent("event/\(id)"))
         
         do {

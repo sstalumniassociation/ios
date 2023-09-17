@@ -74,6 +74,7 @@
 		32F3B6662AB711A10075F5D7 /* Constants+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6652AB711A10075F5D7 /* Constants+URL.swift */; };
 		32F3B6682AB713730075F5D7 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6672AB713730075F5D7 /* Event.swift */; };
 		32F3B66A2AB717090075F5D7 /* SSTAARSEventConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6692AB717090075F5D7 /* SSTAARSEventConfirmationView.swift */; };
+		32F3B66C2AB74DD30075F5D7 /* EventAttendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B66B2AB74DD30075F5D7 /* EventAttendee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +120,7 @@
 		32F3B6652AB711A10075F5D7 /* Constants+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+URL.swift"; sourceTree = "<group>"; };
 		32F3B6672AB713730075F5D7 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		32F3B6692AB717090075F5D7 /* SSTAARSEventConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAARSEventConfirmationView.swift; sourceTree = "<group>"; };
+		32F3B66B2AB74DD30075F5D7 /* EventAttendee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendee.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 				32410FB92AB60D2C00A9184B /* LocationValidationState.swift */,
 				32410FB72AB60D1C00A9184B /* BiometricAuthenticationState.swift */,
 				32F3B6672AB713730075F5D7 /* Event.swift */,
+				32F3B66B2AB74DD30075F5D7 /* EventAttendee.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				32410FA62AB5EBBA00A9184B /* MemberType.swift in Sources */,
 				32410F5C2AB4C9E700A9184B /* SSTAARSView.swift in Sources */,
 				32410FAC2AB6002E00A9184B /* SecurityAccessManager.swift in Sources */,
+				32F3B66C2AB74DD30075F5D7 /* EventAttendee.swift in Sources */,
 				32F3B64F2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift in Sources */,
 				32410FB02AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift in Sources */,
 				32410F562AB4C3F500A9184B /* AlumniServicesView.swift in Sources */,
