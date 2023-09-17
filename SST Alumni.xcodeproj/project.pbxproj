@@ -60,6 +60,13 @@
 		32410FB52AB60C2A00A9184B /* LocationValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FB42AB60C2A00A9184B /* LocationValidationManager.swift */; };
 		32410FB82AB60D1C00A9184B /* BiometricAuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FB72AB60D1C00A9184B /* BiometricAuthenticationState.swift */; };
 		32410FBA2AB60D2C00A9184B /* LocationValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FB92AB60D2C00A9184B /* LocationValidationState.swift */; };
+		32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */; };
+		32F3B6472AB629D80075F5D7 /* SecurityAccessAdmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */; };
+		32F3B6492AB62A240075F5D7 /* SecurityAccessDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */; };
+		32F3B64D2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B64C2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift */; };
+		32F3B64F2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B64E2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift */; };
+		32F3B6542AB6AEC40075F5D7 /* ConfettiUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6522AB6AEC40075F5D7 /* ConfettiUIView.swift */; };
+		32F3B6552AB6AEC40075F5D7 /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6532AB6AEC40075F5D7 /* ConfettiView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +97,13 @@
 		32410FB42AB60C2A00A9184B /* LocationValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationValidationManager.swift; sourceTree = "<group>"; };
 		32410FB72AB60D1C00A9184B /* BiometricAuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthenticationState.swift; sourceTree = "<group>"; };
 		32410FB92AB60D2C00A9184B /* LocationValidationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationValidationState.swift; sourceTree = "<group>"; };
+		32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessStatusView.swift; sourceTree = "<group>"; };
+		32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessAdmittedView.swift; sourceTree = "<group>"; };
+		32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessDeniedView.swift; sourceTree = "<group>"; };
+		32F3B64C2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCaptureRedactionView.swift; sourceTree = "<group>"; };
+		32F3B64E2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAAAnimatedLogo.swift; sourceTree = "<group>"; };
+		32F3B6522AB6AEC40075F5D7 /* ConfettiUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfettiUIView.swift; sourceTree = "<group>"; };
+		32F3B6532AB6AEC40075F5D7 /* ConfettiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,7 +225,7 @@
 				32410F532AB4BFAC00A9184B /* HomeView.swift */,
 				32410F6A2AB569FB00A9184B /* NewsArticleSectionView.swift */,
 				32410F682AB5695E00A9184B /* NewsArticleView.swift */,
-				32410F5F2AB4D0F200A9184B /* CardExpandedView.swift */,
+				32F3B64B2AB62A660075F5D7 /* Security Card */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -241,6 +255,37 @@
 				32410FB42AB60C2A00A9184B /* LocationValidationManager.swift */,
 			);
 			path = "Security Access Manager";
+			sourceTree = "<group>";
+		};
+		32F3B64A2AB62A600075F5D7 /* SecurityAccessStatusView */ = {
+			isa = PBXGroup;
+			children = (
+				32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */,
+				32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */,
+				32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */,
+				32F3B64C2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift */,
+			);
+			path = SecurityAccessStatusView;
+			sourceTree = "<group>";
+		};
+		32F3B64B2AB62A660075F5D7 /* Security Card */ = {
+			isa = PBXGroup;
+			children = (
+				32410F5F2AB4D0F200A9184B /* CardExpandedView.swift */,
+				32F3B64E2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift */,
+				32F3B6562AB6B0D10075F5D7 /* Confetti */,
+				32F3B64A2AB62A600075F5D7 /* SecurityAccessStatusView */,
+			);
+			path = "Security Card";
+			sourceTree = "<group>";
+		};
+		32F3B6562AB6B0D10075F5D7 /* Confetti */ = {
+			isa = PBXGroup;
+			children = (
+				32F3B6522AB6AEC40075F5D7 /* ConfettiUIView.swift */,
+				32F3B6532AB6AEC40075F5D7 /* ConfettiView.swift */,
+			);
+			path = Confetti;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,24 +396,31 @@
 				32410F642AB4D7AB00A9184B /* SSTAARSEventView.swift in Sources */,
 				32410FB52AB60C2A00A9184B /* LocationValidationManager.swift in Sources */,
 				32410F662AB568D400A9184B /* NewsArticle.swift in Sources */,
+				32F3B64D2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift in Sources */,
 				32410F522AB4BA7E00A9184B /* User.swift in Sources */,
 				32410F582AB4C42F00A9184B /* EventsView.swift in Sources */,
 				32410F602AB4D0F200A9184B /* CardExpandedView.swift in Sources */,
 				32410FAE2AB6004400A9184B /* SecurityAccessState.swift in Sources */,
 				32410F442AB4B9C900A9184B /* ContentView.swift in Sources */,
+				32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */,
 				32410FA92AB5F51B00A9184B /* UserManager.swift in Sources */,
 				32410F6B2AB569FB00A9184B /* NewsArticleSectionView.swift in Sources */,
 				32410F692AB5695E00A9184B /* NewsArticleView.swift in Sources */,
 				32410F5A2AB4C48A00A9184B /* AlumniServicesRowView.swift in Sources */,
 				32410F502AB4B9DD00A9184B /* CardView.swift in Sources */,
 				32410F542AB4BFAC00A9184B /* HomeView.swift in Sources */,
+				32F3B6552AB6AEC40075F5D7 /* ConfettiView.swift in Sources */,
+				32F3B6472AB629D80075F5D7 /* SecurityAccessAdmittedView.swift in Sources */,
 				32410FA62AB5EBBA00A9184B /* MemberType.swift in Sources */,
 				32410F5C2AB4C9E700A9184B /* SSTAARSView.swift in Sources */,
 				32410FAC2AB6002E00A9184B /* SecurityAccessManager.swift in Sources */,
+				32F3B64F2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift in Sources */,
 				32410FB02AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift in Sources */,
 				32410F562AB4C3F500A9184B /* AlumniServicesView.swift in Sources */,
+				32F3B6492AB62A240075F5D7 /* SecurityAccessDeniedView.swift in Sources */,
 				32410F422AB4B9C900A9184B /* SST_AlumniApp.swift in Sources */,
 				32410FB32AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift in Sources */,
+				32F3B6542AB6AEC40075F5D7 /* ConfettiUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +557,7 @@
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Face ID is required to access the virtual security access card.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Security card can only be accessed while on campus.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -536,6 +589,7 @@
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Face ID is required to access the virtual security access card.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Security card can only be accessed while on campus.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

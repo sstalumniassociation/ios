@@ -13,6 +13,8 @@ class LocationValidationManager: NSObject, CLLocationManagerDelegate {
     
     private var completionHandler: ((LocationValidationState) -> Void)?
     
+    var didOutputValue = false
+    
     func checkLocation() async -> LocationValidationState {
         await withCheckedContinuation { continuation in
             checkLocation { state in
@@ -24,19 +26,23 @@ class LocationValidationManager: NSObject, CLLocationManagerDelegate {
     func checkLocation(completion: @escaping ((LocationValidationState) -> Void)) {
         self.completionHandler = completion
         
+        locationManager.delegate = self
+        
         switch locationManager.authorizationStatus {
-        case .authorizedWhenInUse:
-            determineUserLocation()
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
-        default:
+        case .restricted, .denied:
             completion(.notAuthorized)
+        default: break
         }
     }
     
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
+    }
+    
     private func determineUserLocation() {
-        locationManager.startUpdatingLocation()
-        locationManager.delegate = self
+        locationManager.requestLocation()
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
@@ -46,7 +52,8 @@ class LocationValidationManager: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else { return }
+        guard let location = locations.first, !didOutputValue else { return }
+        didOutputValue = true
         
         let region = CLCircularRegion(center: .sst, radius: 1000, identifier: "TargetRegion")
         

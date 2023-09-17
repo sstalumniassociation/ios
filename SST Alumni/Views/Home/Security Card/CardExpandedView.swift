@@ -9,6 +9,11 @@ import SwiftUI
 
 struct CardExpandedView: View {
     
+    @StateObject var securityAccessManager = SecurityAccessManager()
+    
+    @Binding var isConfettiAnimating: Bool
+    @Binding var isCardExpanded: Bool
+    
     var user: User
     var namespace: Namespace.ID
     
@@ -16,40 +21,22 @@ struct CardExpandedView: View {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
-                    Text("Qin Guan")
+                    Text(user.name)
                         .font(.title)
                         .fontWeight(.bold)
                         .fontWidth(.expanded)
                         .matchedGeometryEffect(id: "name", in: namespace)
-                    Text("OR2022029")
+                    Text(user.memberId)
                         .monospaced()
                         .matchedGeometryEffect(id: "membershipnumber", in: namespace)
                 }
                 Spacer()
-                Image(.logoWhite)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 48)
+                
+                SSTAAAnimatedLogo(isAnimating: securityAccessManager.securityAccessState == .admitted)
                     .matchedGeometryEffect(id: "sstaalogo", in: namespace)
             }
             
-            RoundedRectangle(cornerRadius: 8)
-                .fill(.white)
-                .aspectRatio(1, contentMode: .fit)
-                .overlay {
-                    VStack {
-                        Text("15 Sep 2023")
-                            .font(.system(size: 40, weight: .heavy))
-                        
-                        Text("9:41 AM")
-                            .font(.system(size: 40, weight: .semibold))
-                        
-                        Text("Alumnus")
-                            .font(.system(size: 32, weight: .regular))
-                    }
-                    .foregroundStyle(.black)
-                    .padding()
-                }
+            SecurityAccessStatusView(securityAccessManager: securityAccessManager)
         }
         .foregroundStyle(.white)
         .padding(21)
@@ -59,5 +46,24 @@ struct CardExpandedView: View {
                 .matchedGeometryEffect(id: "gradientbackground", in: namespace)
         }
         .padding()
+        .onAppear {
+            isConfettiAnimating = false
+            securityAccessManager.performCheck()
+        }
+        .onChange(of: securityAccessManager.securityAccessState) { newValue in
+            if newValue == .admitted {
+                isConfettiAnimating = true
+            } else {
+                isConfettiAnimating = false
+            }
+        }
+        .onChange(of: securityAccessManager.isTimedOut) { newValue in
+            if newValue {
+                withAnimation(.easeInOut) {
+                    isCardExpanded = false
+                    isConfettiAnimating = false
+                }
+            }
+        }
     }
 }

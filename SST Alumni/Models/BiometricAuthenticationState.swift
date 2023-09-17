@@ -7,9 +7,18 @@
 
 import Foundation
 
-enum BiometricAuthenticationState {
+enum BiometricAuthenticationState: Equatable {
     case noData
     case noBiometrics
     case biometricsFailure
     case approved
+    
+    var description: String {
+        switch self {
+        case .noData: return "No Data"
+        case .noBiometrics: return "A password must be set on your device."
+        case .biometricsFailure: return "Failed to authenticate."
+        case .approved: return "Approved"
+        }
+    }
 }

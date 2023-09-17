@@ -15,8 +15,16 @@ struct HomeView: View {
     
     @EnvironmentObject var userManager: UserManager
     
+    @State private var isConfettiAnimating = false
+    
     var body: some View {
         ZStack {
+            if isCardExpanded && isConfettiAnimating {
+                GeometryReader { geometry in
+                    ConfettiView(size: geometry.size)
+                }
+            }
+            
             ScrollView {
                 if !isCardExpanded {
                     Button {
@@ -58,7 +66,7 @@ struct HomeView: View {
                     
                     NewsArticleSectionView()
                 } else {
-                    CardExpandedView(user: userManager.user, namespace: namespace)
+                    CardExpandedView(isConfettiAnimating: $isConfettiAnimating, isCardExpanded: $isCardExpanded, user: userManager.user, namespace: namespace)
                 }
             }
             
