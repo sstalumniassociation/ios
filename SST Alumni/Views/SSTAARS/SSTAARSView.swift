@@ -15,8 +15,10 @@ struct SSTAARSView: View {
     
     @State private var eventCode = ""
     
+    @State private var path = NavigationPath()
+    
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             List {
                 Section {
                     HStack(alignment: .top) {
@@ -35,8 +37,8 @@ struct SSTAARSView: View {
                 
                 Section("My Events") {
                     ForEach(sstaarsManager.events) { event in
-                        NavigationLink(event.name) {
-                            SSTAARSEventView()
+                        NavigationLink(value: event) {
+                            Text(event.name)
                         }
                     }
                 }
@@ -51,9 +53,13 @@ struct SSTAARSView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(for: Event.self) { event in
+                SSTAARSEventView()
+            }
         }
         .alert("SSTAARS Access Code", isPresented: $accessCodeAlertPresented) {
             TextField("Access Code", text: $eventCode)
+            
             Button(role: .cancel) {
                 
             } label: {
@@ -70,7 +76,7 @@ struct SSTAARSView: View {
             Text("Enter the event’s access code.")
         }
         .sheet(isPresented: $isEventConfirmationViewPresented) {
-            SSTAARSEventConfirmationView(sstaarsManager: sstaarsManager)
+            SSTAARSEventConfirmationView(path: $path, sstaarsManager: sstaarsManager)
                 .presentationDetents([.medium, .large])
         }
     }

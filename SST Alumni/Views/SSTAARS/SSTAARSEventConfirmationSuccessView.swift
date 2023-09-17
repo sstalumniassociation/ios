@@ -11,7 +11,9 @@ struct SSTAARSEventConfirmationSuccessView: View {
     
     @Environment(\.dismiss) var dismiss
     
+    @Binding var path: NavigationPath
     @Binding var allEvents: [Event]
+    
     var event: Event
     
     var body: some View {
@@ -51,6 +53,7 @@ struct SSTAARSEventConfirmationSuccessView: View {
                 dismiss()
                 withAnimation {
                     allEvents.append(event)
+                    path.append(event)
                 }
             } label: {
                 Text("Access Event")

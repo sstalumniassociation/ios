@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SSTAARSEventConfirmationView: View {
     
+    @Binding var path: NavigationPath
+    
     @ObservedObject var sstaarsManager: SSTAARSManager
     
     var body: some View {
@@ -47,7 +49,7 @@ struct SSTAARSEventConfirmationView: View {
                 }
                 .multilineTextAlignment(.center)
             case .success(let event):
-                SSTAARSEventConfirmationSuccessView(allEvents: $sstaarsManager.events, event: event)
+                SSTAARSEventConfirmationSuccessView(path: $path, allEvents: $sstaarsManager.events, event: event)
             }
         }
     }
