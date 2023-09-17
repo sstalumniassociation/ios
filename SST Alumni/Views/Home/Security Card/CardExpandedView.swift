@@ -11,6 +11,7 @@ struct CardExpandedView: View {
     
     @StateObject var securityAccessManager = SecurityAccessManager()
     
+    @Binding var isConfettiAnimating: Bool
     @Binding var isCardExpanded: Bool
     
     var user: User
@@ -30,10 +31,8 @@ struct CardExpandedView: View {
                         .matchedGeometryEffect(id: "membershipnumber", in: namespace)
                 }
                 Spacer()
-                Image(.logoWhite)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 48)
+                
+                SSTAAAnimatedLogo(isAnimating: securityAccessManager.securityAccessState == .admitted)
                     .matchedGeometryEffect(id: "sstaalogo", in: namespace)
             }
             
@@ -48,12 +47,21 @@ struct CardExpandedView: View {
         }
         .padding()
         .onAppear {
+            isConfettiAnimating = false
             securityAccessManager.performCheck()
+        }
+        .onChange(of: securityAccessManager.securityAccessState) { newValue in
+            if newValue == .admitted {
+                isConfettiAnimating = true
+            } else {
+                isConfettiAnimating = false
+            }
         }
         .onChange(of: securityAccessManager.isTimedOut) { newValue in
             if newValue {
                 withAnimation(.easeInOut) {
                     isCardExpanded = false
+                    isConfettiAnimating = false
                 }
             }
         }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum BiometricAuthenticationState {
+enum BiometricAuthenticationState: Equatable {
     case noData
     case noBiometrics
     case biometricsFailure

@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum SecurityAccessState {
+enum SecurityAccessState: Equatable {
     case processing
     case denied(DeniedReason)
     case admitted
     
-    enum DeniedReason {
+    enum DeniedReason: Equatable {
         case biometrics(BiometricAuthenticationState)
         case location(LocationValidationState)
         

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LocationValidationState {
+enum LocationValidationState: Equatable {
     case notAuthorized
     case notInRange
     case approved

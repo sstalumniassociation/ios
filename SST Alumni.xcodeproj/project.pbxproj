@@ -64,6 +64,9 @@
 		32F3B6472AB629D80075F5D7 /* SecurityAccessAdmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */; };
 		32F3B6492AB62A240075F5D7 /* SecurityAccessDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */; };
 		32F3B64D2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B64C2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift */; };
+		32F3B64F2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B64E2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift */; };
+		32F3B6542AB6AEC40075F5D7 /* ConfettiUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6522AB6AEC40075F5D7 /* ConfettiUIView.swift */; };
+		32F3B6552AB6AEC40075F5D7 /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6532AB6AEC40075F5D7 /* ConfettiView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +101,9 @@
 		32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessAdmittedView.swift; sourceTree = "<group>"; };
 		32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessDeniedView.swift; sourceTree = "<group>"; };
 		32F3B64C2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCaptureRedactionView.swift; sourceTree = "<group>"; };
+		32F3B64E2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAAAnimatedLogo.swift; sourceTree = "<group>"; };
+		32F3B6522AB6AEC40075F5D7 /* ConfettiUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfettiUIView.swift; sourceTree = "<group>"; };
+		32F3B6532AB6AEC40075F5D7 /* ConfettiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +272,9 @@
 			isa = PBXGroup;
 			children = (
 				32410F5F2AB4D0F200A9184B /* CardExpandedView.swift */,
+				32F3B64E2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift */,
+				32F3B6522AB6AEC40075F5D7 /* ConfettiUIView.swift */,
+				32F3B6532AB6AEC40075F5D7 /* ConfettiView.swift */,
 				32F3B64A2AB62A600075F5D7 /* SecurityAccessStatusView */,
 			);
 			path = "Security Card";
@@ -392,15 +401,18 @@
 				32410F5A2AB4C48A00A9184B /* AlumniServicesRowView.swift in Sources */,
 				32410F502AB4B9DD00A9184B /* CardView.swift in Sources */,
 				32410F542AB4BFAC00A9184B /* HomeView.swift in Sources */,
+				32F3B6552AB6AEC40075F5D7 /* ConfettiView.swift in Sources */,
 				32F3B6472AB629D80075F5D7 /* SecurityAccessAdmittedView.swift in Sources */,
 				32410FA62AB5EBBA00A9184B /* MemberType.swift in Sources */,
 				32410F5C2AB4C9E700A9184B /* SSTAARSView.swift in Sources */,
 				32410FAC2AB6002E00A9184B /* SecurityAccessManager.swift in Sources */,
+				32F3B64F2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift in Sources */,
 				32410FB02AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift in Sources */,
 				32410F562AB4C3F500A9184B /* AlumniServicesView.swift in Sources */,
 				32F3B6492AB62A240075F5D7 /* SecurityAccessDeniedView.swift in Sources */,
 				32410F422AB4B9C900A9184B /* SST_AlumniApp.swift in Sources */,
 				32410FB32AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift in Sources */,
+				32F3B6542AB6AEC40075F5D7 /* ConfettiUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
