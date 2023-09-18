@@ -1,0 +1,37 @@
+//
+//  AttendeeRowView.swift
+//  SST Alumni
+//
+//  Created by Jia Chen Yee on 18/9/23.
+//
+
+import SwiftUI
+
+struct AttendeeRowView: View {
+    
+    @ObservedObject var sstaarsManager: SSTAARSManager
+    
+    var attendee: EventAttendee
+    
+    var body: some View {
+        NavigationLink(value: attendee) {
+            VStack(alignment: .leading) {
+                Text(attendee.name)
+                switch sstaarsManager.checkCheckInStatus(of: attendee) {
+                case .checkedIn:
+                    HStack {
+                        Image(systemName: "checkmark.circle.fill")
+                            .foregroundStyle(.green)
+                        Text("Checked In")
+                    }
+                case .notCheckedIn:
+                    HStack {
+                        Image(systemName: "xmark.circle.fill")
+                        Text("Not Checked In")
+                    }
+                    .foregroundStyle(.secondary)
+                }
+            }
+        }
+    }
+}

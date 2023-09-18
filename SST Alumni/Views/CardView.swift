@@ -11,7 +11,7 @@ struct CardView: View {
     
     var namespace: Namespace.ID
     
-    var user: User
+    var user: UserData
     var body: some View {
         VStack(alignment: .leading) {
             Text(user.name)

@@ -9,10 +9,16 @@ import SwiftUI
 
 struct SSTAARSView: View {
     
+    @StateObject var sstaarsManager = SSTAARSManager()
     @State private var accessCodeAlertPresented = false
+    @State private var isEventConfirmationViewPresented = false
+    
+    @State private var eventCode = ""
+    
+    @State private var path = NavigationPath()
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             List {
                 Section {
                     HStack(alignment: .top) {
@@ -30,8 +36,10 @@ struct SSTAARSView: View {
                 }
                 
                 Section("My Events") {
-                    NavigationLink("SST Homecoming 2024") {
-                        SSTAARSEventView()
+                    ForEach(sstaarsManager.events) { event in
+                        NavigationLink(value: event) {
+                            Text(event.name)
+                        }
                     }
                 }
             }
@@ -45,21 +53,31 @@ struct SSTAARSView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(for: Event.self) { event in
+                SSTAARSEventView(path: $path, sstaarsManager: sstaarsManager, event: event)
+            }
         }
         .alert("SSTAARS Access Code", isPresented: $accessCodeAlertPresented) {
-            TextField("", text: .constant(""))
+            TextField("Access Code", text: $eventCode)
+            
             Button(role: .cancel) {
                 
             } label: {
                 Text("Cancel")
             }
 
-            
             Button("Done") {
-                accessCodeAlertPresented.toggle()
+                isEventConfirmationViewPresented = true
+                Task {
+                    await sstaarsManager.retrieveEvent(for: eventCode)
+                }
             }
         } message: {
-            Text("Enter the event's access code.")
+            Text("Enter the event’s access code.")
+        }
+        .sheet(isPresented: $isEventConfirmationViewPresented) {
+            SSTAARSEventConfirmationView(path: $path, sstaarsManager: sstaarsManager)
+                .presentationDetents([.medium, .large])
         }
     }
 }

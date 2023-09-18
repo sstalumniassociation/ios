@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  UserData.swift
 //  SST Alumni
 //
 //  Created by Jia Chen Yee on 16/9/23.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct User {
+struct UserData {
     /// From Firebase user ID
     var id: String
     
@@ -19,5 +19,5 @@ struct User {
     
     var memberType: MemberType
     
-    static let sample = User(id: "2136245678", name: "Qin Guan", memberId: "OR2022029", graduationYear: "2020", memberType: .exco)
+    static let sample = UserData(id: "2136245678", name: "Qin Guan", memberId: "OR2022029", graduationYear: "2020", memberType: .exco)
 }
