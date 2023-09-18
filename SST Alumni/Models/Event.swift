@@ -37,6 +37,11 @@ struct Event: Codable, Identifiable, Hashable {
         self.badgeImage = try container.decode(URL.self, forKey: .badgeImage)
         self.startDateTime = try container.decode(Date.self, forKey: .startDateTime)
         self.endDateTime = try container.decode(Date.self, forKey: .endDateTime)
-        self.attendees = try container.decodeIfPresent([EventAttendee].self, forKey: .attendees) ?? []
+        self.attendees = try container.decodeIfPresent([EventAttendee].self, forKey: .attendees) ?? [
+            EventAttendee(name: "Qin Guan", userId: "12345", admissionKey: "qinguan"),
+            EventAttendee(name: "Jia Chen", userId: "23456", admissionKey: "jiachen"),
+            EventAttendee(name: "Arash", userId: "34567", admissionKey: "arash"),
+            EventAttendee(name: "Zheng Jie", userId: "45678", admissionKey: "boss")
+        ]
     }
 }

@@ -78,6 +78,7 @@
 		32F3B66E2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B66D2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift */; };
 		32F3B6702AB751540075F5D7 /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B66F2AB751540075F5D7 /* QRCodeScannerView.swift */; };
 		32F3B6742AB816400075F5D7 /* AttendeeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6732AB816400075F5D7 /* AttendeeRowView.swift */; };
+		32F3B6762AB81D9A0075F5D7 /* AttendeeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6752AB81D9A0075F5D7 /* AttendeeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +128,7 @@
 		32F3B66D2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAARSEventConfirmationSuccessView.swift; sourceTree = "<group>"; };
 		32F3B66F2AB751540075F5D7 /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
 		32F3B6732AB816400075F5D7 /* AttendeeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeRowView.swift; sourceTree = "<group>"; };
+		32F3B6752AB81D9A0075F5D7 /* AttendeeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				32410F632AB4D7AB00A9184B /* SSTAARSEventView.swift */,
+				32F3B6752AB81D9A0075F5D7 /* AttendeeDetailView.swift */,
 				32F3B6732AB816400075F5D7 /* AttendeeRowView.swift */,
 				32F3B66F2AB751540075F5D7 /* QRCodeScannerView.swift */,
 			);
@@ -454,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32410FBA2AB60D2C00A9184B /* LocationValidationState.swift in Sources */,
+				32F3B6762AB81D9A0075F5D7 /* AttendeeDetailView.swift in Sources */,
 				32410FB82AB60D1C00A9184B /* BiometricAuthenticationState.swift in Sources */,
 				32410F642AB4D7AB00A9184B /* SSTAARSEventView.swift in Sources */,
 				32410FB52AB60C2A00A9184B /* LocationValidationManager.swift in Sources */,

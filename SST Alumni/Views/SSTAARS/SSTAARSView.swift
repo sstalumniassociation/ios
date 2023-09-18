@@ -54,7 +54,7 @@ struct SSTAARSView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationDestination(for: Event.self) { event in
-                SSTAARSEventView(event: event)
+                SSTAARSEventView(sstaarsManager: sstaarsManager, event: event)
             }
         }
         .alert("SSTAARS Access Code", isPresented: $accessCodeAlertPresented) {

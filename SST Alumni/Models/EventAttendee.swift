@@ -14,6 +14,6 @@ struct EventAttendee: Codable, Hashable, Identifiable {
     }
     
     var name: String
-    var userId: String
+    var userId: String?
     var admissionKey: String
 }

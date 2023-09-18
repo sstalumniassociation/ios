@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SSTAARSEventView: View {
     
+    @ObservedObject var sstaarsManager: SSTAARSManager
+    
     var event: Event
     
     @State private var searchText = ""
@@ -67,7 +69,7 @@ struct SSTAARSEventView: View {
             
             Section("Attendees") {
                 ForEach(event.attendees) { attendee in
-                    AttendeeRowView(attendee: attendee)
+                    AttendeeRowView(sstaarsManager: sstaarsManager, attendee: attendee)
                 }
             }
         }
@@ -84,6 +86,9 @@ struct SSTAARSEventView: View {
                     Label("Scan QR Code", systemImage: "qrcode.viewfinder")
                 }
             }
+        }
+        .navigationDestination(for: EventAttendee.self) { attendee in
+            AttendeeDetailView(sstaarsManager: sstaarsManager, attendee: attendee)
         }
     }
 }

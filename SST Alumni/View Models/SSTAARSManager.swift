@@ -53,6 +53,16 @@ class SSTAARSManager: ObservableObject {
             }
         }
     }
+    
+    func checkCheckInStatus(of attendee: EventAttendee) -> CheckInStatus {
+#warning("Replace this placeholder")
+        return Bool.random() ? .notCheckedIn : .notCheckedIn
+    }
+}
+
+enum CheckInStatus {
+    case checkedIn
+    case notCheckedIn
 }
 
 enum EventImportState {

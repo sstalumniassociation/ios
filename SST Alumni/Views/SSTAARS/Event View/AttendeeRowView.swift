@@ -9,16 +9,20 @@ import SwiftUI
 
 struct AttendeeRowView: View {
     
+    @ObservedObject var sstaarsManager: SSTAARSManager
+    
     var attendee: EventAttendee
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(attendee.name)
-            HStack {
-                Image(systemName: "xmark.circle.fill")
-                Text("Not Checked In")
+        NavigationLink(value: attendee) {
+            VStack(alignment: .leading) {
+                Text(attendee.name)
+                HStack {
+                    Image(systemName: "xmark.circle.fill")
+                    Text("Not Checked In")
+                }
+                .foregroundStyle(.secondary)
             }
-            .foregroundStyle(.secondary)
         }
     }
 }
