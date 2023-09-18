@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct EventAttendee: Codable, Hashable {
+struct EventAttendee: Codable, Hashable, Identifiable {
+    
+    var id: String {
+        admissionKey
+    }
+    
     var name: String
     var userId: String
     var admissionKey: String

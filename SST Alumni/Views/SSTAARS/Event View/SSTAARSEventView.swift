@@ -66,18 +66,10 @@ struct SSTAARSEventView: View {
             
             
             Section("Attendees") {
-                ForEach(0..<400) { item in
-                    VStack(alignment: .leading) {
-                        Text("Jia Chen Yee")
-                        HStack {
-                            Image(systemName: "xmark.circle.fill")
-                            Text("Not Checked In")
-                        }
-                        .foregroundStyle(.secondary)
-                    }
+                ForEach(event.attendees) { attendee in
+                    AttendeeRowView(attendee: attendee)
                 }
             }
-            
         }
         .navigationTitle(event.name)
         .searchable(text: $searchText, prompt: "Search Attendees")

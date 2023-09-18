@@ -14,52 +14,67 @@ struct QRCodeScannerView: View {
     @State private var isExpanding = false
     @State private var isPresented = false
     
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         ZStack {
-            QRCodeScanner()
-            
-            if isPresented {
-                GeometryReader { reader in
-                    let rectanglePath = Rectangle()
-                        .path(in: CGRect(origin: .zero, size: reader.size))
-                        .cgPath
-                    
-                    let squareWidth = min(reader.size.width, reader.size.height) - 64
-                    
-                    let xOffset = (reader.size.width - squareWidth) / 2
-                    
-                    let yOffset = 64.0
-                    
-                    let roundedPath = RoundedRectangle(cornerRadius: squareWidth / 6)
-                        .path(in: CGRect(x: xOffset, y: yOffset,
-                                         width: squareWidth,
-                                         height: squareWidth)).cgPath
-                    
-                    Path(rectanglePath.subtracting(roundedPath))
-                        .fill(.ultraThinMaterial)
-                    
-                    RoundedRectangle(cornerRadius: squareWidth / 6)
-                        .stroke(.blue, style: .init(lineWidth: 3))
-                        .offset(x: xOffset, y: yOffset)
-                        .frame(width: squareWidth, height: squareWidth)
-                    
-                    let animatingSquareWidth = squareWidth * (isExpanding ? 1.5 : 1)
-                    
-                    RoundedRectangle(cornerRadius: animatingSquareWidth / 6)
-                        .stroke(.blue.opacity(0.5), style: .init(lineWidth: 3))
-                        .offset(x: (reader.size.width - animatingSquareWidth) / 2,
-                                y: 64 - (animatingSquareWidth - squareWidth) / 2)
-                        .frame(width: animatingSquareWidth, height: animatingSquareWidth)
-                        .opacity(isExpanding ? 0 : 1)
-                    
-                    Rectangle()
-                        .fill(.blue)
-                        .frame(height: 8)
-                        .offset(y: isScanningDown ? yOffset : yOffset + squareWidth)
+            Group {
+                QRCodeScanner()
+                
+                if isPresented {
+                    GeometryReader { reader in
+                        let rectanglePath = Rectangle()
+                            .path(in: CGRect(origin: .zero, size: reader.size))
+                            .cgPath
+                        
+                        let squareWidth = min(reader.size.width, reader.size.height) - 64
+                        
+                        let xOffset = (reader.size.width - squareWidth) / 2
+                        
+                        let yOffset = 64.0
+                        
+                        let roundedPath = RoundedRectangle(cornerRadius: squareWidth / 6)
+                            .path(in: CGRect(x: xOffset, y: yOffset,
+                                             width: squareWidth,
+                                             height: squareWidth)).cgPath
+                        
+                        Path(rectanglePath.subtracting(roundedPath))
+                            .fill(.ultraThinMaterial)
+                        
+                        RoundedRectangle(cornerRadius: squareWidth / 6)
+                            .stroke(.blue, style: .init(lineWidth: 3))
+                            .offset(x: xOffset, y: yOffset)
+                            .frame(width: squareWidth, height: squareWidth)
+                        
+                        let animatingSquareWidth = squareWidth * (isExpanding ? 1.5 : 1)
+                        
+                        RoundedRectangle(cornerRadius: animatingSquareWidth / 6)
+                            .stroke(.blue.opacity(0.5), style: .init(lineWidth: 3))
+                            .offset(x: (reader.size.width - animatingSquareWidth) / 2,
+                                    y: 64 - (animatingSquareWidth - squareWidth) / 2)
+                            .frame(width: animatingSquareWidth, height: animatingSquareWidth)
+                            .opacity(isExpanding ? 0 : 1)
+                        
+                        Rectangle()
+                            .fill(.blue)
+                            .frame(height: 8)
+                            .offset(y: isScanningDown ? yOffset : yOffset + squareWidth)
+                    }
                 }
             }
+            .ignoresSafeArea()
+            
+            Button {
+                dismiss()
+            } label: {
+                Text("Cancel")
+                    .padding(8)
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.bordered)
+            .frame(maxHeight: .infinity, alignment: .bottom)
+            .padding()
         }
-        .ignoresSafeArea()
         .onAppear {
             Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
                 withAnimation {
