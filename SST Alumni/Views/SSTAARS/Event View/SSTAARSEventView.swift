@@ -16,6 +16,7 @@ struct SSTAARSEventView: View {
     var event: Event
     
     @State private var searchText = ""
+    @State private var isInvalidQRCodeAlertPresented = false
     
     @State private var isQRScannerPresented = false
     
@@ -84,6 +85,8 @@ struct SSTAARSEventView: View {
             QRCodeScannerView { string in
                 if let attendee = event.attendees.first(where: { $0.admissionKey == string }) {
                     path.append(attendee)
+                } else {
+                    isInvalidQRCodeAlertPresented.toggle()
                 }
             }
         }
@@ -95,6 +98,9 @@ struct SSTAARSEventView: View {
                     Label("Scan QR Code", systemImage: "qrcode.viewfinder")
                 }
             }
+        }
+        .alert("Invalid QR Code", isPresented: $isInvalidQRCodeAlertPresented) {
+            Button("OK") {}
         }
         .navigationDestination(for: EventAttendee.self) { attendee in
             AttendeeDetailView(sstaarsManager: sstaarsManager, attendee: attendee)
