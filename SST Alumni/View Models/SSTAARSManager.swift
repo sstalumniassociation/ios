@@ -6,12 +6,24 @@
 //
 
 import Foundation
+import FirebaseDatabase
+import FirebaseDatabaseSwift
 
 class SSTAARSManager: ObservableObject {
     
     @Published var events: [Event] = []
     
+    @Published var observedEvent: Event?
+    
     @Published var eventImportState = EventImportState.none
+    
+    @Published var attendeeCheckInInfo: [String: Double] = [:]
+    
+    var ref: DatabaseReference!
+    
+    init() {
+        ref = Database.database(url: "https://sstaa-app-default-rtdb.asia-southeast1.firebasedatabase.app").reference()
+    }
     
     func retrieveEvent(for id: String) async {
         await MainActor.run {
@@ -54,14 +66,44 @@ class SSTAARSManager: ObservableObject {
         }
     }
     
+    func attachListener(to event: Event) {
+        observedEvent = event
+        
+        ref.child(event.id).observe(.value) { snapshot in
+            guard let value = snapshot.value as? [String: Double] else { return }
+            
+            Task {
+                await MainActor.run {
+                    self.attendeeCheckInInfo = value
+                }
+            }
+        }
+    }
+    
     func checkCheckInStatus(of attendee: EventAttendee) -> CheckInStatus {
-#warning("Replace this placeholder")
-        return Bool.random() ? .notCheckedIn : .notCheckedIn
+        let attendeeAdmissionTime = attendeeCheckInInfo[attendee.admissionKey]
+        
+        if let attendeeAdmissionTime {
+            return .checkedIn(Date(timeIntervalSince1970: attendeeAdmissionTime))
+        } else {
+            return .notCheckedIn
+        }
+    }
+    
+    func update(status: CheckInStatus, of attendee: EventAttendee) {
+        guard let observedEvent else { return }
+        
+        switch status {
+        case .checkedIn(let date):
+            ref.child(observedEvent.id).child(attendee.admissionKey).setValue(date.timeIntervalSince1970)
+        case .notCheckedIn:
+            ref.child(observedEvent.id).child(attendee.admissionKey).removeValue()
+        }
     }
 }
 
 enum CheckInStatus {
-    case checkedIn
+    case checkedIn(Date)
     case notCheckedIn
 }
 

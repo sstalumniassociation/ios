@@ -16,10 +16,15 @@ struct QRCodeScannerView: View {
     
     @Environment(\.dismiss) var dismiss
     
+    var completionHandler: ((String) -> Void)
+    
     var body: some View {
         ZStack {
             Group {
-                QRCodeScanner()
+                QRCodeScanner { string in
+                    dismiss()
+                    completionHandler(string)
+                }
                 
                 if isPresented {
                     GeometryReader { reader in
@@ -92,9 +97,13 @@ struct QRCodeScannerView: View {
 }
 
 struct QRCodeScanner: UIViewControllerRepresentable {
+    
+    var completionHandler: ((String) -> Void)
+    
     func makeUIViewController(context: UIViewControllerRepresentableContext<QRCodeScanner>) -> UIViewController {
         // Create a QR code scanner
         let scannerViewController = QRCodeScannerViewController()
+        scannerViewController.completionHandler = completionHandler
         return scannerViewController
     }
     
@@ -108,6 +117,10 @@ class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObje
     
     var captureSession: AVCaptureSession!
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
+    
+    var completionHandler: ((String) -> Void)!
+    
+    var didOutput = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,7 +161,11 @@ class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObje
         // Check if the QR code contains a valid URL
         if metadataObj.type == AVMetadataObject.ObjectType.qr, 
             let stringValue = metadataObj.stringValue {
-            print(stringValue)
+            
+            if !didOutput {
+                didOutput = true
+                completionHandler(stringValue)
+            }
         }
     }
 }

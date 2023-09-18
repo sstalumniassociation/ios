@@ -17,11 +17,20 @@ struct AttendeeRowView: View {
         NavigationLink(value: attendee) {
             VStack(alignment: .leading) {
                 Text(attendee.name)
-                HStack {
-                    Image(systemName: "xmark.circle.fill")
-                    Text("Not Checked In")
+                switch sstaarsManager.checkCheckInStatus(of: attendee) {
+                case .checkedIn:
+                    HStack {
+                        Image(systemName: "checkmark.circle.fill")
+                            .foregroundStyle(.green)
+                        Text("Checked In")
+                    }
+                case .notCheckedIn:
+                    HStack {
+                        Image(systemName: "xmark.circle.fill")
+                        Text("Not Checked In")
+                    }
+                    .foregroundStyle(.secondary)
                 }
-                .foregroundStyle(.secondary)
             }
         }
     }

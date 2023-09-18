@@ -20,20 +20,27 @@ struct AttendeeDetailView: View {
             }
             
             Section("Status") {
-                HStack {
-                    switch sstaarsManager.checkCheckInStatus(of: attendee) {
-                    case .checkedIn:
+                switch sstaarsManager.checkCheckInStatus(of: attendee) {
+                case .checkedIn(let date):
+                    HStack(alignment: .firstTextBaseline) {
                         Image(systemName: "checkmark.circle.fill")
                             .foregroundStyle(.green)
-                        Text("Checked In")
-                    case .notCheckedIn:
+                        Text("Already checked in at \(date.formatted(date: .omitted, time: .shortened))")
+                    }
+                    
+                    Button("Mark as not checked in", systemImage: "person.fill.xmark") {
+                        sstaarsManager.update(status: .notCheckedIn, of: attendee)
+                    }
+                case .notCheckedIn:
+                    HStack(alignment: .firstTextBaseline) {
                         Image(systemName: "xmark.circle.fill")
                             .foregroundStyle(.red)
-                        Text("Not Checked In")
+                        Text("Not checked in")
                     }
-                }
-                Button("Mark as Checked In") {
                     
+                    Button("Check In", systemImage: "person.fill.checkmark") {
+                        sstaarsManager.update(status: .checkedIn(.now), of: attendee)
+                    }
                 }
             }
         }
