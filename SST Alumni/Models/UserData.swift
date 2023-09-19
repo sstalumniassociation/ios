@@ -8,9 +8,12 @@
 import Foundation
 import SwiftUI
 
-struct UserData: Codable {
+struct UserData: Codable, Identifiable {
+    /// Definitely unique
+    var id: String
+    
     /// From Firebase user ID
-    var id: String?
+    var firebaseId: String?
     
     /// From CloudFlare
     var name: String
@@ -19,5 +22,5 @@ struct UserData: Codable {
     
     var memberType: MemberType
     
-    static let sample = UserData(id: "2136245678", name: "Qin Guan", memberId: "OR2022029", graduationYear: "2020", memberType: .exco)
+    static let sample = UserData(id: "qgdroptable", firebaseId: "2136245678", name: "Qin Guan", memberId: "OR2022029", graduationYear: "2020", memberType: .exco)
 }
