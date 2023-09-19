@@ -13,6 +13,10 @@
 		323D34702AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D346F2AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift */; };
 		323D34722AB89982001E1CBE /* BookVenueOnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34712AB89982001E1CBE /* BookVenueOnboardingItemView.swift */; };
 		323D34752AB954D3001E1CBE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34742AB954D3001E1CBE /* SignUpView.swift */; };
+		323D34772AB95EAA001E1CBE /* SSTEmailRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34762AB95EAA001E1CBE /* SSTEmailRegex.swift */; };
+		323D34792AB9756B001E1CBE /* SignUpCreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34782AB9756B001E1CBE /* SignUpCreateAccountView.swift */; };
+		323D347B2AB97735001E1CBE /* SignUpState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D347A2AB97735001E1CBE /* SignUpState.swift */; };
+		323D347D2AB97743001E1CBE /* SSTEmailValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D347C2AB97743001E1CBE /* SSTEmailValidationState.swift */; };
 		32410F422AB4B9C900A9184B /* SST_AlumniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F412AB4B9C900A9184B /* SST_AlumniApp.swift */; };
 		32410F442AB4B9C900A9184B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F432AB4B9C900A9184B /* ContentView.swift */; };
 		32410F462AB4B9CA00A9184B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32410F452AB4B9CA00A9184B /* Assets.xcassets */; };
@@ -94,6 +98,10 @@
 		323D346F2AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityPassOnboardingItemView.swift; sourceTree = "<group>"; };
 		323D34712AB89982001E1CBE /* BookVenueOnboardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVenueOnboardingItemView.swift; sourceTree = "<group>"; };
 		323D34742AB954D3001E1CBE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		323D34762AB95EAA001E1CBE /* SSTEmailRegex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTEmailRegex.swift; sourceTree = "<group>"; };
+		323D34782AB9756B001E1CBE /* SignUpCreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCreateAccountView.swift; sourceTree = "<group>"; };
+		323D347A2AB97735001E1CBE /* SignUpState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpState.swift; sourceTree = "<group>"; };
+		323D347C2AB97743001E1CBE /* SSTEmailValidationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTEmailValidationState.swift; sourceTree = "<group>"; };
 		32410F3E2AB4B9C900A9184B /* SST Alumni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SST Alumni.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32410F412AB4B9C900A9184B /* SST_AlumniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SST_AlumniApp.swift; sourceTree = "<group>"; };
 		32410F432AB4B9C900A9184B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -192,6 +200,7 @@
 				323D34692AB88BAA001E1CBE /* OnboardingItemView.swift */,
 				323D346B2AB895D9001E1CBE /* WelcomeOnboardingItemView.swift */,
 				323D34742AB954D3001E1CBE /* SignUpView.swift */,
+				323D34782AB9756B001E1CBE /* SignUpCreateAccountView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -273,6 +282,8 @@
 				32410FB92AB60D2C00A9184B /* LocationValidationState.swift */,
 				32410FB72AB60D1C00A9184B /* BiometricAuthenticationState.swift */,
 				32F3B6672AB713730075F5D7 /* Event.swift */,
+				323D347A2AB97735001E1CBE /* SignUpState.swift */,
+				323D347C2AB97743001E1CBE /* SSTEmailValidationState.swift */,
 				32F3B66B2AB74DD30075F5D7 /* EventAttendee.swift */,
 			);
 			path = Models;
@@ -304,6 +315,7 @@
 			children = (
 				32410FB22AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift */,
 				32F3B6652AB711A10075F5D7 /* Constants+URL.swift */,
+				323D34762AB95EAA001E1CBE /* SSTEmailRegex.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -489,10 +501,12 @@
 				323D346C2AB895D9001E1CBE /* WelcomeOnboardingItemView.swift in Sources */,
 				32410FB52AB60C2A00A9184B /* LocationValidationManager.swift in Sources */,
 				32F3B66E2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift in Sources */,
+				323D347B2AB97735001E1CBE /* SignUpState.swift in Sources */,
 				323D34722AB89982001E1CBE /* BookVenueOnboardingItemView.swift in Sources */,
 				32F3B66A2AB717090075F5D7 /* SSTAARSEventConfirmationView.swift in Sources */,
 				32F3B6642AB711910075F5D7 /* SSTAARSManager.swift in Sources */,
 				32410F662AB568D400A9184B /* NewsArticle.swift in Sources */,
+				323D34772AB95EAA001E1CBE /* SSTEmailRegex.swift in Sources */,
 				32F3B64D2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift in Sources */,
 				32410F522AB4BA7E00A9184B /* UserData.swift in Sources */,
 				32410F582AB4C42F00A9184B /* EventsView.swift in Sources */,
@@ -509,6 +523,7 @@
 				32410F5A2AB4C48A00A9184B /* AlumniServicesRowView.swift in Sources */,
 				32F3B6682AB713730075F5D7 /* Event.swift in Sources */,
 				32410F502AB4B9DD00A9184B /* CardView.swift in Sources */,
+				323D347D2AB97743001E1CBE /* SSTEmailValidationState.swift in Sources */,
 				32410F542AB4BFAC00A9184B /* HomeView.swift in Sources */,
 				323D34702AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift in Sources */,
 				32F3B6662AB711A10075F5D7 /* Constants+URL.swift in Sources */,
@@ -516,6 +531,7 @@
 				32F3B6472AB629D80075F5D7 /* SecurityAccessAdmittedView.swift in Sources */,
 				32410FA62AB5EBBA00A9184B /* MemberType.swift in Sources */,
 				32410F5C2AB4C9E700A9184B /* SSTAARSView.swift in Sources */,
+				323D34792AB9756B001E1CBE /* SignUpCreateAccountView.swift in Sources */,
 				32410FAC2AB6002E00A9184B /* SecurityAccessManager.swift in Sources */,
 				32F3B66C2AB74DD30075F5D7 /* EventAttendee.swift in Sources */,
 				32F3B64F2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift in Sources */,

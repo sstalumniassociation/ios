@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-struct UserData {
+struct UserData: Codable {
     /// From Firebase user ID
-    var id: String
+    var id: String?
     
     /// From CloudFlare
     var name: String
