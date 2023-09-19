@@ -13,7 +13,6 @@
 		323D34702AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D346F2AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift */; };
 		323D34722AB89982001E1CBE /* BookVenueOnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34712AB89982001E1CBE /* BookVenueOnboardingItemView.swift */; };
 		323D34772AB95EAA001E1CBE /* SSTEmailRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34762AB95EAA001E1CBE /* SSTEmailRegex.swift */; };
-		323D34792AB9756B001E1CBE /* SignUpCreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34782AB9756B001E1CBE /* SignUpCreateAccountView.swift */; };
 		323D347B2AB97735001E1CBE /* SignUpState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D347A2AB97735001E1CBE /* SignUpState.swift */; };
 		323D347D2AB97743001E1CBE /* SSTEmailValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D347C2AB97743001E1CBE /* SSTEmailValidationState.swift */; };
 		323D34802AB97EA1001E1CBE /* ScreenCaptureRedaction in Frameworks */ = {isa = PBXBuildFile; productRef = 323D347F2AB97EA1001E1CBE /* ScreenCaptureRedaction */; };
@@ -103,7 +102,6 @@
 		323D346F2AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityPassOnboardingItemView.swift; sourceTree = "<group>"; };
 		323D34712AB89982001E1CBE /* BookVenueOnboardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVenueOnboardingItemView.swift; sourceTree = "<group>"; };
 		323D34762AB95EAA001E1CBE /* SSTEmailRegex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTEmailRegex.swift; sourceTree = "<group>"; };
-		323D34782AB9756B001E1CBE /* SignUpCreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCreateAccountView.swift; sourceTree = "<group>"; };
 		323D347A2AB97735001E1CBE /* SignUpState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpState.swift; sourceTree = "<group>"; };
 		323D347C2AB97743001E1CBE /* SSTEmailValidationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTEmailValidationState.swift; sourceTree = "<group>"; };
 		323D34812AB991BB001E1CBE /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 				32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */,
 				32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */,
 				32ADD6822ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift */,
-				323D34782AB9756B001E1CBE /* SignUpCreateAccountView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -550,7 +547,6 @@
 				32F3B6472AB629D80075F5D7 /* SecurityAccessAdmittedView.swift in Sources */,
 				32410FA62AB5EBBA00A9184B /* MemberType.swift in Sources */,
 				32410F5C2AB4C9E700A9184B /* SSTAARSView.swift in Sources */,
-				323D34792AB9756B001E1CBE /* SignUpCreateAccountView.swift in Sources */,
 				32410FAC2AB6002E00A9184B /* SecurityAccessManager.swift in Sources */,
 				32F3B66C2AB74DD30075F5D7 /* EventAttendee.swift in Sources */,
 				32F3B64F2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift in Sources */,
