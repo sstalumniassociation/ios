@@ -17,6 +17,7 @@
 		323D34792AB9756B001E1CBE /* SignUpCreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34782AB9756B001E1CBE /* SignUpCreateAccountView.swift */; };
 		323D347B2AB97735001E1CBE /* SignUpState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D347A2AB97735001E1CBE /* SignUpState.swift */; };
 		323D347D2AB97743001E1CBE /* SSTEmailValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D347C2AB97743001E1CBE /* SSTEmailValidationState.swift */; };
+		323D34802AB97EA1001E1CBE /* ScreenCaptureRedaction in Frameworks */ = {isa = PBXBuildFile; productRef = 323D347F2AB97EA1001E1CBE /* ScreenCaptureRedaction */; };
 		32410F422AB4B9C900A9184B /* SST_AlumniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F412AB4B9C900A9184B /* SST_AlumniApp.swift */; };
 		32410F442AB4B9C900A9184B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F432AB4B9C900A9184B /* ContentView.swift */; };
 		32410F462AB4B9CA00A9184B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32410F452AB4B9CA00A9184B /* Assets.xcassets */; };
@@ -73,7 +74,6 @@
 		32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */; };
 		32F3B6472AB629D80075F5D7 /* SecurityAccessAdmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */; };
 		32F3B6492AB62A240075F5D7 /* SecurityAccessDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */; };
-		32F3B64D2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B64C2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift */; };
 		32F3B64F2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B64E2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift */; };
 		32F3B6542AB6AEC40075F5D7 /* ConfettiUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6522AB6AEC40075F5D7 /* ConfettiUIView.swift */; };
 		32F3B6552AB6AEC40075F5D7 /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6532AB6AEC40075F5D7 /* ConfettiView.swift */; };
@@ -132,7 +132,6 @@
 		32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessStatusView.swift; sourceTree = "<group>"; };
 		32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessAdmittedView.swift; sourceTree = "<group>"; };
 		32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessDeniedView.swift; sourceTree = "<group>"; };
-		32F3B64C2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCaptureRedactionView.swift; sourceTree = "<group>"; };
 		32F3B64E2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAAAnimatedLogo.swift; sourceTree = "<group>"; };
 		32F3B6522AB6AEC40075F5D7 /* ConfettiUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfettiUIView.swift; sourceTree = "<group>"; };
 		32F3B6532AB6AEC40075F5D7 /* ConfettiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
@@ -166,6 +165,7 @@
 				32410F962AB58B0300A9184B /* FirebaseMLModelDownloader in Frameworks */,
 				32410F8A2AB58B0300A9184B /* FirebaseFirestoreSwift in Frameworks */,
 				32410F762AB58B0300A9184B /* FirebaseAppCheck in Frameworks */,
+				323D34802AB97EA1001E1CBE /* ScreenCaptureRedaction in Frameworks */,
 				32410F742AB58B0300A9184B /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				32410F7A2AB58B0300A9184B /* FirebaseAuth in Frameworks */,
 				32410F7E2AB58B0300A9184B /* FirebaseCrashlytics in Frameworks */,
@@ -336,7 +336,6 @@
 				32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */,
 				32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */,
 				32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */,
-				32F3B64C2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift */,
 			);
 			path = SecurityAccessStatusView;
 			sourceTree = "<group>";
@@ -434,6 +433,7 @@
 				32410F9F2AB58B0300A9184B /* FirebaseStorage */,
 				32410FA12AB58B0300A9184B /* FirebaseStorageCombine-Community */,
 				32F3B65C2AB6B6030075F5D7 /* Alamofire */,
+				323D347F2AB97EA1001E1CBE /* ScreenCaptureRedaction */,
 			);
 			productName = "SST Alumni";
 			productReference = 32410F3E2AB4B9C900A9184B /* SST Alumni.app */;
@@ -466,6 +466,7 @@
 			packageReferences = (
 				32410F6C2AB58B0300A9184B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				32F3B65B2AB6B6030075F5D7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				323D347E2AB97EA1001E1CBE /* XCRemoteSwiftPackageReference "ScreenCaptureRedaction" */,
 			);
 			productRefGroup = 32410F3F2AB4B9C900A9184B /* Products */;
 			projectDirPath = "";
@@ -507,7 +508,6 @@
 				32F3B6642AB711910075F5D7 /* SSTAARSManager.swift in Sources */,
 				32410F662AB568D400A9184B /* NewsArticle.swift in Sources */,
 				323D34772AB95EAA001E1CBE /* SSTEmailRegex.swift in Sources */,
-				32F3B64D2AB63EC70075F5D7 /* ScreenCaptureRedactionView.swift in Sources */,
 				32410F522AB4BA7E00A9184B /* UserData.swift in Sources */,
 				32410F582AB4C42F00A9184B /* EventsView.swift in Sources */,
 				32410F602AB4D0F200A9184B /* CardExpandedView.swift in Sources */,
@@ -764,6 +764,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		323D347E2AB97EA1001E1CBE /* XCRemoteSwiftPackageReference "ScreenCaptureRedaction" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jiachenyee/ScreenCaptureRedaction";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		32410F6C2AB58B0300A9184B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -783,6 +791,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		323D347F2AB97EA1001E1CBE /* ScreenCaptureRedaction */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 323D347E2AB97EA1001E1CBE /* XCRemoteSwiftPackageReference "ScreenCaptureRedaction" */;
+			productName = ScreenCaptureRedaction;
+		};
 		32410F6D2AB58B0300A9184B /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 32410F6C2AB58B0300A9184B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ScreenCaptureRedaction
 
 struct SecurityAccessAdmittedView: View {
     
@@ -14,18 +15,17 @@ struct SecurityAccessAdmittedView: View {
     @Environment(\.scenePhase) private var scenePhase
     
     var body: some View {
-        ScreenCaptureRedactionView {
-            VStack {
-                Text(securityAccessManager.authorizationRequestDateString)
-                    .font(.system(size: 40, weight: .heavy))
-                
-                Text(securityAccessManager.authorizationRequestTimeString)
-                    .font(.system(size: 40, weight: .semibold))
-                
-                Text("Alumnus")
-                    .font(.system(size: 32, weight: .regular))
-            }
+        VStack {
+            Text(securityAccessManager.authorizationRequestDateString)
+                .font(.system(size: 40, weight: .heavy))
+            
+            Text(securityAccessManager.authorizationRequestTimeString)
+                .font(.system(size: 40, weight: .semibold))
+            
+            Text("Alumnus")
+                .font(.system(size: 32, weight: .regular))
         }
+        .redactWhenScreenRecorded()
         .foregroundStyle(.black)
         .padding()
         .onAppear {
