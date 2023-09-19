@@ -78,6 +78,7 @@ class UserManager: ObservableObject {
     
     func signOut() {
         do {
+            user = nil
             try auth.signOut()
         } catch {
             print(error.localizedDescription)

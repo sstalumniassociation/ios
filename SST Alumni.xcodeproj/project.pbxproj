@@ -18,6 +18,8 @@
 		323D347B2AB97735001E1CBE /* SignUpState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D347A2AB97735001E1CBE /* SignUpState.swift */; };
 		323D347D2AB97743001E1CBE /* SSTEmailValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D347C2AB97743001E1CBE /* SSTEmailValidationState.swift */; };
 		323D34802AB97EA1001E1CBE /* ScreenCaptureRedaction in Frameworks */ = {isa = PBXBuildFile; productRef = 323D347F2AB97EA1001E1CBE /* ScreenCaptureRedaction */; };
+		323D34822AB991BB001E1CBE /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34812AB991BB001E1CBE /* UserProfileView.swift */; };
+		323D34842AB99272001E1CBE /* AcknowledgementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34832AB99272001E1CBE /* AcknowledgementsView.swift */; };
 		32410F422AB4B9C900A9184B /* SST_AlumniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F412AB4B9C900A9184B /* SST_AlumniApp.swift */; };
 		32410F442AB4B9C900A9184B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F432AB4B9C900A9184B /* ContentView.swift */; };
 		32410F462AB4B9CA00A9184B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32410F452AB4B9CA00A9184B /* Assets.xcassets */; };
@@ -102,6 +104,8 @@
 		323D34782AB9756B001E1CBE /* SignUpCreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCreateAccountView.swift; sourceTree = "<group>"; };
 		323D347A2AB97735001E1CBE /* SignUpState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpState.swift; sourceTree = "<group>"; };
 		323D347C2AB97743001E1CBE /* SSTEmailValidationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTEmailValidationState.swift; sourceTree = "<group>"; };
+		323D34812AB991BB001E1CBE /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		323D34832AB99272001E1CBE /* AcknowledgementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsView.swift; sourceTree = "<group>"; };
 		32410F3E2AB4B9C900A9184B /* SST Alumni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SST Alumni.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32410F412AB4B9C900A9184B /* SST_AlumniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SST_AlumniApp.swift; sourceTree = "<group>"; };
 		32410F432AB4B9C900A9184B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -254,6 +258,8 @@
 				323D34732AB89AB1001E1CBE /* Onboarding */,
 				32410FA72AB5F41800A9184B /* Home */,
 				32410F552AB4C3F500A9184B /* AlumniServicesView.swift */,
+				323D34812AB991BB001E1CBE /* UserProfileView.swift */,
+				323D34832AB99272001E1CBE /* AcknowledgementsView.swift */,
 				32410F592AB4C48A00A9184B /* AlumniServicesRowView.swift */,
 				32410F572AB4C42F00A9184B /* EventsView.swift */,
 				32410F4F2AB4B9DD00A9184B /* CardView.swift */,
@@ -502,9 +508,11 @@
 				323D346C2AB895D9001E1CBE /* WelcomeOnboardingItemView.swift in Sources */,
 				32410FB52AB60C2A00A9184B /* LocationValidationManager.swift in Sources */,
 				32F3B66E2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift in Sources */,
+				323D34842AB99272001E1CBE /* AcknowledgementsView.swift in Sources */,
 				323D347B2AB97735001E1CBE /* SignUpState.swift in Sources */,
 				323D34722AB89982001E1CBE /* BookVenueOnboardingItemView.swift in Sources */,
 				32F3B66A2AB717090075F5D7 /* SSTAARSEventConfirmationView.swift in Sources */,
+				323D34822AB991BB001E1CBE /* UserProfileView.swift in Sources */,
 				32F3B6642AB711910075F5D7 /* SSTAARSManager.swift in Sources */,
 				32410F662AB568D400A9184B /* NewsArticle.swift in Sources */,
 				323D34772AB95EAA001E1CBE /* SSTEmailRegex.swift in Sources */,
