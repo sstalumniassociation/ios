@@ -18,7 +18,7 @@ struct MegaphoneOnboardingItemView: View {
                            description: "Be the first to find out about SST alumni events.") {
             Image(systemName: "megaphone.fill")
                 .foregroundStyle(.blue)
-                .rotationEffect(isAnimated ? .degrees(-20) : .degrees(0))
+                .rotationEffect(isAnimated ? .degrees(-20) : .degrees(0), anchor: .bottomLeading)
                 .scaleEffect(isAnimated ? 1 : 0.8, anchor: .bottomLeading)
         }
         .tag(OnboardingState.announcements)
