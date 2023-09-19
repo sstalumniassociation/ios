@@ -10,7 +10,7 @@ import RegexBuilder
 
 func extractInformation(fromSSTEmail sstEmail: String) -> SSTEmailValidationState {
     
-    let nameReference = Reference(Substring.self)
+    let nameReference = Reference(String.self)
     let entryYearReference = Reference(Int?.self)
     
     let sstEmailRegex = Regex {
@@ -21,6 +21,8 @@ func extractInformation(fromSSTEmail sstEmail: String) -> SSTEmailValidationStat
                 "_"
             }
             OneOrMore(.word)
+        } transform: { name in
+            name.replacingOccurrences(of: "_", with: " ").capitalized
         }
         
         "@"
@@ -47,7 +49,7 @@ func extractInformation(fromSSTEmail sstEmail: String) -> SSTEmailValidationStat
     }
     
     if let result = try? sstEmailRegex.wholeMatch(in: sstEmail) {
-        let name = String(result[nameReference])
+        let name = result[nameReference]
         
         if let entryYear = result[entryYearReference] {
             return .student(name, entryYear)
