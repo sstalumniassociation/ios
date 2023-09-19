@@ -207,9 +207,7 @@
 				323D346D2AB8971F001E1CBE /* MegaphoneOnboardingItemView.swift */,
 				323D34692AB88BAA001E1CBE /* OnboardingItemView.swift */,
 				323D346B2AB895D9001E1CBE /* WelcomeOnboardingItemView.swift */,
-				32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */,
-				32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */,
-				32ADD6822ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift */,
+				32ADD6842ABA28EA009E947A /* Authentication */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -340,6 +338,16 @@
 				32410FB42AB60C2A00A9184B /* LocationValidationManager.swift */,
 			);
 			path = "Security Access Manager";
+			sourceTree = "<group>";
+		};
+		32ADD6842ABA28EA009E947A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */,
+				32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */,
+				32ADD6822ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		32F3B64A2AB62A600075F5D7 /* SecurityAccessStatusView */ = {
