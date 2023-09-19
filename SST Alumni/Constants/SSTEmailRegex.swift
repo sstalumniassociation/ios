@@ -8,6 +8,38 @@
 import Foundation
 import RegexBuilder
 
+func isValid(email: String) -> Bool {
+    let emailRegex = Regex {
+        OneOrMore {
+            CharacterClass(
+                .anyOf("._%+-"),
+                .digit,
+                .generalCategory(.uppercaseLetter),
+                .generalCategory(.lowercaseLetter)
+            )
+        }
+        "@"
+        OneOrMore {
+            CharacterClass(
+                .anyOf(".-"),
+                .digit,
+                .generalCategory(.uppercaseLetter),
+                .generalCategory(.lowercaseLetter)
+            )
+        }
+        "."
+        Repeat(2...64) {
+            CharacterClass(
+                .generalCategory(.uppercaseLetter),
+                .generalCategory(.lowercaseLetter)
+                
+            )
+        }
+    }
+    
+    return (try? emailRegex.wholeMatch(in: email)) != nil
+}
+
 func extractInformation(fromSSTEmail sstEmail: String) -> SSTEmailValidationState {
     
     let nameReference = Reference(String.self)

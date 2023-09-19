@@ -12,7 +12,6 @@
 		323D346E2AB8971F001E1CBE /* MegaphoneOnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D346D2AB8971F001E1CBE /* MegaphoneOnboardingItemView.swift */; };
 		323D34702AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D346F2AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift */; };
 		323D34722AB89982001E1CBE /* BookVenueOnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34712AB89982001E1CBE /* BookVenueOnboardingItemView.swift */; };
-		323D34752AB954D3001E1CBE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34742AB954D3001E1CBE /* SignUpView.swift */; };
 		323D34772AB95EAA001E1CBE /* SSTEmailRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34762AB95EAA001E1CBE /* SSTEmailRegex.swift */; };
 		323D34792AB9756B001E1CBE /* SignUpCreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34782AB9756B001E1CBE /* SignUpCreateAccountView.swift */; };
 		323D347B2AB97735001E1CBE /* SignUpState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D347A2AB97735001E1CBE /* SignUpState.swift */; };
@@ -76,6 +75,7 @@
 		32ADD67D2AB9FC00009E947A /* AuthenticationEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */; };
 		32ADD67F2ABA0C1F009E947A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */; };
 		32ADD6812ABA0D45009E947A /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6802ABA0D45009E947A /* AuthenticationState.swift */; };
+		32ADD6832ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6822ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift */; };
 		32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */; };
 		32F3B6472AB629D80075F5D7 /* SecurityAccessAdmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */; };
 		32F3B6492AB62A240075F5D7 /* SecurityAccessDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */; };
@@ -102,7 +102,6 @@
 		323D346D2AB8971F001E1CBE /* MegaphoneOnboardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaphoneOnboardingItemView.swift; sourceTree = "<group>"; };
 		323D346F2AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityPassOnboardingItemView.swift; sourceTree = "<group>"; };
 		323D34712AB89982001E1CBE /* BookVenueOnboardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVenueOnboardingItemView.swift; sourceTree = "<group>"; };
-		323D34742AB954D3001E1CBE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		323D34762AB95EAA001E1CBE /* SSTEmailRegex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTEmailRegex.swift; sourceTree = "<group>"; };
 		323D34782AB9756B001E1CBE /* SignUpCreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCreateAccountView.swift; sourceTree = "<group>"; };
 		323D347A2AB97735001E1CBE /* SignUpState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpState.swift; sourceTree = "<group>"; };
@@ -139,6 +138,7 @@
 		32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEmailView.swift; sourceTree = "<group>"; };
 		32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		32ADD6802ABA0D45009E947A /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
+		32ADD6822ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRegisterPasswordView.swift; sourceTree = "<group>"; };
 		32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessStatusView.swift; sourceTree = "<group>"; };
 		32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessAdmittedView.swift; sourceTree = "<group>"; };
 		32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessDeniedView.swift; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 				323D346B2AB895D9001E1CBE /* WelcomeOnboardingItemView.swift */,
 				32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */,
 				32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */,
-				323D34742AB954D3001E1CBE /* SignUpView.swift */,
+				32ADD6822ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift */,
 				323D34782AB9756B001E1CBE /* SignUpCreateAccountView.swift */,
 			);
 			path = Onboarding;
@@ -532,6 +532,7 @@
 				32410F442AB4B9C900A9184B /* ContentView.swift in Sources */,
 				32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */,
 				32410FA92AB5F51B00A9184B /* UserManager.swift in Sources */,
+				32ADD6832ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift in Sources */,
 				32F3B6612AB6BD530075F5D7 /* OnboardingView.swift in Sources */,
 				32F3B6702AB751540075F5D7 /* QRCodeScannerView.swift in Sources */,
 				32F3B65A2AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift in Sources */,
@@ -557,7 +558,6 @@
 				32ADD67D2AB9FC00009E947A /* AuthenticationEmailView.swift in Sources */,
 				32410F562AB4C3F500A9184B /* AlumniServicesView.swift in Sources */,
 				323D346A2AB88BAA001E1CBE /* OnboardingItemView.swift in Sources */,
-				323D34752AB954D3001E1CBE /* SignUpView.swift in Sources */,
 				32F3B6492AB62A240075F5D7 /* SecurityAccessDeniedView.swift in Sources */,
 				32ADD6812ABA0D45009E947A /* AuthenticationState.swift in Sources */,
 				32410F422AB4B9C900A9184B /* SST_AlumniApp.swift in Sources */,

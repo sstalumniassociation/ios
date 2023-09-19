@@ -19,7 +19,7 @@ struct AuthenticationView: View {
             case .logInPassword:
                 Text("Login")
             case .registerPassword:
-                Text("Register")
+                AuthenticationRegisterPasswordView()
             case .verifyEmailAddress:
                 EmptyView()
             case .forgotPassword:

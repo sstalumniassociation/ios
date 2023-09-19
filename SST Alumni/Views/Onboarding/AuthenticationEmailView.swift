@@ -16,45 +16,54 @@ struct AuthenticationEmailView: View {
     @State private var email = ""
     
     var body: some View {
-        VStack {
-            Spacer()
-            Image(systemName: "envelope.fill")
-                .foregroundStyle(.blue)
-                .frame(height: 96)
-                .font(.system(size: 64))
-            Text("What’s your email?")
-                .font(.title)
-                .fontWeight(.bold)
-                .padding()
-            
-            HStack {
-                TextField("Email Address", text: $email)
-                    .focused($isFocused)
-                    .submitLabel(.done)
-                    .onSubmit {
-                        withAnimation {
-                            authenticationState = .lookingUpEmail(email)
-                        }
+        ScrollView {
+            VStack {
+                Image(systemName: "envelope.fill")
+                    .foregroundStyle(.blue)
+                    .frame(height: 96)
+                    .font(.system(size: 64))
+                    .padding(.top)
+                Text("What’s your email?")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding()
+                
+                HStack {
+                    TextField("Email Address", text: $email)
+                        .focused($isFocused)
+                        .keyboardType(.emailAddress)
+                        .textContentType(.emailAddress)
+                        .textInputAutocapitalization(.never)
+                        .disabled(authenticationState.isLookingUpEmail)
+                    
+                    if authenticationState.isLookingUpEmail {
+                        ProgressView()
                     }
-                    .keyboardType(.emailAddress)
-                    .textContentType(.emailAddress)
-                    .textInputAutocapitalization(.never)
-                    .disabled(authenticationState.isLookingUpEmail)
-                
-                if authenticationState.isLookingUpEmail {
-                    ProgressView()
                 }
-            }
-            .padding(16)
-            .background(.thinMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: 8))
-            Text("Use the email address you registered with SST Alumni Association.")
-                .multilineTextAlignment(.center)
-                .foregroundStyle(.secondary)
-            Spacer()
-            
-            Button("Not registered with SST Alumni Association?") {
+                .padding(16)
+                .background(.thinMaterial)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
                 
+                Button {
+                    withAnimation {
+                        authenticationState = .lookingUpEmail(email)
+                    }
+                } label: {
+                    Text("Next")
+                        .padding(8)
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+                .disabled(!isValid(email: email))
+                
+                Text("Use the email address you registered with SST Alumni Association.")
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(.secondary)
+                Spacer()
+                
+                Button("Not registered with SST Alumni Association?") {
+                    
+                }
             }
         }
         .padding()
