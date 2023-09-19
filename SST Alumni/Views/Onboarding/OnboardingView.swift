@@ -12,6 +12,7 @@ struct OnboardingView: View {
     @EnvironmentObject var userManager: UserManager
     
     @State private var onboardingSelection = OnboardingState.welcome
+    @State private var isSignUpPresented = false
     
     var body: some View {
         ZStack {
@@ -66,7 +67,7 @@ struct OnboardingView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                     
                     Button {
-                        
+                        isSignUpPresented.toggle()
                     } label: {
                         Text("Sign Up")
                             .frame(maxWidth: .infinity)
@@ -76,6 +77,9 @@ struct OnboardingView: View {
                 }
                 .padding()
             }
+        }
+        .sheet(isPresented: $isSignUpPresented) {
+            SignUpView()
         }
     }
 }
