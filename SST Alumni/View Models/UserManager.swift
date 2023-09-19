@@ -7,12 +7,22 @@
 
 import Foundation
 import FirebaseAuth
+import Alamofire
 
 class UserManager: ObservableObject {
     @Published var user: UserData?
     var firebaseUser: User?
     
-    @Published var signUpState = SignUpState.creatingAccount
+    @Published var authenticationState = AuthenticationState.emailInput {
+        didSet {
+            print(authenticationState)
+            switch authenticationState {
+            case .lookingUpEmail(let email):
+                validateEmail(email)
+            default: break
+            }
+        }
+    }
     
     let auth: Auth
     
@@ -26,32 +36,75 @@ class UserManager: ObservableObject {
         }
     }
     
-    func beginSignUp(email: String, password: String) async {
-        await MainActor.run {
-            signUpState = .processing
-        }
-        
-        do {
-            if let discoveredUser = try await checkIfDatabaseContainsEmail(email) {
-                try await createUserAndVerifyEmail(email: email, password: password)
-            } else {
-                switch extractInformation(fromSSTEmail: email) {
-                case .staff(let staffName):
-                    try await createUserAndVerifyEmail(email: email, password: password)
-                    // Create a new user in the database
-                case .student(let studentName):
-                    try await createUserAndVerifyEmail(email: email, password: password)
-                    // Create a new user in the database
-                case .invalid:
-                    await MainActor.run {
-                        signUpState = .additionalVerificationRequired
+    func validateEmail(_ email: String) {
+        Task {
+            let authState: AuthenticationState
+            
+            var request = URLRequest(url: .cfServer.appendingPathComponent("auth/verify/"))
+            request.httpMethod = "POST"
+            
+            let dict = ["email": email]
+            let dataToSend = try JSONSerialization.data(withJSONObject: dict, options: [.fragmentsAllowed])
+            
+            request.httpBody = dataToSend
+            
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            let (data, response) = try await URLSession.shared.data(for: request)
+            guard let response = response as? HTTPURLResponse else { return }
+            
+            switch response.statusCode {
+            case 400...499:
+                authState = .unregistered
+            case 500...599: 
+                authState = .error(.ours, "Internal Server Error")
+            case 200...299:
+                if let jsonData = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+                   let cloudflareUserId = jsonData["id"] as? String,
+                   let isLinked = jsonData["linked"] as? Bool {
+                    if isLinked {
+                        authState = .logInEmail
+                    } else {
+                        authState = .registerEmail(cloudflareUserId)
                     }
-                    // Require additional verification
+                } else {
+                    authState = .error(.ours, "Unable to decode data.")
                 }
+            default: authState = .error(.ours, "Something has gone horribly wrong.\nPlease contact us.")
             }
-        } catch {
-            print(error.localizedDescription)
+            
+            await MainActor.run {
+                authenticationState = authState
+            }
         }
+    }
+    
+    func beginSignUp(email: String, password: String) async {
+//        await MainActor.run {
+//            signUpState = .processing
+//        }
+//        
+//        do {
+//            if let discoveredUser = try await checkIfDatabaseContainsEmail(email) {
+//                try await createUserAndVerifyEmail(email: email, password: password)
+//            } else {
+//                switch extractInformation(fromSSTEmail: email) {
+//                case .staff(let staffName):
+//                    try await createUserAndVerifyEmail(email: email, password: password)
+//                    // Create a new user in the database
+//                case .student(let studentName):
+//                    try await createUserAndVerifyEmail(email: email, password: password)
+//                    // Create a new user in the database
+//                case .invalid:
+//                    await MainActor.run {
+//                        signUpState = .additionalVerificationRequired
+//                    }
+//                    // Require additional verification
+//                }
+//            }
+//        } catch {
+//            print(error.localizedDescription)
+//        }
     }
     
     func createUserAndVerifyEmail(email: String, password: String) async throws {

@@ -12,7 +12,7 @@ struct OnboardingView: View {
     @EnvironmentObject var userManager: UserManager
     
     @State private var onboardingSelection = OnboardingState.welcome
-    @State private var isSignUpPresented = false
+    @State private var isAuthenticationPresented = false
     
     var body: some View {
         ZStack {
@@ -54,32 +54,19 @@ struct OnboardingView: View {
                 }
                 .tabViewStyle(.page)
                 
-                HStack {
-                    Button {
-                        userManager.signIn()
-                    } label: {
-                        Text("Sign In")
-                            .frame(maxWidth: .infinity)
-                            .padding(8)
-                    }
-                    .buttonStyle(.bordered)
-                    .background(.background)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
-                    
-                    Button {
-                        isSignUpPresented.toggle()
-                    } label: {
-                        Text("Sign Up")
-                            .frame(maxWidth: .infinity)
-                            .padding(8)
-                    }
-                    .buttonStyle(.borderedProminent)
+                Button {
+                    isAuthenticationPresented.toggle()
+                } label: {
+                    Text("Get Started")
+                        .frame(maxWidth: .infinity)
+                        .padding(8)
                 }
+                .buttonStyle(.borderedProminent)
                 .padding()
             }
         }
-        .sheet(isPresented: $isSignUpPresented) {
-            SignUpView()
+        .sheet(isPresented: $isAuthenticationPresented) {
+            AuthenticationView()
         }
     }
 }
