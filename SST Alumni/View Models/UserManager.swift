@@ -38,15 +38,15 @@ class UserManager: ObservableObject {
                 switch extractInformation(fromSSTEmail: email) {
                 case .staff(let staffName):
                     try await createUserAndVerifyEmail(email: email, password: password)
-                    break
+                    // Create a new user in the database
                 case .student(let studentName):
                     try await createUserAndVerifyEmail(email: email, password: password)
-                    break
+                    // Create a new user in the database
                 case .invalid:
                     await MainActor.run {
                         signUpState = .additionalVerificationRequired
                     }
-                    break
+                    // Require additional verification
                 }
             }
         } catch {
@@ -63,7 +63,11 @@ class UserManager: ObservableObject {
         // Send a POST request
         var request = URLRequest(url: .cfServer.appendingPathComponent("verifyuser"))
         request.httpMethod = "POST"
-        request.httpBody = email.data(using: .utf8)
+        
+        let dict = ["email": email]
+        let dataToSend = try JSONSerialization.data(withJSONObject: dict, options: [])
+        
+        request.httpBody = dataToSend
         
         let (data, response) = try await URLSession.shared.data(for: request)
         guard let response = response as? HTTPURLResponse else { return nil }

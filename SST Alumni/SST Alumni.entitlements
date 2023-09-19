@@ -5,6 +5,8 @@
 	<key>com.apple.developer.associated-domains</key>
 	<array>
 		<string>applinks:sstaa-app.firebaseapp.com</string>
+		<string>webcredentials:sstaa.hotchocolate.app</string>
+		<string>applinks:sstaa.hotchocolate.app</string>
 	</array>
 	<key>com.apple.developer.devicecheck.appattest-environment</key>
 	<string>development</string>
