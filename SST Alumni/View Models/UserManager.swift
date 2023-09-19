@@ -63,9 +63,9 @@ class UserManager: ObservableObject {
                    let cloudflareUserId = jsonData["id"] as? String,
                    let isLinked = jsonData["linked"] as? Bool {
                     if isLinked {
-                        authState = .logInEmail
+                        authState = .logInPassword
                     } else {
-                        authState = .registerEmail(cloudflareUserId)
+                        authState = .registerPassword(cloudflareUserId)
                     }
                 } else {
                     authState = .error(.ours, "Unable to decode data.")

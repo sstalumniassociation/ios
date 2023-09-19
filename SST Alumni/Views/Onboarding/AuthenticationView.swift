@@ -16,9 +16,9 @@ struct AuthenticationView: View {
             switch userManager.authenticationState {
             case .emailInput, .lookingUpEmail:
                 AuthenticationEmailView(authenticationState: $userManager.authenticationState)
-            case .logInEmail:
+            case .logInPassword:
                 Text("Login")
-            case .registerEmail:
+            case .registerPassword:
                 Text("Register")
             case .verifyEmailAddress:
                 EmptyView()

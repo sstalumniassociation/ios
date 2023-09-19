@@ -12,10 +12,10 @@ enum AuthenticationState {
     
     case lookingUpEmail(String)
     
-    case logInEmail
+    case logInPassword
     
     // Parameter: Cloudflare ID
-    case registerEmail(String)
+    case registerPassword(String)
     case verifyEmailAddress
     
     case forgotPassword
