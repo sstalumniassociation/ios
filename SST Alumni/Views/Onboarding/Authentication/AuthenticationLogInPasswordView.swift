@@ -61,7 +61,7 @@ struct AuthenticationLogInPasswordView: View {
                 .disabled(!isValid(email: email))
                 
                 Button("Forgot Password?") {
-                    
+                    authenticationState = .forgotPassword(email)
                 }
                 Spacer()
             }

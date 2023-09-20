@@ -29,7 +29,7 @@ struct AuthenticationView: View {
                                                 email: email,
                                                 authenticationState: $userManager.authenticationState)
             case .registeringUser:
-                EmptyView()
+                AuthenticationLoadingView(systemName: "person.fill.checkmark", title: "Registering…")
             case .verifyEmailAddress:
                 EmptyView()
             case .forgotPassword:
@@ -39,7 +39,7 @@ struct AuthenticationView: View {
             case .error(let message):
                 AuthenticationErrorView(message: message)
             case .loggingIn:
-                AuthenticationLoggingInView()
+                AuthenticationLoadingView(systemName: "person.crop.circle", title: "Logging In…")
             case .authenticated:
                 EmptyView()
             }

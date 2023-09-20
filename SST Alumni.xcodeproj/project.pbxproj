@@ -80,7 +80,7 @@
 		32ADD68A2ABACF4B009E947A /* AuthErrorHandle+FirebaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6892ABACF4B009E947A /* AuthErrorHandle+FirebaseErrors.swift */; };
 		32ADD68C2ABAD238009E947A /* AuthenticationErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD68B2ABAD238009E947A /* AuthenticationErrorView.swift */; };
 		32ADD68E2ABADA9D009E947A /* ErrorFlameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD68D2ABADA9D009E947A /* ErrorFlameView.swift */; };
-		32ADD6902ABB5E5D009E947A /* AuthenticationLoggingInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD68F2ABB5E5D009E947A /* AuthenticationLoggingInView.swift */; };
+		32ADD6902ABB5E5D009E947A /* AuthenticationLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD68F2ABB5E5D009E947A /* AuthenticationLoadingView.swift */; };
 		32ADD6922ABB5EFE009E947A /* AuthenticationUnregisteredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6912ABB5EFE009E947A /* AuthenticationUnregisteredView.swift */; };
 		32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */; };
 		32F3B6472AB629D80075F5D7 /* SecurityAccessAdmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */; };
@@ -149,7 +149,7 @@
 		32ADD6892ABACF4B009E947A /* AuthErrorHandle+FirebaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorHandle+FirebaseErrors.swift"; sourceTree = "<group>"; };
 		32ADD68B2ABAD238009E947A /* AuthenticationErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorView.swift; sourceTree = "<group>"; };
 		32ADD68D2ABADA9D009E947A /* ErrorFlameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorFlameView.swift; sourceTree = "<group>"; };
-		32ADD68F2ABB5E5D009E947A /* AuthenticationLoggingInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLoggingInView.swift; sourceTree = "<group>"; };
+		32ADD68F2ABB5E5D009E947A /* AuthenticationLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLoadingView.swift; sourceTree = "<group>"; };
 		32ADD6912ABB5EFE009E947A /* AuthenticationUnregisteredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUnregisteredView.swift; sourceTree = "<group>"; };
 		32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessStatusView.swift; sourceTree = "<group>"; };
 		32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessAdmittedView.swift; sourceTree = "<group>"; };
@@ -364,7 +364,7 @@
 				32ADD68D2ABADA9D009E947A /* ErrorFlameView.swift */,
 				32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */,
 				32ADD6852ABA9F50009E947A /* AuthenticationLogInPasswordView.swift */,
-				32ADD68F2ABB5E5D009E947A /* AuthenticationLoggingInView.swift */,
+				32ADD68F2ABB5E5D009E947A /* AuthenticationLoadingView.swift */,
 				32ADD6912ABB5EFE009E947A /* AuthenticationUnregisteredView.swift */,
 				32ADD6822ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift */,
 			);
@@ -560,7 +560,7 @@
 				32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */,
 				32410FA92AB5F51B00A9184B /* UserManager.swift in Sources */,
 				32ADD6832ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift in Sources */,
-				32ADD6902ABB5E5D009E947A /* AuthenticationLoggingInView.swift in Sources */,
+				32ADD6902ABB5E5D009E947A /* AuthenticationLoadingView.swift in Sources */,
 				32F3B6612AB6BD530075F5D7 /* OnboardingView.swift in Sources */,
 				32F3B6702AB751540075F5D7 /* QRCodeScannerView.swift in Sources */,
 				32F3B65A2AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  AuthenticationLoggingInView.swift
+//  AuthenticationLoadingView.swift
 //  SST Alumni
 //
 //  Created by Jia Chen Yee on 21/9/23.
@@ -7,16 +7,20 @@
 
 import SwiftUI
 
-struct AuthenticationLoggingInView: View {
+struct AuthenticationLoadingView: View {
+    
+    var systemName: String
+    var title: String
+    
     var body: some View {
         VStack {
-            Image(systemName: "person.crop.circle")
+            Image(systemName: systemName)
                 .foregroundStyle(.blue)
                 .frame(height: 96)
                 .font(.system(size: 64))
                 .padding(.top)
             
-            Text("Logging In…")
+            Text(title)
                 .font(.title)
                 .fontWeight(.bold)
                 .padding()
@@ -27,8 +31,4 @@ struct AuthenticationLoggingInView: View {
         }
         .padding()
     }
-}
-
-#Preview {
-    AuthenticationLoggingInView()
 }
