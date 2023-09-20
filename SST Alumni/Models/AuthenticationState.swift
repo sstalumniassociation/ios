@@ -7,27 +7,34 @@
 
 import Foundation
 
-enum AuthenticationState {
+enum AuthenticationState: Equatable {
     case emailInput
     
     case lookingUpEmail(String)
     
-    case logInPassword
+    case logInPassword(String)
     
-    // Parameter: Cloudflare ID
-    case registerPassword(String)
+    // Parameter: Email, Cloudflare ID
+    case registerPassword(String, String)
+    
+    // Parameter: Email, Password, CloudFlare User ID
+    case registeringUser(String, String, String)
+    
     case verifyEmailAddress
+    
+    // Parameter: Email, Password
+    case loggingIn(String, String)
+    
+    // Parameter: Email
+    case incorrectPassword(String)
     
     case forgotPassword
     
     case unregistered
     
-    case error(WhoseFault, String)
+    case error(AuthErrorHandle)
     
-    enum WhoseFault {
-        case ours
-        case theirs
-    }
+    case authenticated
     
     var isLookingUpEmail: Bool {
         switch self {

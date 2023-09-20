@@ -9,6 +9,11 @@ import SwiftUI
 
 struct AuthenticationRegisterPasswordView: View {
     
+    var email: String
+    var cloudflareId: String
+    
+    @Binding var authenticationState: AuthenticationState
+    
     @FocusState private var isPasswordFieldFocused
     @FocusState private var isConfirmPasswordFieldFocused
     
@@ -150,13 +155,14 @@ struct AuthenticationRegisterPasswordView: View {
                     
                     
                     Button {
-                        
+                        authenticationState = .registeringUser(email, password, cloudflareId)
                     } label: {
                         Text("Next")
                             .padding(8)
                             .frame(maxWidth: .infinity)
                     }
                     .buttonStyle(.borderedProminent)
+                    .padding()
                 }
             }
         }
@@ -164,8 +170,4 @@ struct AuthenticationRegisterPasswordView: View {
             isPasswordFieldFocused = true
         }
     }
-}
-
-#Preview {
-    AuthenticationRegisterPasswordView()
 }
