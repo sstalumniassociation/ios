@@ -35,11 +35,11 @@ struct AuthenticationView: View {
             case .forgotPassword:
                 EmptyView()
             case .unregistered:
-                EmptyView()
+                AuthenticationUnregisteredView()
             case .error(let message):
                 AuthenticationErrorView(message: message)
-            case .loggingIn(_, _):
-                EmptyView()
+            case .loggingIn:
+                AuthenticationLoggingInView()
             case .authenticated:
                 EmptyView()
             }
