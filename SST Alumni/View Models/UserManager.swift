@@ -170,7 +170,7 @@ class UserManager: ObservableObject {
                     
                     await MainActor.run {
                         if let user {
-                            authenticationState = .verifyEmailAddress
+                            authenticationState = .verifyEmailAddress(email)
                             self.user = user
                         } else {
                             authenticationState = .error(.ourFault(icon: "doc", description: "Could not decode returned data."))
