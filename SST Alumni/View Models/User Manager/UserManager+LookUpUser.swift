@@ -21,7 +21,8 @@ extension UserManager {
         }
     }
     
-    fileprivate func handleEmailLookupResult(result: Result<(Data, HTTPURLResponse), OnboardingHTTPError>, email: String) -> AuthenticationState {
+    fileprivate func handleEmailLookupResult(result: Result<(Data, HTTPURLResponse), OnboardingHTTPError>,
+                                             email: String) -> AuthenticationState {
         switch result {
         case .success(let (data, response)):
             switch response.statusCode {
@@ -39,7 +40,8 @@ extension UserManager {
         }
     }
     
-    fileprivate func extractAuthenticationState(from data: Data, _ email: String) -> AuthenticationState {
+    fileprivate func extractAuthenticationState(from data: Data, 
+                                                _ email: String) -> AuthenticationState {
         guard let jsonData = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
               let cloudflareUserId = jsonData["id"] as? String,
               let isLinked = jsonData["linked"] as? Bool else {
