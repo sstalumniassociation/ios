@@ -35,6 +35,13 @@ struct ContentView: View {
                     }
             }
             .environmentObject(userManager)
+        } else if let firebaseUser = userManager.firebaseUser {
+            if firebaseUser.isEmailVerified {
+                AuthenticationEmailVerificationRequired()
+            } else {
+                AuthenticationLoadingView(systemName: "arrow.down.circle",
+                                          title: "Syncing User Data…")
+            }
         } else {
             OnboardingView()
                 .environmentObject(userManager)

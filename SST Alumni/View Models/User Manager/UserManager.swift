@@ -12,7 +12,7 @@ import SwiftUI
 
 class UserManager: ObservableObject {
     @Published var user: UserData?
-    var firebaseUser: User?
+    @Published var firebaseUser: User?
     
     @Published var authenticationState = AuthenticationState.emailInput {
         didSet {
@@ -35,13 +35,32 @@ class UserManager: ObservableObject {
     init() {
         self.auth = Auth.auth()
         
+        var firstLoad = true
+        
+        firebaseUser = auth.currentUser
+        
         auth.addStateDidChangeListener { auth, user in
-            if user != nil && self.authenticationState == .authenticated {
-                self.firebaseUser = user
-            } else {
-                self.firebaseUser = nil
+            guard !firstLoad else {
+                firstLoad = false
+                return
+            }
+            Task {
+                await MainActor.run {
+                    if user != nil && self.authenticationState == .authenticated {
+                        self.firebaseUser = user
+                    } else {
+                        self.firebaseUser = nil
+                    }
+                }
             }
         }
+    }
+    
+    func sendEmailVerification() {
+        #warning("Incomplete implementation")
+//        let actionCode = ActionCodeSettings.init()
+        
+//        auth.currentUser?.sendEmailVerification(with: ActionCodeSettings.init(), completion: <#T##((Error?) -> Void)?##((Error?) -> Void)?##(Error?) -> Void#>)
     }
     
     func forgetPassword(email: String) {
