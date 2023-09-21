@@ -76,7 +76,7 @@ enum AuthenticationState: Equatable {
     
     case unregistered
     
-    case error(AuthErrorHandle)
+    case error(AuthErrorDescription)
     
     case authenticated
     

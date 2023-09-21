@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AuthenticationErrorView: View {
     
-    var message: AuthErrorHandle
+    var message: AuthErrorDescription
     
     @Environment(\.dismiss) var dismiss
     
