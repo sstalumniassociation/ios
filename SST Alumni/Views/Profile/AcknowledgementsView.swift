@@ -19,32 +19,48 @@ struct AcknowledgementsView: View {
             Section {
                 Link(destination: URL(string: "https://github.com/jiachenyee")!) {
                     Label {
-                        Text("Jia Chen")
-                            .foregroundStyle(Color(uiColor: .label))
+                        VStack(alignment: .leading) {
+                            Text("Jia Chen")
+                            Text("Class of 2020")
+                                .foregroundStyle(.secondary)
+                        }
+                        .foregroundStyle(Color(uiColor: .label))
                     } icon: {
                         Image(systemName: "person.fill")
                     }
                 }
                 Link(destination: URL(string: "https://github.com/qin-guan")!) {
                     Label {
-                        Text("Qin Guan")
-                            .foregroundStyle(Color(uiColor: .label))
+                        VStack(alignment: .leading) {
+                            Text("Qin Guan")
+                            Text("Class of 2020")
+                                .foregroundStyle(.secondary)
+                        }
+                        .foregroundStyle(Color(uiColor: .label))
                     } icon: {
                         Image(systemName: "person.fill")
                     }
                 }
                 Link(destination: URL(string: "https://github.com/arashnrim")!) {
                     Label {
-                        Text("Arash")
-                            .foregroundStyle(Color(uiColor: .label))
+                        VStack(alignment: .leading) {
+                            Text("Arash")
+                            Text("Class of 2021")
+                                .foregroundStyle(.secondary)
+                        }
+                        .foregroundStyle(Color(uiColor: .label))
                     } icon: {
                         Image(systemName: "person.fill")
                     }
                 }
                 Link(destination: URL(string: "https://github.com/Ethan-Chew")!) {
                     Label {
-                        Text("Ethan Chew")
-                            .foregroundStyle(Color(uiColor: .label))
+                        VStack(alignment: .leading) {
+                            Text("Arash")
+                            Text("Class of 2021")
+                                .foregroundStyle(.secondary)
+                        }
+                        .foregroundStyle(Color(uiColor: .label))
                     } icon: {
                         Image(systemName: "person.fill")
                     }

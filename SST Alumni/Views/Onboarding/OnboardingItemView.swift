@@ -7,22 +7,6 @@
 
 import SwiftUI
 
-enum OnboardingState: Hashable {
-    case welcome
-    case security
-    case announcements
-    case loanVenues
-    
-    var color: Color {
-        switch self {
-        case .welcome: return .clear
-        case .security: return .red
-        case .announcements: return .blue
-        case .loanVenues: return .gray
-        }
-    }
-}
-
 struct OnboardingItemView<Content: View>: View {
     
     var title: String

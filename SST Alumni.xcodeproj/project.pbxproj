@@ -13,7 +13,6 @@
 		323D34702AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D346F2AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift */; };
 		323D34722AB89982001E1CBE /* BookVenueOnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34712AB89982001E1CBE /* BookVenueOnboardingItemView.swift */; };
 		323D34772AB95EAA001E1CBE /* SSTEmailRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34762AB95EAA001E1CBE /* SSTEmailRegex.swift */; };
-		323D347B2AB97735001E1CBE /* SignUpState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D347A2AB97735001E1CBE /* SignUpState.swift */; };
 		323D347D2AB97743001E1CBE /* SSTEmailValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D347C2AB97743001E1CBE /* SSTEmailValidationState.swift */; };
 		323D34802AB97EA1001E1CBE /* ScreenCaptureRedaction in Frameworks */ = {isa = PBXBuildFile; productRef = 323D347F2AB97EA1001E1CBE /* ScreenCaptureRedaction */; };
 		323D34822AB991BB001E1CBE /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34812AB991BB001E1CBE /* UserProfileView.swift */; };
@@ -88,6 +87,8 @@
 		32ADD69A2ABC3C5F009E947A /* UserManager+LookUpUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6992ABC3C5F009E947A /* UserManager+LookUpUser.swift */; };
 		32ADD69C2ABC3C80009E947A /* UserManager+LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD69B2ABC3C80009E947A /* UserManager+LogIn.swift */; };
 		32ADD6BB2ABCC5EF009E947A /* AuthenticationEmailVerificationRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6BA2ABCC5EF009E947A /* AuthenticationEmailVerificationRequired.swift */; };
+		32ADD6C02ABCC9B4009E947A /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6BF2ABCC9B4009E947A /* OnboardingState.swift */; };
+		32ADD6C82ABCCAB4009E947A /* ConditionalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6C72ABCCAB4009E947A /* ConditionalLink.swift */; };
 		32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */; };
 		32F3B6472AB629D80075F5D7 /* SecurityAccessAdmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */; };
 		32F3B6492AB62A240075F5D7 /* SecurityAccessDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */; };
@@ -115,7 +116,6 @@
 		323D346F2AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityPassOnboardingItemView.swift; sourceTree = "<group>"; };
 		323D34712AB89982001E1CBE /* BookVenueOnboardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVenueOnboardingItemView.swift; sourceTree = "<group>"; };
 		323D34762AB95EAA001E1CBE /* SSTEmailRegex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTEmailRegex.swift; sourceTree = "<group>"; };
-		323D347A2AB97735001E1CBE /* SignUpState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpState.swift; sourceTree = "<group>"; };
 		323D347C2AB97743001E1CBE /* SSTEmailValidationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTEmailValidationState.swift; sourceTree = "<group>"; };
 		323D34812AB991BB001E1CBE /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		323D34832AB99272001E1CBE /* AcknowledgementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsView.swift; sourceTree = "<group>"; };
@@ -163,6 +163,8 @@
 		32ADD6992ABC3C5F009E947A /* UserManager+LookUpUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserManager+LookUpUser.swift"; sourceTree = "<group>"; };
 		32ADD69B2ABC3C80009E947A /* UserManager+LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserManager+LogIn.swift"; sourceTree = "<group>"; };
 		32ADD6BA2ABCC5EF009E947A /* AuthenticationEmailVerificationRequired.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEmailVerificationRequired.swift; sourceTree = "<group>"; };
+		32ADD6BF2ABCC9B4009E947A /* OnboardingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingState.swift; sourceTree = "<group>"; };
+		32ADD6C72ABCCAB4009E947A /* ConditionalLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalLink.swift; sourceTree = "<group>"; };
 		32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessStatusView.swift; sourceTree = "<group>"; };
 		32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessAdmittedView.swift; sourceTree = "<group>"; };
 		32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessDeniedView.swift; sourceTree = "<group>"; };
@@ -287,12 +289,9 @@
 				32ADD6BA2ABCC5EF009E947A /* AuthenticationEmailVerificationRequired.swift */,
 				323D34732AB89AB1001E1CBE /* Onboarding */,
 				32410FA72AB5F41800A9184B /* Home */,
-				32410F552AB4C3F500A9184B /* AlumniServicesView.swift */,
-				323D34812AB991BB001E1CBE /* UserProfileView.swift */,
-				323D34832AB99272001E1CBE /* AcknowledgementsView.swift */,
-				32410F592AB4C48A00A9184B /* AlumniServicesRowView.swift */,
-				32410F572AB4C42F00A9184B /* EventsView.swift */,
-				32410F4F2AB4B9DD00A9184B /* CardView.swift */,
+				32ADD6BC2ABCC958009E947A /* Alumni Services */,
+				32ADD6BD2ABCC964009E947A /* Profile */,
+				32ADD6BE2ABCC982009E947A /* Events */,
 				32410F622AB4D74800A9184B /* SSTAARS */,
 			);
 			path = Views;
@@ -311,20 +310,12 @@
 		32410F672AB5694900A9184B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				32410F512AB4BA7E00A9184B /* UserData.swift */,
-				32410FA52AB5EBBA00A9184B /* MemberType.swift */,
-				32410F652AB568D400A9184B /* NewsArticle.swift */,
-				32410FAD2AB6004400A9184B /* SecurityAccessState.swift */,
-				32410FB92AB60D2C00A9184B /* LocationValidationState.swift */,
-				32ADD6802ABA0D45009E947A /* AuthenticationState.swift */,
-				32ADD6872ABACF30009E947A /* AuthErrorDescription.swift */,
-				32ADD6892ABACF4B009E947A /* AuthErrorHandle+FirebaseErrors.swift */,
-				32ADD6952ABC3285009E947A /* OnboardingHTTPError.swift */,
-				32410FB72AB60D1C00A9184B /* BiometricAuthenticationState.swift */,
-				32F3B6672AB713730075F5D7 /* Event.swift */,
-				323D347A2AB97735001E1CBE /* SignUpState.swift */,
+				32ADD6C52ABCCA48009E947A /* User */,
+				32ADD6C62ABCCA4E009E947A /* News */,
+				32ADD6C42ABCCA3E009E947A /* Security Card */,
+				32ADD6C22ABCC9F1009E947A /* Onboarding */,
+				32ADD6C32ABCCA30009E947A /* SSTAARS */,
 				323D347C2AB97743001E1CBE /* SSTEmailValidationState.swift */,
-				32F3B66B2AB74DD30075F5D7 /* EventAttendee.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -397,6 +388,89 @@
 			path = "User Manager";
 			sourceTree = "<group>";
 		};
+		32ADD6BC2ABCC958009E947A /* Alumni Services */ = {
+			isa = PBXGroup;
+			children = (
+				32410F552AB4C3F500A9184B /* AlumniServicesView.swift */,
+				32410F592AB4C48A00A9184B /* AlumniServicesRowView.swift */,
+				32ADD6C72ABCCAB4009E947A /* ConditionalLink.swift */,
+			);
+			path = "Alumni Services";
+			sourceTree = "<group>";
+		};
+		32ADD6BD2ABCC964009E947A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				323D34812AB991BB001E1CBE /* UserProfileView.swift */,
+				323D34832AB99272001E1CBE /* AcknowledgementsView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		32ADD6BE2ABCC982009E947A /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				32410F572AB4C42F00A9184B /* EventsView.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		32ADD6C12ABCC9D1009E947A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				32ADD6802ABA0D45009E947A /* AuthenticationState.swift */,
+				32ADD6872ABACF30009E947A /* AuthErrorDescription.swift */,
+				32ADD6892ABACF4B009E947A /* AuthErrorHandle+FirebaseErrors.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		32ADD6C22ABCC9F1009E947A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				32ADD6BF2ABCC9B4009E947A /* OnboardingState.swift */,
+				32ADD6952ABC3285009E947A /* OnboardingHTTPError.swift */,
+				32ADD6C12ABCC9D1009E947A /* Authentication */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		32ADD6C32ABCCA30009E947A /* SSTAARS */ = {
+			isa = PBXGroup;
+			children = (
+				32F3B6672AB713730075F5D7 /* Event.swift */,
+				32F3B66B2AB74DD30075F5D7 /* EventAttendee.swift */,
+			);
+			path = SSTAARS;
+			sourceTree = "<group>";
+		};
+		32ADD6C42ABCCA3E009E947A /* Security Card */ = {
+			isa = PBXGroup;
+			children = (
+				32410FAD2AB6004400A9184B /* SecurityAccessState.swift */,
+				32410FB92AB60D2C00A9184B /* LocationValidationState.swift */,
+				32410FB72AB60D1C00A9184B /* BiometricAuthenticationState.swift */,
+			);
+			path = "Security Card";
+			sourceTree = "<group>";
+		};
+		32ADD6C52ABCCA48009E947A /* User */ = {
+			isa = PBXGroup;
+			children = (
+				32410F512AB4BA7E00A9184B /* UserData.swift */,
+				32410FA52AB5EBBA00A9184B /* MemberType.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		32ADD6C62ABCCA4E009E947A /* News */ = {
+			isa = PBXGroup;
+			children = (
+				32410F652AB568D400A9184B /* NewsArticle.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 		32F3B64A2AB62A600075F5D7 /* SecurityAccessStatusView */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +484,7 @@
 		32F3B64B2AB62A660075F5D7 /* Security Card */ = {
 			isa = PBXGroup;
 			children = (
+				32410F4F2AB4B9DD00A9184B /* CardView.swift */,
 				32410F5F2AB4D0F200A9184B /* CardExpandedView.swift */,
 				32F3B64E2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift */,
 				32F3B6562AB6B0D10075F5D7 /* Confetti */,
@@ -570,12 +645,13 @@
 				32410FB52AB60C2A00A9184B /* LocationValidationManager.swift in Sources */,
 				32F3B66E2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift in Sources */,
 				323D34842AB99272001E1CBE /* AcknowledgementsView.swift in Sources */,
-				323D347B2AB97735001E1CBE /* SignUpState.swift in Sources */,
+				32ADD6C02ABCC9B4009E947A /* OnboardingState.swift in Sources */,
 				323D34722AB89982001E1CBE /* BookVenueOnboardingItemView.swift in Sources */,
 				32F3B66A2AB717090075F5D7 /* SSTAARSEventConfirmationView.swift in Sources */,
 				323D34822AB991BB001E1CBE /* UserProfileView.swift in Sources */,
 				32F3B6642AB711910075F5D7 /* SSTAARSManager.swift in Sources */,
 				32ADD6922ABB5EFE009E947A /* AuthenticationUnregisteredView.swift in Sources */,
+				32ADD6C82ABCCAB4009E947A /* ConditionalLink.swift in Sources */,
 				32410F662AB568D400A9184B /* NewsArticle.swift in Sources */,
 				323D34772AB95EAA001E1CBE /* SSTEmailRegex.swift in Sources */,
 				32410F522AB4BA7E00A9184B /* UserData.swift in Sources */,
