@@ -11,10 +11,33 @@ struct UserProfileView: View {
     
     @EnvironmentObject var userManager: UserManager
     
+    @State private var isDeleteAccountSheetPresented = false
+    
     var body: some View {
         if let user = userManager.user {
             NavigationStack {
                 Form {
+                    Section {
+                        Text(user.name)
+                            .textSelection(.enabled)
+                    } header: {
+                        Text("Name")
+                    } footer: {
+                        Text("To update this information, contact us at [app@sstaa.org](app@sstaa.org).")
+                    }
+                    
+                    if let email = userManager.firebaseUser?.email {
+                        Section("Email") {
+                            Text(email)
+                                .textSelection(.enabled)
+                        }
+                    }
+                    
+                    Section("Graduation Year") {
+                        Text("Class of \(String(user.graduationYear))")
+                            .textSelection(.enabled)
+                    }
+                    
                     NavigationLink("Acknowledgements") {
                         AcknowledgementsView()
                     }
@@ -24,6 +47,16 @@ struct UserProfileView: View {
                             userManager.signOut()
                         } label: {
                             Text("Sign Out")
+                        }
+                        
+                        Button(role: .destructive) {
+                            isDeleteAccountSheetPresented = true
+                        } label: {
+                            Text("Delete & Unlink My Account")
+                        }
+                        .sheet(isPresented: $isDeleteAccountSheetPresented) {
+                            DeleteAccountView()
+                                .presentationDetents([.medium])
                         }
                     }
                 }

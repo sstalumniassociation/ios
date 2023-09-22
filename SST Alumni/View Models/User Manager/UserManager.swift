@@ -37,18 +37,15 @@ class UserManager: ObservableObject {
     init() {
         self.auth = Auth.auth()
         
-        var firstLoad = true
-        
         firebaseUser = auth.currentUser
         emailVerificationState = (auth.currentUser?.isEmailVerified ?? false) ? .verified : .needsVerification
-        auth.addStateDidChangeListener { auth, user in
-            print("Test")
-            guard !firstLoad else {
-                firstLoad = false
-                return
-            }
+        authenticationState = .authenticated
+        
+        auth.addStateDidChangeListener { [self] auth, user in
             Task {
                 await MainActor.run {
+                    emailVerificationState = (auth.currentUser?.isEmailVerified ?? false) ? .verified : .needsVerification
+                    
                     if user != nil && self.authenticationState == .authenticated {
                         self.firebaseUser = user
                     } else {
@@ -142,6 +139,7 @@ class UserManager: ObservableObject {
             
         case .failure(let error):
             print(error)
+            #warning("Incomplete implementation")
         }
     }
 }

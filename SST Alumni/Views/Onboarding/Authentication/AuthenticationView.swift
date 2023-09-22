@@ -39,7 +39,21 @@ struct AuthenticationView: View {
             case .loggingIn:
                 AuthenticationLoadingView(systemName: "person.crop.circle", title: "Logging In…")
             case .authenticated:
-                EmptyView()
+                VStack {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundStyle(.blue)
+                        .frame(height: 96)
+                        .font(.system(size: 64))
+                        .padding(.top)
+                    
+                    Text("Authenticated")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding()
+                    
+                    Spacer()
+                }
+                .padding()
             }
         }
         .onAppear {

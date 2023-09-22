@@ -18,6 +18,7 @@ extension UserManager {
             switch await getUserData(with: user.uid) {
             case .success(let userData):
                 await MainActor.run {
+                    firebaseUser = auth.currentUser
                     withAnimation {
                         self.user = userData
                         authenticationState = .authenticated
