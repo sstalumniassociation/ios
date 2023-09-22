@@ -142,6 +142,26 @@ class UserManager: ObservableObject {
             #warning("Incomplete implementation")
         }
     }
+    
+    func deleteAndUnlinkAccount() {
+        guard let firebaseUser, let user else { return }
+        Task {
+            do {
+                switch await sendRequest(to: "user/\(user.id)", method: "DELETE") {
+                case .success(let (data, response)):
+                    print(response)
+                    print(String(data: data, encoding: .utf8))
+                    try await firebaseUser.delete()
+                case .failure(let error):
+                    print(error)
+                }
+                
+            } catch {
+                print(error.localizedDescription)
+                print(error)
+            }
+        }
+    }
 }
 
 enum EmailVerificationState: Equatable {

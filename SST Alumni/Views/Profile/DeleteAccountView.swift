@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct DeleteAccountView: View {
+    
+    @EnvironmentObject var userManager: UserManager
+    
     var body: some View {
         VStack {
             ScrollView {
@@ -36,7 +39,7 @@ struct DeleteAccountView: View {
                 .padding()
             }
             Button(role: .destructive) {
-                
+                userManager.deleteAndUnlinkAccount()
             } label: {
                 Text("Delete My Account")
                     .padding(8)
