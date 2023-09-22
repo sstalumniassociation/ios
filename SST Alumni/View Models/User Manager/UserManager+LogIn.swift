@@ -40,7 +40,7 @@ extension UserManager {
         }
     }
     
-    fileprivate func getUserData(with userId: String) async -> Result<UserData, OnboardingHTTPError> {
+    func getUserData(with userId: String) async -> Result<UserData, OnboardingHTTPError> {
         switch await sendRequest(to: "user/\(userId)") {
         case .success(let (data, _)):
             do {

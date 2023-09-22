@@ -30,8 +30,6 @@ struct AuthenticationView: View {
                                                 authenticationState: $userManager.authenticationState)
             case .registeringUser:
                 AuthenticationLoadingView(systemName: "person.fill.checkmark", title: "Registering…")
-            case .verifyEmailAddress:
-                EmptyView()
             case .forgotPassword:
                 EmptyView()
             case .unregistered:

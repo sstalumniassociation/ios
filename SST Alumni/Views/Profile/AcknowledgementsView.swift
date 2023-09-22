@@ -56,8 +56,8 @@ struct AcknowledgementsView: View {
                 Link(destination: URL(string: "https://github.com/Ethan-Chew")!) {
                     Label {
                         VStack(alignment: .leading) {
-                            Text("Arash")
-                            Text("Class of 2021")
+                            Text("Ethan Chew")
+                            Text("Class of 2022")
                                 .foregroundStyle(.secondary)
                         }
                         .foregroundStyle(Color(uiColor: .label))

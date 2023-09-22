@@ -16,7 +16,7 @@ extension UserManager {
         case .success(let user):
             await MainActor.run {
                 self.user = user
-                authenticationState = .verifyEmailAddress(email)
+                authenticationState = .authenticated
             }
         case .failure(let error):
             await MainActor.run {

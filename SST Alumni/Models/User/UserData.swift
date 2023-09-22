@@ -18,9 +18,9 @@ struct UserData: Codable, Identifiable {
     /// From CloudFlare
     var name: String
     var memberId: String
-    var graduationYear: String
+    var graduationYear: Int
     
     var memberType: MemberType
     
-    static let sample = UserData(id: "qgdroptable", firebaseId: "2136245678", name: "Qin Guan", memberId: "OR2022029", graduationYear: "2020", memberType: .exco)
+    static let sample = UserData(id: "qgdroptable", firebaseId: "2136245678", name: "Qin Guan", memberId: "OR2022029", graduationYear: 2020, memberType: .exco)
 }

@@ -14,6 +14,8 @@ class UserManager: ObservableObject {
     @Published var user: UserData?
     @Published var firebaseUser: User?
     
+    @Published var emailVerificationState = EmailVerificationState.needsVerification
+    
     @Published var authenticationState = AuthenticationState.emailInput {
         didSet {
             Task {
@@ -38,8 +40,9 @@ class UserManager: ObservableObject {
         var firstLoad = true
         
         firebaseUser = auth.currentUser
-        
+        emailVerificationState = (auth.currentUser?.isEmailVerified ?? false) ? .verified : .needsVerification
         auth.addStateDidChangeListener { auth, user in
+            print("Test")
             guard !firstLoad else {
                 firstLoad = false
                 return
@@ -57,10 +60,62 @@ class UserManager: ObservableObject {
     }
     
     func sendEmailVerification() {
-        #warning("Incomplete implementation")
-//        let actionCode = ActionCodeSettings.init()
+        withAnimation {
+            emailVerificationState = .sendingEmail
+        }
         
-//        auth.currentUser?.sendEmailVerification(with: ActionCodeSettings.init(), completion: <#T##((Error?) -> Void)?##((Error?) -> Void)?##(Error?) -> Void#>)
+        Task {
+            let verificationState: EmailVerificationState
+            do {
+                if let currentUser = auth.currentUser {
+                    try await auth.currentUser?.sendEmailVerification()
+                    
+                    verificationState = .sent
+                } else {
+                    verificationState = .error(.userNotFound)
+                }
+            } catch {
+                verificationState = .error(.from(.firebaseError(error)))
+            }
+            
+            await MainActor.run {
+                withAnimation {
+                    emailVerificationState = verificationState
+                }
+            }
+        }
+    }
+    
+    func checkEmailVerification() {
+        withAnimation {
+            emailVerificationState = .checkStatus
+        }
+        
+        Task {
+            let verificationState: EmailVerificationState
+            
+            do {
+                if let currentUser = auth.currentUser {
+                    try await currentUser.reload()
+                    
+                    if currentUser.isEmailVerified {
+                        verificationState = .verified
+                    } else {
+                        verificationState = .sent
+                    }
+                } else {
+                    verificationState = .error(.userNotFound)
+                }
+            } catch {
+                verificationState = .error(.from(.firebaseError(error)))
+            }
+            
+            await MainActor.run {
+                withAnimation {
+                    emailVerificationState = verificationState
+                }
+            }
+        }
     }
     
     func forgetPassword(email: String) {
@@ -76,7 +131,61 @@ class UserManager: ObservableObject {
         }
     }
     
-    func signIn() {
-        user = .sample
+    func fetchUserData() async {
+        guard let uid = firebaseUser?.uid else { return }
+        
+        switch await getUserData(with: uid) {
+        case .success(let userData):
+            await MainActor.run {
+                self.user = userData
+            }
+            
+        case .failure(let error):
+            print(error)
+        }
+    }
+}
+
+enum EmailVerificationState: Equatable {
+    case needsVerification
+    case sendingEmail
+    case sent
+    case checkStatus
+    case verified
+    
+    case error(AuthErrorDescription)
+    
+    var title: String {
+        switch self {
+        case .needsVerification:
+            "Verify Your Email"
+        case .sendingEmail:
+            "Sending…"
+        case .sent:
+            "Check Your Email"
+        case .checkStatus:
+            "Checking…"
+        case .verified:
+            "Verified"
+        case .error(let description):
+            description.title
+        }
+    }
+    
+    var subtitle: String {
+        switch self {
+        case .needsVerification:
+            "Email verification required to use app."
+        case .sendingEmail:
+            "Sending email."
+        case .sent:
+            "If you can't find it, check your Spam/Junk folder."
+        case .checkStatus:
+            "If you can't find it, check your Spam/Junk folder."
+        case .verified:
+            ""
+        case .error(let error):
+            error.description
+        }
     }
 }
