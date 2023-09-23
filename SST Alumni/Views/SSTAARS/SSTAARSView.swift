@@ -36,7 +36,7 @@ struct SSTAARSView: View {
                 }
                 
                 Section("My Events") {
-                    ForEach(sstaarsManager.events) { event in
+                    ForEach($sstaarsManager.events, editActions: .all) { $event in
                         NavigationLink(value: event) {
                             Text(event.name)
                         }
@@ -46,10 +46,16 @@ struct SSTAARSView: View {
             .listStyle(.insetGrouped)
             .navigationTitle("SSTAARS")
             .toolbar {
-                Button {
-                    accessCodeAlertPresented.toggle()
-                } label: {
-                    Image(systemName: "plus")
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        accessCodeAlertPresented.toggle()
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    EditButton()
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
