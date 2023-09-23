@@ -43,9 +43,6 @@ struct ContentView: View {
                 } else {
                     AuthenticationLoadingView(systemName: "arrow.down.circle",
                                               title: "Syncing User Data…")
-                    .task {
-                        await userManager.fetchUserData()
-                    }
                 }
             }
         } else {

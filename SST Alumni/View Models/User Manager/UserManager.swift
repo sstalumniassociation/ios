@@ -11,7 +11,11 @@ import Alamofire
 import SwiftUI
 
 class UserManager: ObservableObject {
-    @Published var user: UserData?
+    @Published var user: UserData? {
+        didSet {
+            writeData()
+        }
+    }
     @Published var firebaseUser: User?
     
     @Published var emailVerificationState = EmailVerificationState.needsVerification
@@ -41,6 +45,8 @@ class UserManager: ObservableObject {
         emailVerificationState = (auth.currentUser?.isEmailVerified ?? false) ? .verified : .needsVerification
         authenticationState = .authenticated
         
+        loadUserData()
+        
         if emailVerificationState == .needsVerification {
             Task {
                 try await firebaseUser?.reload()
@@ -59,6 +65,8 @@ class UserManager: ObservableObject {
                         self.firebaseUser = nil
                     }
                 }
+                
+                await fetchUserData()
             }
         }
     }
