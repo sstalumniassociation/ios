@@ -35,10 +35,12 @@ struct SSTAARSView: View {
                     }
                 }
                 
-                Section("My Events") {
-                    ForEach($sstaarsManager.events, editActions: .all) { $event in
-                        NavigationLink(value: event) {
-                            Text(event.name)
+                if !sstaarsManager.events.isEmpty {
+                    Section("My Events") {
+                        ForEach($sstaarsManager.events, editActions: .all) { $event in
+                            NavigationLink(value: event) {
+                                Text(event.name)
+                            }
                         }
                     }
                 }
@@ -54,8 +56,10 @@ struct SSTAARSView: View {
                     }
                 }
                 
-                ToolbarItem(placement: .topBarLeading) {
-                    EditButton()
+                if !sstaarsManager.events.isEmpty {
+                    ToolbarItem(placement: .topBarLeading) {
+                        EditButton()
+                    }
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
