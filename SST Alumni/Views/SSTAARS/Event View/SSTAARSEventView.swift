@@ -111,5 +111,8 @@ struct SSTAARSEventView: View {
         .onAppear {
             sstaarsManager.attachListener(to: event)
         }
+        .task {
+            await sstaarsManager.refreshEvent(for: event.id)
+        }
     }
 }
