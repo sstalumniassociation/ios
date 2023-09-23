@@ -11,6 +11,7 @@ struct NewsArticle {
     var title: String
     var description: String
     
+    var heroImageAlt: URL?
     var heroImageURL: URL?
     
     var ctaTitle: String

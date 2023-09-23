@@ -27,15 +27,6 @@ class SecurityAccessManager: ObservableObject {
     func performCheck() {
         authorizationRequestDate = Date.now
         Task {
-            let locationValidationResult = await locationValidationManager.checkLocation()
-            
-            guard locationValidationResult == .approved else {
-                await MainActor.run {
-                    securityAccessState = .denied(.location(locationValidationResult))
-                }
-                return
-            }
-            
             let biometricsAuthenticationResult = await performBiometricsAuthentication()
             
             guard biometricsAuthenticationResult == .approved else {

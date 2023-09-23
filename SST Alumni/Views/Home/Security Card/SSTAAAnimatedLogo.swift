@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ScreenCaptureRedaction
 
 struct SSTAAAnimatedLogo: View {
     
@@ -47,6 +48,7 @@ struct SSTAAAnimatedLogo: View {
                 }
             }
         }
+        .redactWhenScreenRecorded()
     }
 }
 

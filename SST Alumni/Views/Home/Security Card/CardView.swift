@@ -27,7 +27,7 @@ struct CardView: View {
             Spacer()
             HStack(alignment: .bottom) {
                 VStack(alignment: .leading) {
-                    Text("Class of \(user.graduationYear)")
+                    Text("Class of \(String(user.graduationYear))")
                         .fontWeight(.semibold)
                         .matchedGeometryEffect(id: "batchyear", in: namespace)
                     Text("\(user.memberType.description)")

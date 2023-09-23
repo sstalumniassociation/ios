@@ -47,7 +47,7 @@ struct HomeView: View {
                                     Text("Contact SST Alumni Association")
                                         .font(.headline)
                                         .fontWeight(.bold)
-                                    Text("If you intend on returning to SST as an alumnus, email [alumnisst.sg@gmail.com](mailto:alumnisst.sg@gmail.com).")
+                                    Text("If you intend on returning to SST as an alumnus, email [alumni@sstaa.org](mailto:alumni@sstaa.org).")
                                 }
                             }
                             .foregroundStyle(.secondary)
