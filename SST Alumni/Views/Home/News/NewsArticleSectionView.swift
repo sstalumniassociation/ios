@@ -27,6 +27,9 @@ struct NewsArticleSectionView: View {
             }
         }
         .padding([.horizontal, .bottom])
+        .task {
+            await newsManager.loadArticles()
+        }
     }
 }
 
