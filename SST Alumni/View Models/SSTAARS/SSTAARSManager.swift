@@ -12,7 +12,11 @@ import FirebaseAuth
 
 class SSTAARSManager: ObservableObject {
     
-    @Published var events: [Event] = []
+    @Published var events: [Event] = [] {
+        didSet {
+            writeData()
+        }
+    }
     
     @Published var observedEvent: Event?
     
@@ -24,6 +28,8 @@ class SSTAARSManager: ObservableObject {
     
     init() {
         ref = Database.database(url: "https://sstaa-app-default-rtdb.asia-southeast1.firebasedatabase.app").reference()
+        
+        loadData()
     }
     
     func retrieveEvent(for id: String) async {
