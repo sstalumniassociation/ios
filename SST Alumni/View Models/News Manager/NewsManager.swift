@@ -13,10 +13,7 @@ class NewsManager: ObservableObject {
     
     func loadArticles() async {
         do {
-            
-            print("Load")
             guard let token = try await Auth.auth().currentUser?.getIDToken() else {
-                print("FAIL")
                 return
             }
             
@@ -26,12 +23,8 @@ class NewsManager: ObservableObject {
             
             let (data, _) = try await URLSession.shared.data(for: request)
             
-            print("hello", String(data: data, encoding: .utf8))
-            
             let decoder = JSONDecoder()
             let articles = try decoder.decode([NewsArticle].self, from: data)
-            
-            print("retrieved", articles)
             
             await MainActor.run {
                 self.articles = articles
