@@ -46,7 +46,7 @@ struct AuthenticationEmailView: View {
                 
                 Button {
                     withAnimation {
-                        authenticationState = .lookingUpEmail(email)
+                        authenticationState = .lookingUpEmail(email.lowercased())
                     }
                 } label: {
                     Text("Next")
