@@ -72,6 +72,7 @@
 		32410FBA2AB60D2C00A9184B /* LocationValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FB92AB60D2C00A9184B /* LocationValidationState.swift */; };
 		324FB2642ABF0CF50088A9C6 /* SSTAARSManager+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB2632ABF0CF50088A9C6 /* SSTAARSManager+Persistence.swift */; };
 		324FB2672ABF65AC0088A9C6 /* UserManager+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB2662ABF65AC0088A9C6 /* UserManager+Persistence.swift */; };
+		324FB26A2ABF689E0088A9C6 /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB2692ABF689E0088A9C6 /* NewsManager.swift */; };
 		32ADD67D2AB9FC00009E947A /* AuthenticationEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */; };
 		32ADD67F2ABA0C1F009E947A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */; };
 		32ADD6812ABA0D45009E947A /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6802ABA0D45009E947A /* AuthenticationState.swift */; };
@@ -151,6 +152,7 @@
 		32410FB92AB60D2C00A9184B /* LocationValidationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationValidationState.swift; sourceTree = "<group>"; };
 		324FB2632ABF0CF50088A9C6 /* SSTAARSManager+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SSTAARSManager+Persistence.swift"; sourceTree = "<group>"; };
 		324FB2662ABF65AC0088A9C6 /* UserManager+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserManager+Persistence.swift"; sourceTree = "<group>"; };
+		324FB2692ABF689E0088A9C6 /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
 		32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEmailView.swift; sourceTree = "<group>"; };
 		32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		32ADD6802ABA0D45009E947A /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 		32410FAA2AB5FFEA00A9184B /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				324FB2682ABF68970088A9C6 /* News Manager */,
 				32ADD69D2ABC51AA009E947A /* User Manager */,
 				324FB2652ABF0CF90088A9C6 /* SSTAARS */,
 				32410FB62AB60C3800A9184B /* Security Access Manager */,
@@ -374,6 +377,14 @@
 				324FB2632ABF0CF50088A9C6 /* SSTAARSManager+Persistence.swift */,
 			);
 			path = SSTAARS;
+			sourceTree = "<group>";
+		};
+		324FB2682ABF68970088A9C6 /* News Manager */ = {
+			isa = PBXGroup;
+			children = (
+				324FB2692ABF689E0088A9C6 /* NewsManager.swift */,
+			);
+			path = "News Manager";
 			sourceTree = "<group>";
 		};
 		32ADD6842ABA28EA009E947A /* Authentication */ = {
@@ -682,6 +693,7 @@
 				32ADD6832ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift in Sources */,
 				32ADD6902ABB5E5D009E947A /* AuthenticationLoadingView.swift in Sources */,
 				32F3B6612AB6BD530075F5D7 /* OnboardingView.swift in Sources */,
+				324FB26A2ABF689E0088A9C6 /* NewsManager.swift in Sources */,
 				32F3B6702AB751540075F5D7 /* QRCodeScannerView.swift in Sources */,
 				32F3B65A2AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift in Sources */,
 				32410F6B2AB569FB00A9184B /* NewsArticleSectionView.swift in Sources */,

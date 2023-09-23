@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct NewsArticleSectionView: View {
+    
+    @StateObject var newsManager = NewsManager()
+    
     var body: some View {
         HStack {
             Image(systemName: "newspaper")
@@ -19,9 +22,9 @@ struct NewsArticleSectionView: View {
         .padding(.horizontal)
         
         VStack {
-            NewsArticleView(article: NewsArticle(title: "SST Homecoming 2024", description: "Registration is now open! See you on 24 January 2024, Wednesday!", ctaTitle: "Learn More & Register", ctaURL: URL(string: "https://sst.edu.sg")!))
-            
-            NewsArticleView(article: NewsArticle(title: "SST Homecoming 2024", description: "Registration is now open! See you on 24 January 2024, Wednesday!", ctaTitle: "Learn More & Register", ctaURL: URL(string: "https://sst.edu.sg")!))
+            ForEach(newsManager.articles) { article in
+                NewsArticleView(article: article)
+            }
         }
         .padding([.horizontal, .bottom])
     }
