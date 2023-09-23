@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseDatabase
 import FirebaseDatabaseSwift
+import FirebaseAuth
 
 class SSTAARSManager: ObservableObject {
     
@@ -33,6 +34,10 @@ class SSTAARSManager: ObservableObject {
         var request = URLRequest(url: .cfServer.appendingPathComponent("event/\(id)"))
         
         do {
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            let token = try await Auth.auth().currentUser!.getIDToken()
+            request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             let (data, response) = try await URLSession.shared.data(for: request)
             
             guard let response = response as? HTTPURLResponse else { return }

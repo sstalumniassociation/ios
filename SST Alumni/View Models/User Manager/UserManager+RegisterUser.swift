@@ -58,6 +58,7 @@ extension UserManager {
                 
                 return .success(try decoder.decode(UserData.self, from: data))
             } catch {
+                print(error.localizedDescription)
                 return .failure(.decodingError(error))
             }
         case .failure(let error):

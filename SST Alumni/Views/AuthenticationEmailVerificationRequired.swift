@@ -53,7 +53,7 @@ struct AuthenticationEmailVerificationRequired: View {
             case .sent:
                 Button {
                     withAnimation(.easeInOut) {
-                        userManager.sendEmailVerification()
+                        userManager.checkEmailVerification()
                     }
                 } label: {
                     Text("Check Verification")
