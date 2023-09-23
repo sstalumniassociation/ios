@@ -90,6 +90,9 @@ struct SSTAARSEventView: View {
                 }
             }
         }
+        .refreshable {
+            await sstaarsManager.refreshEvent(for: event.id)
+        }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
