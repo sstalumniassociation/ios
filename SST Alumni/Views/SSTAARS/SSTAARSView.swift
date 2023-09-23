@@ -31,6 +31,7 @@ struct SSTAARSView: View {
                         }
                     }
                     Button("Enter Access Code") {
+                        eventCode = ""
                         accessCodeAlertPresented.toggle()
                     }
                 }
