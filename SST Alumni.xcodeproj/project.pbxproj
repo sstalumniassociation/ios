@@ -71,6 +71,7 @@
 		32410FB82AB60D1C00A9184B /* BiometricAuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FB72AB60D1C00A9184B /* BiometricAuthenticationState.swift */; };
 		32410FBA2AB60D2C00A9184B /* LocationValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FB92AB60D2C00A9184B /* LocationValidationState.swift */; };
 		324FB2642ABF0CF50088A9C6 /* SSTAARSManager+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB2632ABF0CF50088A9C6 /* SSTAARSManager+Persistence.swift */; };
+		324FB2672ABF65AC0088A9C6 /* UserManager+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB2662ABF65AC0088A9C6 /* UserManager+Persistence.swift */; };
 		32ADD67D2AB9FC00009E947A /* AuthenticationEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */; };
 		32ADD67F2ABA0C1F009E947A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */; };
 		32ADD6812ABA0D45009E947A /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6802ABA0D45009E947A /* AuthenticationState.swift */; };
@@ -149,6 +150,7 @@
 		32410FB72AB60D1C00A9184B /* BiometricAuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthenticationState.swift; sourceTree = "<group>"; };
 		32410FB92AB60D2C00A9184B /* LocationValidationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationValidationState.swift; sourceTree = "<group>"; };
 		324FB2632ABF0CF50088A9C6 /* SSTAARSManager+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SSTAARSManager+Persistence.swift"; sourceTree = "<group>"; };
+		324FB2662ABF65AC0088A9C6 /* UserManager+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserManager+Persistence.swift"; sourceTree = "<group>"; };
 		32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEmailView.swift; sourceTree = "<group>"; };
 		32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		32ADD6802ABA0D45009E947A /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				32410FA82AB5F51B00A9184B /* UserManager.swift */,
+				324FB2662ABF65AC0088A9C6 /* UserManager+Persistence.swift */,
 				32ADD69B2ABC3C80009E947A /* UserManager+LogIn.swift */,
 				32ADD6992ABC3C5F009E947A /* UserManager+LookUpUser.swift */,
 				32ADD6972ABC380D009E947A /* UserManager+RegisterUser.swift */,
@@ -692,6 +695,7 @@
 				32ADD7362ABD892F009E947A /* DeleteAccountView.swift in Sources */,
 				323D347D2AB97743001E1CBE /* SSTEmailValidationState.swift in Sources */,
 				32410F542AB4BFAC00A9184B /* HomeView.swift in Sources */,
+				324FB2672ABF65AC0088A9C6 /* UserManager+Persistence.swift in Sources */,
 				32ADD69A2ABC3C5F009E947A /* UserManager+LookUpUser.swift in Sources */,
 				32ADD67F2ABA0C1F009E947A /* AuthenticationView.swift in Sources */,
 				323D34702AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift in Sources */,
