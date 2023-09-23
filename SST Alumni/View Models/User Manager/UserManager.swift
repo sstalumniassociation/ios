@@ -41,6 +41,13 @@ class UserManager: ObservableObject {
         emailVerificationState = (auth.currentUser?.isEmailVerified ?? false) ? .verified : .needsVerification
         authenticationState = .authenticated
         
+        if emailVerificationState == .needsVerification {
+            Task {
+                try await firebaseUser?.reload()
+                emailVerificationState = (auth.currentUser?.isEmailVerified ?? false) ? .verified : .needsVerification
+            }
+        }
+        
         auth.addStateDidChangeListener { [self] auth, user in
             Task {
                 await MainActor.run {
