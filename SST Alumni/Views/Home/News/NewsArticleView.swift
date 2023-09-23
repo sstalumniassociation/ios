@@ -13,25 +13,33 @@ struct NewsArticleView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            Rectangle()
-                .fill(.clear)
-                .aspectRatio(2/1, contentMode: .fit)
-                .background {
-                    Image(.samplePhoto)
-                        .resizable()
-                        .scaledToFill()
-                }
-                .clipped()
-                .clipShape(RoundedRectangle(cornerRadius: 16))
+            if let heroImage = article.heroImageURL {
+                Rectangle()
+                    .fill(.clear)
+                    .aspectRatio(2/1, contentMode: .fit)
+                    .background {
+                        AsyncImage(url: heroImage) { image in
+                            image
+                                .resizable()
+                                .scaledToFill()
+                        } placeholder: {
+                            ProgressView()
+                        }
+                    }
+                    .clipped()
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .accessibilityElement()
+                    .accessibilityLabel(article.heroImageAlt ?? "Hero Image")
+            }
             
             VStack(alignment: .leading) {
-                Text("SST Homecoming 2024")
+                Text(article.title)
                     .font(.title3)
                     .fontWeight(.bold)
-                Text("Registration is now open! See you on 24 January 2024, Wednesday!")
+                Text(try! AttributedString(markdown: article.description))
                 
                 Link(destination: article.ctaURL) {
-                    Text("Learn More & Register")
+                    Text(article.ctaTitle)
                 }
                 .buttonStyle(.borderedProminent)
                 .padding(.top)
