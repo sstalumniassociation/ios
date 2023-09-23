@@ -72,7 +72,7 @@ class UserManager: ObservableObject {
             let verificationState: EmailVerificationState
             do {
                 if let currentUser = auth.currentUser {
-                    try await auth.currentUser?.sendEmailVerification()
+                    try await currentUser.sendEmailVerification()
                     
                     verificationState = .sent
                 } else {
@@ -150,14 +150,13 @@ class UserManager: ObservableObject {
         }
     }
     
+    // TODO: Display waiting view, reauthenticate user
     func deleteAndUnlinkAccount() {
         guard let firebaseUser, let user else { return }
         Task {
             do {
                 switch await sendRequest(to: "user/\(user.id)", method: "DELETE") {
                 case .success(let (data, response)):
-                    print(response)
-                    print(String(data: data, encoding: .utf8))
                     try await firebaseUser.delete()
                 case .failure(let error):
                     print(error)
