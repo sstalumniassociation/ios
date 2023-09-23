@@ -9,7 +9,15 @@ import Foundation
 import FirebaseAuth
 
 class NewsManager: ObservableObject {
-    @Published var articles: [NewsArticle] = []
+    @Published var articles: [NewsArticle] = [] {
+        didSet {
+            writeToCache()
+        }
+    }
+    
+    init() {
+        loadArticlesFromCache()
+    }
     
     func loadArticles() async {
         do {
