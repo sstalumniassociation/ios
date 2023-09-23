@@ -39,7 +39,7 @@ struct SSTAARSEventConfirmationSuccessView: View {
                     HStack {
                         Image(systemName: "person.2.fill")
                             .frame(width: 32)
-                        Text("\(300) attendees")
+                        Text("\(event.attendees.count) attendees")
                     }
                     .foregroundStyle(.secondary)
                     
