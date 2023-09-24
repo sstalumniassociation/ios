@@ -113,8 +113,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jiachenyee/ScreenCaptureRedaction",
       "state" : {
-        "revision" : "5296c1bcfb81a613e60aae04c5e5ad5dda37b31a",
-        "version" : "1.0.0"
+        "revision" : "0ec5d21872778de55f32cd873a159cff56ec304f",
+        "version" : "1.1.1"
       }
     },
     {

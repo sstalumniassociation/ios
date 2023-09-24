@@ -17,25 +17,36 @@ struct SSTAAAnimatedLogo: View {
     @State private var logoIndex = 1
     
     var body: some View {
-        ZStack {
-            Image(.logoWhite)
-                .resizable()
-                .scaledToFit()
-                .opacity(0.3)
-            
-            if isAnimating {
-                ForEach(1..<7) { index in
-                    if index <= logoIndex {
-                        Image("LogoWhite\(index)")
-                            .resizable()
-                            .scaledToFit()
-                            .transition(.scale(scale: 0.8, anchor: .leading).combined(with: .opacity))
+        ScreenCaptureRedactionView {
+            ZStack {
+                Image(.logoWhite)
+                    .resizable()
+                    .scaledToFit()
+                    .opacity(0.3)
+                
+                if isAnimating {
+                    ForEach(1..<7) { index in
+                        if index <= logoIndex {
+                            Image("LogoWhite\(index)")
+                                .resizable()
+                                .scaledToFit()
+                                .transition(.scale(scale: 0.8, anchor: .leading).combined(with: .opacity))
+                        }
                     }
                 }
+                Image(.logoWhiteSSTOnly)
+                    .resizable()
+                    .scaledToFit()
             }
-            Image(.logoWhiteSSTOnly)
-                .resizable()
-                .scaledToFit()
+        } replacingWith: {
+            Rectangle()
+                .fill(.white.opacity(0.1))
+                .overlay {
+                    Image(systemName: "eyes")
+                        .resizable()
+                        .scaledToFit()
+                }
+                .aspectRatio(512 / 302, contentMode: .fit)
         }
         .frame(height: 48)
         .onReceive(timer) { _ in
@@ -48,7 +59,6 @@ struct SSTAAAnimatedLogo: View {
                 }
             }
         }
-        .redactWhenScreenRecorded()
     }
 }
 
