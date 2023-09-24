@@ -64,6 +64,7 @@ enum AuthenticationState: Equatable {
     case incorrectPassword(String)
     
     // Parameter: Email
+    case forgotPasswordSending(String)
     case forgotPassword(String)
     
     case unregistered
