@@ -14,9 +14,14 @@ struct SecurityAccessStatusView: View {
     
     var body: some View {
         ScreenCaptureRedactionView {
-            HexagonView()
-                .drawingGroup()
-                .opacity(0.5)
+            if securityAccessManager.securityAccessState == .admitted {
+                HexagonView()
+                    .drawingGroup()
+                    .opacity(0.5)
+            } else {
+                Rectangle()
+                    .fill(.clear)
+            }
         } replacingWith: {
             Rectangle()
                 .fill(.clear)
