@@ -78,6 +78,7 @@
 		3278F7D62AC055BA00C936D1 /* MarkdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D52AC055BA00C936D1 /* MarkdownText.swift */; };
 		3278F7D82AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */; };
 		3278F7DA2AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D92AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift */; };
+		3278F7E02AC0BBAE00C936D1 /* HexagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7DF2AC0BBAE00C936D1 /* HexagonView.swift */; };
 		32ADD67D2AB9FC00009E947A /* AuthenticationEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */; };
 		32ADD67F2ABA0C1F009E947A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */; };
 		32ADD6812ABA0D45009E947A /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6802ABA0D45009E947A /* AuthenticationState.swift */; };
@@ -163,6 +164,7 @@
 		3278F7D52AC055BA00C936D1 /* MarkdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownText.swift; sourceTree = "<group>"; };
 		3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorDescription+GetFirebaseError.swift"; sourceTree = "<group>"; };
 		3278F7D92AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorDescription+OnboardingErrors.swift"; sourceTree = "<group>"; };
+		3278F7DF2AC0BBAE00C936D1 /* HexagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonView.swift; sourceTree = "<group>"; };
 		32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEmailView.swift; sourceTree = "<group>"; };
 		32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		32ADD6802ABA0D45009E947A /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
@@ -534,6 +536,7 @@
 			isa = PBXGroup;
 			children = (
 				32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */,
+				3278F7DF2AC0BBAE00C936D1 /* HexagonView.swift */,
 				32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */,
 				32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */,
 			);
@@ -742,6 +745,7 @@
 				32410F602AB4D0F200A9184B /* CardExpandedView.swift in Sources */,
 				32410FAE2AB6004400A9184B /* SecurityAccessState.swift in Sources */,
 				32410F442AB4B9C900A9184B /* ContentView.swift in Sources */,
+				3278F7E02AC0BBAE00C936D1 /* HexagonView.swift in Sources */,
 				3278F7D62AC055BA00C936D1 /* MarkdownText.swift in Sources */,
 				32ADD6962ABC3285009E947A /* OnboardingHTTPError.swift in Sources */,
 				32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */,
