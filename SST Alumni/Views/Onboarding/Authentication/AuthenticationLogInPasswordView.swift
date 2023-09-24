@@ -26,6 +26,7 @@ struct AuthenticationLogInPasswordView: View {
                     .frame(height: 96)
                     .font(.system(size: 64))
                     .padding(.top)
+                    .accessibilityHidden(true)
                 
                 Text(isIncorrectPassword ? "That’s not it…" : "What’s your password?")
                     .font(.title)

@@ -20,6 +20,8 @@ struct AuthenticationForgetPasswordSentView: View {
                 .frame(height: 96)
                 .font(.system(size: 64))
                 .padding(.top)
+                .accessibilityHidden(true)
+            
             Text("Check your Email!")
                 .font(.title)
                 .fontWeight(.bold)
