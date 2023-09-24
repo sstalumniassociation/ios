@@ -26,7 +26,7 @@ struct HexagonView: View {
                 ForEach(0..<rows, id: \.self) { row in
                     HStack(spacing: width / 2) {
                         ForEach(0..<columns, id: \.self) { column in
-                            let hexagonSeed = (Int(round(date.timeIntervalSince1970) / 3) + ((column + 1) * (row + 1))) % 10
+                            let hexagonSeed = (Int(round(date.timeIntervalSince1970) / 1) + ((column + 1) * (row + 1))) % 10
                             Path { path in
                                 path.move(to: CGPoint(x: centerX - width / 4, y: 0))
                                 path.addLine(to: CGPoint(x: centerX + width / 4, y: 0))
