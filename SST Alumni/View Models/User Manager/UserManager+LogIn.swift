@@ -43,7 +43,7 @@ extension UserManager {
     
     func getUserData(with userId: String) async -> Result<UserData, OnboardingHTTPError> {
         switch await sendRequest(to: "user/\(userId)") {
-        case .success(let (data, response)):
+        case .success(let (data, _)):
             do {
                 let decoder = JSONDecoder()
                 return .success(try decoder.decode(UserData.self, from: data))

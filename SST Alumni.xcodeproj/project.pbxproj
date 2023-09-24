@@ -74,9 +74,10 @@
 		324FB2672ABF65AC0088A9C6 /* UserManager+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB2662ABF65AC0088A9C6 /* UserManager+Persistence.swift */; };
 		324FB26A2ABF689E0088A9C6 /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB2692ABF689E0088A9C6 /* NewsManager.swift */; };
 		324FB26D2ABF6E1F0088A9C6 /* NewsManager+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB26C2ABF6E1F0088A9C6 /* NewsManager+Persistence.swift */; };
+		324FB26F2AC010F30088A9C6 /* AuthenticationForgetPasswordSentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB26E2AC010F30088A9C6 /* AuthenticationForgetPasswordSentView.swift */; };
 		3278F7D62AC055BA00C936D1 /* MarkdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D52AC055BA00C936D1 /* MarkdownText.swift */; };
 		3278F7D82AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */; };
-		324FB26F2AC010F30088A9C6 /* AuthenticationForgetPasswordSentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB26E2AC010F30088A9C6 /* AuthenticationForgetPasswordSentView.swift */; };
+		3278F7DA2AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D92AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift */; };
 		32ADD67D2AB9FC00009E947A /* AuthenticationEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */; };
 		32ADD67F2ABA0C1F009E947A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */; };
 		32ADD6812ABA0D45009E947A /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6802ABA0D45009E947A /* AuthenticationState.swift */; };
@@ -158,9 +159,10 @@
 		324FB2662ABF65AC0088A9C6 /* UserManager+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserManager+Persistence.swift"; sourceTree = "<group>"; };
 		324FB2692ABF689E0088A9C6 /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
 		324FB26C2ABF6E1F0088A9C6 /* NewsManager+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsManager+Persistence.swift"; sourceTree = "<group>"; };
+		324FB26E2AC010F30088A9C6 /* AuthenticationForgetPasswordSentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationForgetPasswordSentView.swift; sourceTree = "<group>"; };
 		3278F7D52AC055BA00C936D1 /* MarkdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownText.swift; sourceTree = "<group>"; };
 		3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorDescription+GetFirebaseError.swift"; sourceTree = "<group>"; };
-		324FB26E2AC010F30088A9C6 /* AuthenticationForgetPasswordSentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationForgetPasswordSentView.swift; sourceTree = "<group>"; };
+		3278F7D92AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorDescription+OnboardingErrors.swift"; sourceTree = "<group>"; };
 		32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEmailView.swift; sourceTree = "<group>"; };
 		32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		32ADD6802ABA0D45009E947A /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
@@ -475,6 +477,7 @@
 			children = (
 				32ADD6802ABA0D45009E947A /* AuthenticationState.swift */,
 				32ADD6872ABACF30009E947A /* AuthErrorDescription.swift */,
+				3278F7D92AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift */,
 				32ADD6892ABACF4B009E947A /* AuthErrorDescription+FirebaseErrors.swift */,
 				3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */,
 			);
@@ -788,6 +791,7 @@
 				32410F422AB4B9C900A9184B /* SSTAlumniApp.swift in Sources */,
 				32F3B6742AB816400075F5D7 /* AttendeeRowView.swift in Sources */,
 				32410FB32AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift in Sources */,
+				3278F7DA2AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift in Sources */,
 				3278F7D82AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift in Sources */,
 				32F3B6542AB6AEC40075F5D7 /* ConfettiUIView.swift in Sources */,
 				324FB2642ABF0CF50088A9C6 /* SSTAARSManager+Persistence.swift in Sources */,
