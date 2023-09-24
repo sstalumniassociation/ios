@@ -1,5 +1,5 @@
 //
-//  AuthErrorHandle+FirebaseErrors.swift
+//  AuthErrorDescription+FirebaseErrors.swift
 //  SST Alumni
 //
 //  Created by Jia Chen Yee on 20/9/23.
