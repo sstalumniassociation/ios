@@ -1026,7 +1026,7 @@
 			repositoryURL = "https://github.com/jiachenyee/ScreenCaptureRedaction";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 1.1.0;
 			};
 		};
 		32410F6C2AB58B0300A9184B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {

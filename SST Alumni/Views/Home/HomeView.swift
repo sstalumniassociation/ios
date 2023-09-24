@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ScreenCaptureRedaction
 
 struct HomeView: View {
     
@@ -20,8 +21,13 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             if isCardExpanded && isConfettiAnimating {
-                GeometryReader { geometry in
-                    ConfettiView(size: geometry.size)
+                ScreenCaptureRedactionView {
+                    GeometryReader { geometry in
+                        ConfettiView(size: geometry.size)
+                    }
+                } replacingWith: {
+                    Rectangle()
+                        .opacity(0)
                 }
             }
             
