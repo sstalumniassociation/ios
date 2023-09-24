@@ -39,6 +39,7 @@ struct OnboardingView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             }
             .opacity(0.2)
+            .accessibilityHidden(true)
             .animation(.easeInOut, value: onboardingSelection)
             
             VStack(alignment: .leading) {

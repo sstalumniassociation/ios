@@ -24,6 +24,8 @@ struct SSTAARSView: View {
                     HStack(alignment: .top) {
                         Text("\(Image(systemName: "ellipsis.rectangle"))")
                             .font(.headline)
+                            .accessibilityHidden(true)
+                        
                         VStack(alignment: .leading) {
                             Text("SSTAARS Access Code")
                                 .font(.headline)
@@ -35,6 +37,7 @@ struct SSTAARSView: View {
                         accessCodeAlertPresented.toggle()
                     }
                 }
+                .accessibilityElement(children: .combine)
                 
                 if !sstaarsManager.events.isEmpty {
                     Section("My Events") {
@@ -51,9 +54,10 @@ struct SSTAARSView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
+                        eventCode = ""
                         accessCodeAlertPresented.toggle()
                     } label: {
-                        Image(systemName: "plus")
+                        Label("Add Event", systemImage: "plus")
                     }
                 }
                 

@@ -19,11 +19,13 @@ struct AuthenticationLoadingView: View {
                 .frame(height: 96)
                 .font(.system(size: 64))
                 .padding(.top)
+                .accessibilityHidden(true)
             
             Text(title)
                 .font(.title)
                 .fontWeight(.bold)
                 .padding()
+                .multilineTextAlignment(.center)
             
             ProgressView()
             

@@ -25,6 +25,8 @@ struct QRCodeScannerView: View {
                     dismiss()
                     completionHandler(string)
                 }
+                .accessibilityElement()
+                .accessibilityLabel("Point at an attendee's QR code to check them in")
                 
                 if isPresented {
                     GeometryReader { reader in

@@ -18,6 +18,7 @@ struct AuthenticationUnregisteredView: View {
                 .frame(height: 96)
                 .font(.system(size: 64))
                 .padding(.top)
+                .accessibilityHidden(true)
             
             Text("Unregistered Email")
                 .font(.title)
@@ -30,7 +31,7 @@ struct AuthenticationUnregisteredView: View {
             
             Spacer()
             
-            Link(destination: URL(string: "https://sst.edu.sg")!) {
+            Link(destination: .sstaaSignUp) {
                 Text("Sign up for SSTAA")
                     .padding(8)
                     .frame(maxWidth: .infinity)

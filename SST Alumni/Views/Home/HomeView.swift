@@ -63,6 +63,7 @@ struct HomeView: View {
                         .buttonStyle(.plain)
                     }
                     .padding()
+                    .accessibilityLabel("Security Card")
                     
                     NewsArticleSectionView()
                 } else {

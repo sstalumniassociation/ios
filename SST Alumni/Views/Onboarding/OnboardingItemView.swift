@@ -21,10 +21,13 @@ struct OnboardingItemView<Content: View>: View {
                 .frame(height: 96)
                 .font(.system(size: 64))
                 .padding(.bottom)
+                .accessibilityHidden(true)
+            
             Text(title)
                 .font(.headline)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
+                .accessibilityLabel(title + " heading")
             
             Text(description)
                 .font(.body)

@@ -16,6 +16,7 @@ struct AuthenticationErrorView: View {
     var body: some View {
         ZStack {
             ErrorFlameView()
+                .accessibilityHidden(true)
             
             VStack {
                 Image(systemName: message.icon)
@@ -23,6 +24,8 @@ struct AuthenticationErrorView: View {
                     .frame(height: 96)
                     .font(.system(size: 64))
                     .padding(.top)
+                    .accessibilityHidden(true)
+                
                 Text(message.title)
                     .font(.title)
                     .fontWeight(.bold)

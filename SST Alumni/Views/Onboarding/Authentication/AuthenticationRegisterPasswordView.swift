@@ -51,6 +51,8 @@ struct AuthenticationRegisterPasswordView: View {
                     .frame(height: 96)
                     .font(.system(size: 64))
                     .padding(.top)
+                    .accessibilityHidden(true)
+                
                 Text("Create a Password")
                     .font(.title)
                     .fontWeight(.bold)

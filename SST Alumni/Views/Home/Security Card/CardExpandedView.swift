@@ -65,5 +65,6 @@ struct CardExpandedView: View {
                 }
             }
         }
+        .accessibilityHidden(true)
     }
 }

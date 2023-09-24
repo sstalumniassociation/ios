@@ -28,6 +28,7 @@ struct SSTAARSEventConfirmationSuccessView: View {
                         .font(.caption)
                         .monospaced()
                         .foregroundStyle(.secondary)
+                        .speechSpellsOutCharacters()
                     
                     HStack {
                         Image(systemName: "calendar")
@@ -35,6 +36,7 @@ struct SSTAARSEventConfirmationSuccessView: View {
                         Text(event.startDateTime.formatted(date: .abbreviated, time: .shortened))
                     }
                     .foregroundStyle(.secondary)
+                    .accessibilityElement(children: .combine)
                     
                     HStack {
                         Image(systemName: "person.2.fill")
@@ -42,6 +44,7 @@ struct SSTAARSEventConfirmationSuccessView: View {
                         Text("\(event.attendees.count) attendees")
                     }
                     .foregroundStyle(.secondary)
+                    .accessibilityElement(children: .combine)
                     
                     Divider()
                     

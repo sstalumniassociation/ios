@@ -30,8 +30,11 @@ struct AuthenticationView: View {
                                                 authenticationState: $userManager.authenticationState)
             case .registeringUser:
                 AuthenticationLoadingView(systemName: "person.fill.checkmark", title: "Registering…")
-            case .forgotPassword:
-                EmptyView()
+            case .forgotPasswordSent(let email):
+                AuthenticationForgetPasswordSentView(authenticationState: $userManager.authenticationState,
+                                                 email: email)
+            case .forgotPasswordSending:
+                AuthenticationLoadingView(systemName: "paperplane", title: "Sending Password Reset Email…")
             case .unregistered:
                 AuthenticationUnregisteredView()
             case .error(let message):
@@ -56,6 +59,7 @@ struct AuthenticationView: View {
                 .padding()
             }
         }
+        .animation(.default, value: userManager.authenticationState)
         .onAppear {
             userManager.authenticationState = .emailInput
         }

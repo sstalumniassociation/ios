@@ -23,6 +23,8 @@ struct AuthenticationEmailView: View {
                     .frame(height: 96)
                     .font(.system(size: 64))
                     .padding(.top)
+                    .accessibilityHidden(true)
+                
                 Text("What’s your email?")
                     .font(.title)
                     .fontWeight(.bold)
@@ -61,9 +63,8 @@ struct AuthenticationEmailView: View {
                     .foregroundStyle(.secondary)
                 Spacer()
                 
-                Button("Not registered with SST Alumni Association?") {
-                    
-                }
+                Link("Not registered with SST Alumni Association?", destination: .sstaaSignUp)
+                    .multilineTextAlignment(.center)
             }
         }
         .padding()

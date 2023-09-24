@@ -18,12 +18,14 @@ struct AuthenticationEmailVerificationRequired: View {
                     .frame(height: 96)
                     .font(.system(size: 64))
                     .padding(.top)
+                    .accessibilityHidden(true)
                     .transition(.scale.combined(with: .opacity))
             } else {
                 Image(systemName: "envelope")
                     .frame(height: 96)
                     .font(.system(size: 64))
                     .padding(.top)
+                    .accessibilityHidden(true)
                     .transition(.scale.combined(with: .opacity))
             }
             
