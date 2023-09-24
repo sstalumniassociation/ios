@@ -20,15 +20,17 @@ struct AuthenticationForgetPasswordView: View {
                 .frame(height: 96)
                 .font(.system(size: 64))
                 .padding(.top)
-            Text("Forgot Password")
+            Text("Check your Email!")
                 .font(.title)
                 .fontWeight(.bold)
                 .padding()
+                .multilineTextAlignment(.center)
             
             Text("An email to reset your password has been sent!")
-                .font(.title)
-                .fontWeight(.bold)
                 .padding()
+                .multilineTextAlignment(.center)
+            
+            Spacer()
             
             Button {
                 withAnimation {
@@ -42,5 +44,6 @@ struct AuthenticationForgetPasswordView: View {
             .buttonStyle(.borderedProminent)
             .disabled(!isValid(email: email))
         }
+        .padding()
     }
 }

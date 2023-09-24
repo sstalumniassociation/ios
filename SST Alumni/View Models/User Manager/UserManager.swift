@@ -30,6 +30,8 @@ class UserManager: ObservableObject {
                     await registerUser(email: email, password: password, cloudflareId: cloudflareUserId)
                 case .loggingIn(let email, let password):
                     await logIn(email: email, password: password)
+                case .forgotPasswordSending(let email):
+                    await forgetPassword(email: email)
                 default: break
                 }
             }
@@ -130,8 +132,18 @@ class UserManager: ObservableObject {
         }
     }
     
-    func forgetPassword(email: String) {
-        
+    func forgetPassword(email: String) async {
+        do {
+            try await Auth.auth().sendPasswordReset(withEmail: email)
+            
+            await MainActor.run {
+                authenticationState = .forgotPassword(email)
+            }
+        } catch {
+            await MainActor.run {
+                authenticationState = .error(.from(.firebaseError(error)))
+            }
+        }
     }
     
     func signOut() {

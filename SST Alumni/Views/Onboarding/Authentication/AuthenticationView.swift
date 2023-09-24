@@ -59,6 +59,7 @@ struct AuthenticationView: View {
                 .padding()
             }
         }
+        .animation(.default, value: userManager.authenticationState)
         .onAppear {
             userManager.authenticationState = .emailInput
         }
