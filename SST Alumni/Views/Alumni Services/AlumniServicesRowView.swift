@@ -72,6 +72,11 @@ struct AlumniServicesRowView<Content: View>: View {
         } sheetContent: {
             content
         }
+        .accessibilityHidden(true)
         .listRowSeparator(.hidden)
+        .accessibilityElement(children: .ignore)
+        .accessibilityAddTraits(.isButton)
+        .accessibilityRemoveTraits(.isLink)
+        .accessibilityLabel("\(title), \(description)")
     }
 }
