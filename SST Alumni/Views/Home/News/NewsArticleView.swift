@@ -36,7 +36,7 @@ struct NewsArticleView: View {
                 Text(article.title)
                     .font(.title3)
                     .fontWeight(.bold)
-                Text(try! AttributedString(markdown: article.description))
+                Text(markdown: article.description)
                 
                 Link(destination: article.ctaURL) {
                     Text(article.ctaTitle)

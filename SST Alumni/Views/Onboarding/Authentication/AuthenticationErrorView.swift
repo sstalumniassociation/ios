@@ -28,7 +28,7 @@ struct AuthenticationErrorView: View {
                     .fontWeight(.bold)
                     .padding()
                 
-                Text(try! AttributedString(markdown: message.description))
+                Text(markdown: message.description)
                     .font(.body)
                     .multilineTextAlignment(.center)
                 

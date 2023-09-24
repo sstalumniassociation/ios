@@ -1,5 +1,5 @@
 //
-//  SST_AlumniApp.swift
+//  SSTAlumniApp.swift
 //  SST Alumni
 //
 //  Created by Jia Chen Yee on 16/9/23.
@@ -22,7 +22,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 @main
-struct SST_AlumniApp: App {
+struct SSTAlumniApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
