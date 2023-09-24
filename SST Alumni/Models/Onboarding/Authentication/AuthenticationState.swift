@@ -40,9 +40,9 @@ import Foundation
 ///                       |                            |   |  +-------------------------------+
 ///                      \|/                           |   |                  |
 ///              +----------------+                    |   |                 \|/
-///              | .authenticated |<-------------------+   |     +-------------------------+
-///              +----------------+                        +-----| .forgotPassword(String) |
-///                                                              +-------------------------+
+///              | .authenticated |<-------------------+   |   +-----------------------------+
+///              +----------------+                        +---| .forgotPasswordSent(String) |
+///                                                            +-----------------------------+
 ///
 /// ```
 enum AuthenticationState: Equatable {
@@ -66,7 +66,7 @@ enum AuthenticationState: Equatable {
     
     // Parameter: Email
     case forgotPasswordSending(String)
-    case forgotPassword(String)
+    case forgotPasswordSent(String)
     
     case unregistered
     

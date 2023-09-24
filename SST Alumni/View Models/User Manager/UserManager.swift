@@ -137,7 +137,7 @@ class UserManager: ObservableObject {
             try await Auth.auth().sendPasswordReset(withEmail: email)
             
             await MainActor.run {
-                authenticationState = .forgotPassword(email)
+                authenticationState = .forgotPasswordSent(email)
             }
         } catch {
             await MainActor.run {

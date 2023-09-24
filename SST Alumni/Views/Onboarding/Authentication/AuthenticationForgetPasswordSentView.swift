@@ -1,5 +1,5 @@
 //
-//  AuthenticationForgetPasswordView.swift
+//  AuthenticationForgetPasswordSentView.swift
 //  SST Alumni
 //
 //  Created by Jia Chen Yee on 24/9/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AuthenticationForgetPasswordView: View {
+struct AuthenticationForgetPasswordSentView: View {
     
     @Binding var authenticationState: AuthenticationState
     
