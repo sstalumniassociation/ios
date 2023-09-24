@@ -75,13 +75,14 @@
 		324FB26A2ABF689E0088A9C6 /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB2692ABF689E0088A9C6 /* NewsManager.swift */; };
 		324FB26D2ABF6E1F0088A9C6 /* NewsManager+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB26C2ABF6E1F0088A9C6 /* NewsManager+Persistence.swift */; };
 		3278F7D62AC055BA00C936D1 /* MarkdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D52AC055BA00C936D1 /* MarkdownText.swift */; };
+		3278F7D82AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */; };
 		32ADD67D2AB9FC00009E947A /* AuthenticationEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */; };
 		32ADD67F2ABA0C1F009E947A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */; };
 		32ADD6812ABA0D45009E947A /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6802ABA0D45009E947A /* AuthenticationState.swift */; };
 		32ADD6832ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6822ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift */; };
 		32ADD6862ABA9F50009E947A /* AuthenticationLogInPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6852ABA9F50009E947A /* AuthenticationLogInPasswordView.swift */; };
 		32ADD6882ABACF30009E947A /* AuthErrorDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6872ABACF30009E947A /* AuthErrorDescription.swift */; };
-		32ADD68A2ABACF4B009E947A /* AuthErrorHandle+FirebaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6892ABACF4B009E947A /* AuthErrorHandle+FirebaseErrors.swift */; };
+		32ADD68A2ABACF4B009E947A /* AuthErrorDescription+FirebaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6892ABACF4B009E947A /* AuthErrorDescription+FirebaseErrors.swift */; };
 		32ADD68C2ABAD238009E947A /* AuthenticationErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD68B2ABAD238009E947A /* AuthenticationErrorView.swift */; };
 		32ADD68E2ABADA9D009E947A /* ErrorFlameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD68D2ABADA9D009E947A /* ErrorFlameView.swift */; };
 		32ADD6902ABB5E5D009E947A /* AuthenticationLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD68F2ABB5E5D009E947A /* AuthenticationLoadingView.swift */; };
@@ -157,13 +158,14 @@
 		324FB2692ABF689E0088A9C6 /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
 		324FB26C2ABF6E1F0088A9C6 /* NewsManager+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsManager+Persistence.swift"; sourceTree = "<group>"; };
 		3278F7D52AC055BA00C936D1 /* MarkdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownText.swift; sourceTree = "<group>"; };
+		3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorDescription+GetFirebaseError.swift"; sourceTree = "<group>"; };
 		32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEmailView.swift; sourceTree = "<group>"; };
 		32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		32ADD6802ABA0D45009E947A /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
 		32ADD6822ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRegisterPasswordView.swift; sourceTree = "<group>"; };
 		32ADD6852ABA9F50009E947A /* AuthenticationLogInPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLogInPasswordView.swift; sourceTree = "<group>"; };
 		32ADD6872ABACF30009E947A /* AuthErrorDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrorDescription.swift; sourceTree = "<group>"; };
-		32ADD6892ABACF4B009E947A /* AuthErrorHandle+FirebaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorHandle+FirebaseErrors.swift"; sourceTree = "<group>"; };
+		32ADD6892ABACF4B009E947A /* AuthErrorDescription+FirebaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorDescription+FirebaseErrors.swift"; sourceTree = "<group>"; };
 		32ADD68B2ABAD238009E947A /* AuthenticationErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorView.swift; sourceTree = "<group>"; };
 		32ADD68D2ABADA9D009E947A /* ErrorFlameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorFlameView.swift; sourceTree = "<group>"; };
 		32ADD68F2ABB5E5D009E947A /* AuthenticationLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLoadingView.swift; sourceTree = "<group>"; };
@@ -470,7 +472,8 @@
 			children = (
 				32ADD6802ABA0D45009E947A /* AuthenticationState.swift */,
 				32ADD6872ABACF30009E947A /* AuthErrorDescription.swift */,
-				32ADD6892ABACF4B009E947A /* AuthErrorHandle+FirebaseErrors.swift */,
+				32ADD6892ABACF4B009E947A /* AuthErrorDescription+FirebaseErrors.swift */,
+				3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -686,6 +689,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		3278F7D32AC0551500C936D1 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -769,7 +773,7 @@
 				32ADD68E2ABADA9D009E947A /* ErrorFlameView.swift in Sources */,
 				32F3B64F2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift in Sources */,
 				32ADD6BB2ABCC5EF009E947A /* AuthenticationEmailVerificationRequired.swift in Sources */,
-				32ADD68A2ABACF4B009E947A /* AuthErrorHandle+FirebaseErrors.swift in Sources */,
+				32ADD68A2ABACF4B009E947A /* AuthErrorDescription+FirebaseErrors.swift in Sources */,
 				32ADD6942ABC2BE7009E947A /* UserManager+Requests.swift in Sources */,
 				32410FB02AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift in Sources */,
 				32ADD67D2AB9FC00009E947A /* AuthenticationEmailView.swift in Sources */,
@@ -780,6 +784,7 @@
 				32410F422AB4B9C900A9184B /* SSTAlumniApp.swift in Sources */,
 				32F3B6742AB816400075F5D7 /* AttendeeRowView.swift in Sources */,
 				32410FB32AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift in Sources */,
+				3278F7D82AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift in Sources */,
 				32F3B6542AB6AEC40075F5D7 /* ConfettiUIView.swift in Sources */,
 				324FB2642ABF0CF50088A9C6 /* SSTAARSManager+Persistence.swift in Sources */,
 				323D346E2AB8971F001E1CBE /* MegaphoneOnboardingItemView.swift in Sources */,

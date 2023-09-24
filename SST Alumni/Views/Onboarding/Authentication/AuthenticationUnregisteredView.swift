@@ -30,7 +30,6 @@ struct AuthenticationUnregisteredView: View {
             
             Spacer()
             
-            #warning("Placeholder URL")
             Link(destination: URL(string: "https://sst.edu.sg")!) {
                 Text("Sign up for SSTAA")
                     .padding(8)

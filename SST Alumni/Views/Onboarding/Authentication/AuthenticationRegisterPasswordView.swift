@@ -153,7 +153,6 @@ struct AuthenticationRegisterPasswordView: View {
                     }
                     .symbolRenderingMode(.multicolor)
                     
-                    
                     Button {
                         authenticationState = .registeringUser(email, password, cloudflareId)
                     } label: {

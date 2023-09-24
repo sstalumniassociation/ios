@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class AuthErrorDescription: Equatable {
     static func == (lhs: AuthErrorDescription, rhs: AuthErrorDescription) -> Bool {
         lhs.title == rhs.title && lhs.description == rhs.description

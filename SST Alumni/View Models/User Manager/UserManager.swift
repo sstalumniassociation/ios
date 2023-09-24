@@ -154,7 +154,7 @@ class UserManager: ObservableObject {
             
         case .failure(let error):
             print(error)
-            #warning("Incomplete implementation")
+            // TODO: Handle error with option to sign out or retry
         }
     }
     
