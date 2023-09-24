@@ -24,6 +24,7 @@ struct AuthenticationLoadingView: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .padding()
+                .multilineTextAlignment(.center)
             
             ProgressView()
             

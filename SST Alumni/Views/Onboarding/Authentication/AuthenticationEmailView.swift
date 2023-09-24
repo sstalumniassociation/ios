@@ -61,9 +61,8 @@ struct AuthenticationEmailView: View {
                     .foregroundStyle(.secondary)
                 Spacer()
                 
-                Button("Not registered with SST Alumni Association?") {
-                    
-                }
+                Link("Not registered with SST Alumni Association?", destination: .sstaaSignUp)
+                    .multilineTextAlignment(.center)
             }
         }
         .padding()
