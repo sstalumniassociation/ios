@@ -20,6 +20,8 @@ struct NewsArticleSectionView: View {
         .padding(.top)
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.horizontal)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("What’s Happening heading")
         
         VStack {
             ForEach(newsManager.articles) { article in

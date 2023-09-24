@@ -16,6 +16,8 @@ struct ErrorFlameView: View {
     @State private var offset = 0.0
     @State private var rotation = -40.0
     
+    @Environment(\.accessibilityReduceMotion) var accessibilityReduceMotion
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -23,12 +25,12 @@ struct ErrorFlameView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(maxHeight: .infinity, alignment: .bottom)
-                    .scaleEffect(flame3, anchor: .bottom)
+                    .scaleEffect(accessibilityReduceMotion ? CGSize(width: 1, height: 1) : flame3, anchor: .bottom)
                 Image(.flame2)
                     .resizable()
                     .scaledToFit()
                     .frame(maxHeight: .infinity, alignment: .bottom)
-                    .scaleEffect(flame2, anchor: .bottom)
+                    .scaleEffect(accessibilityReduceMotion ? CGSize(width: 1, height: 1) : flame2, anchor: .bottom)
                 Image(systemName: "pc")
                     .symbolRenderingMode(.multicolor)
                     .resizable()
@@ -38,12 +40,12 @@ struct ErrorFlameView: View {
                     .frame(maxHeight: .infinity, alignment: .bottom)
                     .padding(.bottom, geometry.size.width / 5)
                     .padding()
-                    .offset(y: offset)
+                    .offset(y: accessibilityReduceMotion ? 0 : offset)
                 Image(.flame1)
                     .resizable()
                     .scaledToFit()
                     .frame(maxHeight: .infinity, alignment: .bottom)
-                    .scaleEffect(flame1, anchor: .bottom)
+                    .scaleEffect(accessibilityReduceMotion ? CGSize(width: 1, height: 1) : flame1, anchor: .bottom)
             }
             .ignoresSafeArea(.container, edges: .bottom)
             .padding([.horizontal, .bottom], -32)
@@ -68,6 +70,7 @@ struct ErrorFlameView: View {
                 flame3 = CGSize(width: 1.3, height: 1.2)
             }
         }
+        .accessibilityHidden(true)
     }
 }
 

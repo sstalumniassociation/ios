@@ -18,6 +18,7 @@ struct AuthenticationUnregisteredView: View {
                 .frame(height: 96)
                 .font(.system(size: 64))
                 .padding(.top)
+                .accessibilityHidden(true)
             
             Text("Unregistered Email")
                 .font(.title)

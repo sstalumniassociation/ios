@@ -44,6 +44,8 @@ struct SSTAARSEventView: View {
                         .padding(.leading)
                     }
                     .padding(.vertical)
+                    .accessibilityElement(children: .ignore)
+                    .accessibilityLabel("\(sstaarsManager.attendeeCheckInInfo.count) of \(event.attendees.count) attendees checked in")
                 }
                 
                 Section {
@@ -75,6 +77,7 @@ struct SSTAARSEventView: View {
                 ForEach(event.attendees) { attendee in
                     if searchText.isEmpty || attendee.name.lowercased().contains(searchText.lowercased()) {
                         AttendeeRowView(sstaarsManager: sstaarsManager, attendee: attendee)
+                            .accessibilityHint("View Attendee Information")
                     }
                 }
             }

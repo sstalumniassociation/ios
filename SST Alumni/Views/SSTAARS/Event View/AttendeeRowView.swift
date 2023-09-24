@@ -24,12 +24,14 @@ struct AttendeeRowView: View {
                             .foregroundStyle(.green)
                         Text("Checked In")
                     }
+                    .accessibilityElement(children: .combine)
                 case .notCheckedIn:
                     HStack {
                         Image(systemName: "xmark.circle.fill")
                         Text("Not Checked In")
                     }
                     .foregroundStyle(.secondary)
+                    .accessibilityElement(children: .combine)
                 }
             }
         }

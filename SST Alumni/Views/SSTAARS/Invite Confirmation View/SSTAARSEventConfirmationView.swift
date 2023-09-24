@@ -23,7 +23,8 @@ struct SSTAARSEventConfirmationView: View {
                     Image(systemName: "pc")
                         .symbolRenderingMode(.multicolor)
                         .font(.system(size: 64))
-                        
+                        .accessibilityHidden(true)
+                    
                     Text("Something went wrong.")
                         .font(.title)
                         .fontWeight(.bold)
@@ -37,7 +38,7 @@ struct SSTAARSEventConfirmationView: View {
                 VStack(spacing: 16) {
                     Image(systemName: "eyes")
                         .font(.system(size: 64))
-                    
+                        .accessibilityHidden(true)
                     Text("Could not find event.")
                         .font(.title)
                         .fontWeight(.bold)

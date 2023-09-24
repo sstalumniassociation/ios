@@ -23,6 +23,8 @@ struct AuthenticationEmailView: View {
                     .frame(height: 96)
                     .font(.system(size: 64))
                     .padding(.top)
+                    .accessibilityHidden(true)
+                
                 Text("What’s your email?")
                     .font(.title)
                     .fontWeight(.bold)
