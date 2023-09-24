@@ -17,7 +17,7 @@
 		323D34802AB97EA1001E1CBE /* ScreenCaptureRedaction in Frameworks */ = {isa = PBXBuildFile; productRef = 323D347F2AB97EA1001E1CBE /* ScreenCaptureRedaction */; };
 		323D34822AB991BB001E1CBE /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34812AB991BB001E1CBE /* UserProfileView.swift */; };
 		323D34842AB99272001E1CBE /* AcknowledgementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34832AB99272001E1CBE /* AcknowledgementsView.swift */; };
-		32410F422AB4B9C900A9184B /* SST_AlumniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F412AB4B9C900A9184B /* SST_AlumniApp.swift */; };
+		32410F422AB4B9C900A9184B /* SSTAlumniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F412AB4B9C900A9184B /* SSTAlumniApp.swift */; };
 		32410F442AB4B9C900A9184B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F432AB4B9C900A9184B /* ContentView.swift */; };
 		32410F462AB4B9CA00A9184B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32410F452AB4B9CA00A9184B /* Assets.xcassets */; };
 		32410F492AB4B9CA00A9184B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32410F482AB4B9CA00A9184B /* Preview Assets.xcassets */; };
@@ -75,13 +75,16 @@
 		324FB26A2ABF689E0088A9C6 /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB2692ABF689E0088A9C6 /* NewsManager.swift */; };
 		324FB26D2ABF6E1F0088A9C6 /* NewsManager+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB26C2ABF6E1F0088A9C6 /* NewsManager+Persistence.swift */; };
 		324FB26F2AC010F30088A9C6 /* AuthenticationForgetPasswordSentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB26E2AC010F30088A9C6 /* AuthenticationForgetPasswordSentView.swift */; };
+		3278F7D62AC055BA00C936D1 /* MarkdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D52AC055BA00C936D1 /* MarkdownText.swift */; };
+		3278F7D82AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */; };
+		3278F7DA2AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D92AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift */; };
 		32ADD67D2AB9FC00009E947A /* AuthenticationEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */; };
 		32ADD67F2ABA0C1F009E947A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */; };
 		32ADD6812ABA0D45009E947A /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6802ABA0D45009E947A /* AuthenticationState.swift */; };
 		32ADD6832ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6822ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift */; };
 		32ADD6862ABA9F50009E947A /* AuthenticationLogInPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6852ABA9F50009E947A /* AuthenticationLogInPasswordView.swift */; };
 		32ADD6882ABACF30009E947A /* AuthErrorDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6872ABACF30009E947A /* AuthErrorDescription.swift */; };
-		32ADD68A2ABACF4B009E947A /* AuthErrorHandle+FirebaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6892ABACF4B009E947A /* AuthErrorHandle+FirebaseErrors.swift */; };
+		32ADD68A2ABACF4B009E947A /* AuthErrorDescription+FirebaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6892ABACF4B009E947A /* AuthErrorDescription+FirebaseErrors.swift */; };
 		32ADD68C2ABAD238009E947A /* AuthenticationErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD68B2ABAD238009E947A /* AuthenticationErrorView.swift */; };
 		32ADD68E2ABADA9D009E947A /* ErrorFlameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD68D2ABADA9D009E947A /* ErrorFlameView.swift */; };
 		32ADD6902ABB5E5D009E947A /* AuthenticationLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD68F2ABB5E5D009E947A /* AuthenticationLoadingView.swift */; };
@@ -126,7 +129,7 @@
 		323D34812AB991BB001E1CBE /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		323D34832AB99272001E1CBE /* AcknowledgementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsView.swift; sourceTree = "<group>"; };
 		32410F3E2AB4B9C900A9184B /* SST Alumni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SST Alumni.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		32410F412AB4B9C900A9184B /* SST_AlumniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SST_AlumniApp.swift; sourceTree = "<group>"; };
+		32410F412AB4B9C900A9184B /* SSTAlumniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAlumniApp.swift; sourceTree = "<group>"; };
 		32410F432AB4B9C900A9184B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		32410F452AB4B9CA00A9184B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32410F482AB4B9CA00A9184B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -157,13 +160,16 @@
 		324FB2692ABF689E0088A9C6 /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
 		324FB26C2ABF6E1F0088A9C6 /* NewsManager+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsManager+Persistence.swift"; sourceTree = "<group>"; };
 		324FB26E2AC010F30088A9C6 /* AuthenticationForgetPasswordSentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationForgetPasswordSentView.swift; sourceTree = "<group>"; };
+		3278F7D52AC055BA00C936D1 /* MarkdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownText.swift; sourceTree = "<group>"; };
+		3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorDescription+GetFirebaseError.swift"; sourceTree = "<group>"; };
+		3278F7D92AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorDescription+OnboardingErrors.swift"; sourceTree = "<group>"; };
 		32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEmailView.swift; sourceTree = "<group>"; };
 		32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		32ADD6802ABA0D45009E947A /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
 		32ADD6822ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRegisterPasswordView.swift; sourceTree = "<group>"; };
 		32ADD6852ABA9F50009E947A /* AuthenticationLogInPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLogInPasswordView.swift; sourceTree = "<group>"; };
 		32ADD6872ABACF30009E947A /* AuthErrorDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrorDescription.swift; sourceTree = "<group>"; };
-		32ADD6892ABACF4B009E947A /* AuthErrorHandle+FirebaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorHandle+FirebaseErrors.swift"; sourceTree = "<group>"; };
+		32ADD6892ABACF4B009E947A /* AuthErrorDescription+FirebaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorDescription+FirebaseErrors.swift"; sourceTree = "<group>"; };
 		32ADD68B2ABAD238009E947A /* AuthenticationErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorView.swift; sourceTree = "<group>"; };
 		32ADD68D2ABADA9D009E947A /* ErrorFlameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorFlameView.swift; sourceTree = "<group>"; };
 		32ADD68F2ABB5E5D009E947A /* AuthenticationLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLoadingView.swift; sourceTree = "<group>"; };
@@ -273,7 +279,7 @@
 			children = (
 				32F3B6622AB6E6E10075F5D7 /* SST-Alumni-Info.plist */,
 				32F3B6572AB6B3A50075F5D7 /* SST Alumni.entitlements */,
-				32410F412AB4B9C900A9184B /* SST_AlumniApp.swift */,
+				32410F412AB4B9C900A9184B /* SSTAlumniApp.swift */,
 				32F3B6582AB6B3FF0075F5D7 /* App Check */,
 				32410FB12AB6050200A9184B /* Constants */,
 				32410F612AB4D74100A9184B /* Views */,
@@ -281,6 +287,7 @@
 				32410F452AB4B9CA00A9184B /* Assets.xcassets */,
 				32410FAA2AB5FFEA00A9184B /* View Models */,
 				32410FA32AB58B6200A9184B /* GoogleService-Info.plist */,
+				3278F7D42AC055AE00C936D1 /* Helper Views */,
 				32410F472AB4B9CA00A9184B /* Preview Content */,
 			);
 			path = "SST Alumni";
@@ -400,6 +407,14 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		3278F7D42AC055AE00C936D1 /* Helper Views */ = {
+			isa = PBXGroup;
+			children = (
+				3278F7D52AC055BA00C936D1 /* MarkdownText.swift */,
+			);
+			path = "Helper Views";
+			sourceTree = "<group>";
+		};
 		32ADD6842ABA28EA009E947A /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,7 +477,9 @@
 			children = (
 				32ADD6802ABA0D45009E947A /* AuthenticationState.swift */,
 				32ADD6872ABACF30009E947A /* AuthErrorDescription.swift */,
-				32ADD6892ABACF4B009E947A /* AuthErrorHandle+FirebaseErrors.swift */,
+				3278F7D92AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift */,
+				32ADD6892ABACF4B009E947A /* AuthErrorDescription+FirebaseErrors.swift */,
+				3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -582,6 +599,7 @@
 				32410F3A2AB4B9C900A9184B /* Sources */,
 				32410F3B2AB4B9C900A9184B /* Frameworks */,
 				32410F3C2AB4B9C900A9184B /* Resources */,
+				3278F7D32AC0551500C936D1 /* Run SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -674,6 +692,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3278F7D32AC0551500C936D1 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		32410F3A2AB4B9C900A9184B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -702,6 +742,7 @@
 				32410F602AB4D0F200A9184B /* CardExpandedView.swift in Sources */,
 				32410FAE2AB6004400A9184B /* SecurityAccessState.swift in Sources */,
 				32410F442AB4B9C900A9184B /* ContentView.swift in Sources */,
+				3278F7D62AC055BA00C936D1 /* MarkdownText.swift in Sources */,
 				32ADD6962ABC3285009E947A /* OnboardingHTTPError.swift in Sources */,
 				32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */,
 				32410FA92AB5F51B00A9184B /* UserManager.swift in Sources */,
@@ -739,7 +780,7 @@
 				32ADD68E2ABADA9D009E947A /* ErrorFlameView.swift in Sources */,
 				32F3B64F2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift in Sources */,
 				32ADD6BB2ABCC5EF009E947A /* AuthenticationEmailVerificationRequired.swift in Sources */,
-				32ADD68A2ABACF4B009E947A /* AuthErrorHandle+FirebaseErrors.swift in Sources */,
+				32ADD68A2ABACF4B009E947A /* AuthErrorDescription+FirebaseErrors.swift in Sources */,
 				32ADD6942ABC2BE7009E947A /* UserManager+Requests.swift in Sources */,
 				32410FB02AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift in Sources */,
 				32ADD67D2AB9FC00009E947A /* AuthenticationEmailView.swift in Sources */,
@@ -747,9 +788,11 @@
 				323D346A2AB88BAA001E1CBE /* OnboardingItemView.swift in Sources */,
 				32F3B6492AB62A240075F5D7 /* SecurityAccessDeniedView.swift in Sources */,
 				32ADD6812ABA0D45009E947A /* AuthenticationState.swift in Sources */,
-				32410F422AB4B9C900A9184B /* SST_AlumniApp.swift in Sources */,
+				32410F422AB4B9C900A9184B /* SSTAlumniApp.swift in Sources */,
 				32F3B6742AB816400075F5D7 /* AttendeeRowView.swift in Sources */,
 				32410FB32AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift in Sources */,
+				3278F7DA2AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift in Sources */,
+				3278F7D82AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift in Sources */,
 				32F3B6542AB6AEC40075F5D7 /* ConfettiUIView.swift in Sources */,
 				324FB2642ABF0CF50088A9C6 /* SSTAARSManager+Persistence.swift in Sources */,
 				323D346E2AB8971F001E1CBE /* MegaphoneOnboardingItemView.swift in Sources */,
@@ -889,6 +932,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SST Alumni/Preview Content\"";
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SST-Alumni-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Scan QR codes";
@@ -924,6 +968,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SST Alumni/Preview Content\"";
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SST-Alumni-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Scan QR codes";

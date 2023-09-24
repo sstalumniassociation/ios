@@ -1,5 +1,5 @@
 //
-//  AuthErrorHandle+FirebaseErrors.swift
+//  AuthErrorDescription+FirebaseErrors.swift
 //  SST Alumni
 //
 //  Created by Jia Chen Yee on 20/9/23.
@@ -8,101 +8,6 @@
 import Foundation
 
 extension AuthErrorDescription {
-    static func fromFirebase(_ errorCode: Int) -> AuthErrorDescription? {
-        switch errorCode {
-        case 17000: Self.invalidCustomToken
-        case 17002: Self.customTokenMismatch
-        case 17004: Self.invalidCredential
-        case 17005: Self.userDisabled
-        case 17006: Self.operationNotAllowed
-        case 17007: Self.emailAlreadyInUse
-        case 17008: Self.invalidEmail
-        case 17009: Self.wrongPassword
-        case 17010: Self.tooManyRequests
-        case 17011: Self.userNotFound
-        case 17012: Self.accountExistsWithDifferentCredential
-        case 17014: Self.requiresRecentLogin
-        case 17015: Self.providerAlreadyLinked
-        case 17016: Self.noSuchProvider
-        case 17017: Self.invalidUserToken
-        case 17020: Self.networkError
-        case 17021: Self.userTokenExpired
-        case 17023: Self.invalidAPIKey
-        case 17024: Self.userMismatch
-        case 17025: Self.credentialAlreadyInUse
-        case 17026: Self.weakPassword
-        case 17028: Self.appNotAuthorized
-        case 17029: Self.expiredActionCode
-        case 17030: Self.invalidActionCode
-        case 17031: Self.invalidMessagePayload
-        case 17032: Self.invalidSender
-        case 17033: Self.invalidRecipientEmail
-        case 17034: Self.missingEmail
-        case 17036: Self.missingIosBundleID
-        case 17037: Self.missingAndroidPackageName
-        case 17038: Self.unauthorizedDomain
-        case 17039: Self.invalidContinueURI
-        case 17040: Self.missingContinueURI
-        case 17041: Self.missingPhoneNumber
-        case 17042: Self.invalidPhoneNumber
-        case 17043: Self.missingVerificationCode
-        case 17044: Self.invalidVerificationCode
-        case 17045: Self.missingVerificationID
-        case 17046: Self.invalidVerificationID
-        case 17047: Self.missingAppCredential
-        case 17048: Self.invalidAppCredential
-        case 17051: Self.sessionExpired
-        case 17052: Self.quotaExceeded
-        case 17053: Self.missingAppToken
-        case 17054: Self.notificationNotForwarded
-        case 17055: Self.appNotVerified
-        case 17056: Self.captchaCheckFailed
-        case 17057: Self.webContextAlreadyPresented
-        case 17058: Self.webContextCancelled
-        case 17059: Self.appVerificationUserInteractionFailure
-        case 17060: Self.invalidClientID
-        case 17061: Self.webNetworkRequestFailed
-        case 17062: Self.webInternalError
-        case 17063: Self.webSignInUserInteractionFailure
-        case 17066: Self.localPlayerNotAuthenticated
-        case 17067: Self.nullUser
-        case 17068: Self.dynamicLinkNotActivated
-        case 17071: Self.invalidProviderID
-        case 17072: Self.tenantIDMismatch
-        case 17073: Self.unsupportedTenantOperation
-        case 17074: Self.invalidDynamicLinkDomain
-        case 17075: Self.rejectedCredential
-        case 17076: Self.gameKitNotLinked
-        case 17078: Self.secondFactorRequired
-        case 17081: Self.missingMultiFactorSession
-        case 17082: Self.missingMultiFactorInfo
-        case 17083: Self.invalidMultiFactorSession
-        case 17084: Self.multiFactorInfoNotFound
-        case 17085: Self.adminRestrictedOperation
-        case 17086: Self.unverifiedEmail
-        case 17087: Self.secondFactorAlreadyEnrolled
-        case 17088: Self.maximumSecondFactorCountExceeded
-        case 17089: Self.unsupportedFirstFactor
-        case 17090: Self.emailChangeNeedsVerification
-        case 17093: Self.missingClientIdentifier
-        case 17094: Self.missingOrInvalidNonce
-        case 17105: Self.blockingCloudFunctionError
-        case 17200: Self.recaptchaNotEnabled
-        case 17201: Self.missingRecaptchaToken
-        case 17202: Self.invalidRecaptchaToken
-        case 17203: Self.invalidRecaptchaAction
-        case 17204: Self.missingClientType
-        case 17205: Self.missingRecaptchaVersion
-        case 17206: Self.invalidRecaptchaVersion
-        case 17207: Self.invalidReqType
-        case 17208: Self.recaptchaSDKNotLinked
-        case 17995: Self.keychainError
-        case 17999: Self.internalError
-        case 18000: Self.malformedJWT
-        default: nil
-        }
-    }
-    
     static let invalidCustomToken = AuthErrorDescription(icon: "key.slash",
                                                     title: "Invalid Custom Token",
                                                     description: "This appears to be our problem. Not yours. Please contact us at [app@sstaa.org](mailto:app@sstaa.org).")

@@ -12,7 +12,7 @@ struct ContentView: View {
     @StateObject var userManager = UserManager()
     
     var body: some View {
-        if let firebaseUser = userManager.firebaseUser {
+        if userManager.firebaseUser != nil {
             if userManager.emailVerificationState != .verified {
                 AuthenticationEmailVerificationRequired()
                     .environmentObject(userManager)

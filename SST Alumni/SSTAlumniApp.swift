@@ -1,5 +1,5 @@
 //
-//  SST_AlumniApp.swift
+//  SSTAlumniApp.swift
 //  SST Alumni
 //
 //  Created by Jia Chen Yee on 16/9/23.
@@ -11,7 +11,7 @@ import FirebaseAppCheck
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         
         let providerFactory = SSTAAAppCheckProviderFactory()
         
@@ -22,7 +22,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 @main
-struct SST_AlumniApp: App {
+struct SSTAlumniApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
