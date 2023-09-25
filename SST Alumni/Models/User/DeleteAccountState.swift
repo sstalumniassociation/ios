@@ -11,4 +11,5 @@ enum DeleteAccountState {
     case warning
     case password
     case deleting
+    case error
 }

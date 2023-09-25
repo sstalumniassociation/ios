@@ -1,5 +1,5 @@
 //
-//  DeleteAccountPassword.swift
+//  DeleteAccountPasswordView.swift
 //  SST Alumni
 //
 //  Created by Jia Chen Yee on 25/9/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DeleteAccountPassword: View {
+struct DeleteAccountPasswordView: View {
     
     @Binding var deleteAccountState: DeleteAccountState
     

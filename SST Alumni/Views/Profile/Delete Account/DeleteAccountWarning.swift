@@ -1,5 +1,5 @@
 //
-//  DeleteAccountWarning.swift
+//  DeleteAccountWarningView.swift
 //  SST Alumni
 //
 //  Created by Jia Chen Yee on 25/9/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DeleteAccountWarning: View {
+struct DeleteAccountWarningView: View {
     
     @Binding var deleteAccountState: DeleteAccountState
     

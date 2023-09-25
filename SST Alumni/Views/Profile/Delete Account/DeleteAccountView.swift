@@ -16,11 +16,13 @@ struct DeleteAccountView: View {
     var body: some View {
         switch deleteAccountState {
         case .warning:
-            DeleteAccountWarning(deleteAccountState: $deleteAccountState)
+            DeleteAccountWarningView(deleteAccountState: $deleteAccountState)
         case .password:
-            DeleteAccountPassword(deleteAccountState: $deleteAccountState)
+            DeleteAccountPasswordView(deleteAccountState: $deleteAccountState)
         case .deleting:
             DeletingAccountView()
+        case .error:
+            EmptyView()
         }
     }
 }
