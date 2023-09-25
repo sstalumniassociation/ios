@@ -79,6 +79,10 @@
 		3278F7D82AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */; };
 		3278F7DA2AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D92AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift */; };
 		3278F7E02AC0BBAE00C936D1 /* HexagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7DF2AC0BBAE00C936D1 /* HexagonView.swift */; };
+		3278F7E22AC1393D00C936D1 /* DeleteAccountPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7E12AC1393D00C936D1 /* DeleteAccountPassword.swift */; };
+		3278F7E42AC13B1F00C936D1 /* DeleteAccountState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7E32AC13B1F00C936D1 /* DeleteAccountState.swift */; };
+		3278F7E62AC13B6000C936D1 /* DeleteAccountWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7E52AC13B6000C936D1 /* DeleteAccountWarning.swift */; };
+		3278F7E82AC13D2300C936D1 /* DeletingAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7E72AC13D2300C936D1 /* DeletingAccountView.swift */; };
 		32ADD67D2AB9FC00009E947A /* AuthenticationEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */; };
 		32ADD67F2ABA0C1F009E947A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */; };
 		32ADD6812ABA0D45009E947A /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6802ABA0D45009E947A /* AuthenticationState.swift */; };
@@ -165,6 +169,10 @@
 		3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorDescription+GetFirebaseError.swift"; sourceTree = "<group>"; };
 		3278F7D92AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorDescription+OnboardingErrors.swift"; sourceTree = "<group>"; };
 		3278F7DF2AC0BBAE00C936D1 /* HexagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonView.swift; sourceTree = "<group>"; };
+		3278F7E12AC1393D00C936D1 /* DeleteAccountPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountPassword.swift; sourceTree = "<group>"; };
+		3278F7E32AC13B1F00C936D1 /* DeleteAccountState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountState.swift; sourceTree = "<group>"; };
+		3278F7E52AC13B6000C936D1 /* DeleteAccountWarning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountWarning.swift; sourceTree = "<group>"; };
+		3278F7E72AC13D2300C936D1 /* DeletingAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletingAccountView.swift; sourceTree = "<group>"; };
 		32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEmailView.swift; sourceTree = "<group>"; };
 		32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		32ADD6802ABA0D45009E947A /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
@@ -461,6 +469,9 @@
 			children = (
 				323D34812AB991BB001E1CBE /* UserProfileView.swift */,
 				32ADD7352ABD892F009E947A /* DeleteAccountView.swift */,
+				3278F7E52AC13B6000C936D1 /* DeleteAccountWarning.swift */,
+				3278F7E12AC1393D00C936D1 /* DeleteAccountPassword.swift */,
+				3278F7E72AC13D2300C936D1 /* DeletingAccountView.swift */,
 				323D34832AB99272001E1CBE /* AcknowledgementsView.swift */,
 			);
 			path = Profile;
@@ -520,6 +531,7 @@
 			children = (
 				32410F512AB4BA7E00A9184B /* UserData.swift */,
 				32410FA52AB5EBBA00A9184B /* MemberType.swift */,
+				3278F7E32AC13B1F00C936D1 /* DeleteAccountState.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -747,6 +759,7 @@
 				32410F442AB4B9C900A9184B /* ContentView.swift in Sources */,
 				3278F7E02AC0BBAE00C936D1 /* HexagonView.swift in Sources */,
 				3278F7D62AC055BA00C936D1 /* MarkdownText.swift in Sources */,
+				3278F7E62AC13B6000C936D1 /* DeleteAccountWarning.swift in Sources */,
 				32ADD6962ABC3285009E947A /* OnboardingHTTPError.swift in Sources */,
 				32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */,
 				32410FA92AB5F51B00A9184B /* UserManager.swift in Sources */,
@@ -780,6 +793,7 @@
 				32ADD68C2ABAD238009E947A /* AuthenticationErrorView.swift in Sources */,
 				32410F5C2AB4C9E700A9184B /* SSTAARSView.swift in Sources */,
 				32410FAC2AB6002E00A9184B /* SecurityAccessManager.swift in Sources */,
+				3278F7E22AC1393D00C936D1 /* DeleteAccountPassword.swift in Sources */,
 				32F3B66C2AB74DD30075F5D7 /* EventAttendee.swift in Sources */,
 				32ADD68E2ABADA9D009E947A /* ErrorFlameView.swift in Sources */,
 				32F3B64F2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift in Sources */,
@@ -788,7 +802,9 @@
 				32ADD6942ABC2BE7009E947A /* UserManager+Requests.swift in Sources */,
 				32410FB02AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift in Sources */,
 				32ADD67D2AB9FC00009E947A /* AuthenticationEmailView.swift in Sources */,
+				3278F7E82AC13D2300C936D1 /* DeletingAccountView.swift in Sources */,
 				32410F562AB4C3F500A9184B /* AlumniServicesView.swift in Sources */,
+				3278F7E42AC13B1F00C936D1 /* DeleteAccountState.swift in Sources */,
 				323D346A2AB88BAA001E1CBE /* OnboardingItemView.swift in Sources */,
 				32F3B6492AB62A240075F5D7 /* SecurityAccessDeniedView.swift in Sources */,
 				32ADD6812ABA0D45009E947A /* AuthenticationState.swift in Sources */,

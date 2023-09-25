@@ -56,7 +56,6 @@ struct UserProfileView: View {
                         }
                         .sheet(isPresented: $isDeleteAccountSheetPresented) {
                             DeleteAccountView()
-                                .presentationDetents([.medium])
                         }
                     }
                 }
