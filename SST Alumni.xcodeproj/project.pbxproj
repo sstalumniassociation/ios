@@ -425,6 +425,17 @@
 			path = "Helper Views";
 			sourceTree = "<group>";
 		};
+		3278F7E92AC13D5E00C936D1 /* Delete Account */ = {
+			isa = PBXGroup;
+			children = (
+				32ADD7352ABD892F009E947A /* DeleteAccountView.swift */,
+				3278F7E52AC13B6000C936D1 /* DeleteAccountWarning.swift */,
+				3278F7E12AC1393D00C936D1 /* DeleteAccountPassword.swift */,
+				3278F7E72AC13D2300C936D1 /* DeletingAccountView.swift */,
+			);
+			path = "Delete Account";
+			sourceTree = "<group>";
+		};
 		32ADD6842ABA28EA009E947A /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,11 +479,8 @@
 			isa = PBXGroup;
 			children = (
 				323D34812AB991BB001E1CBE /* UserProfileView.swift */,
-				32ADD7352ABD892F009E947A /* DeleteAccountView.swift */,
-				3278F7E52AC13B6000C936D1 /* DeleteAccountWarning.swift */,
-				3278F7E12AC1393D00C936D1 /* DeleteAccountPassword.swift */,
-				3278F7E72AC13D2300C936D1 /* DeletingAccountView.swift */,
 				323D34832AB99272001E1CBE /* AcknowledgementsView.swift */,
+				3278F7E92AC13D5E00C936D1 /* Delete Account */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
