@@ -9,21 +9,47 @@ import SwiftUI
 
 struct DeleteAccountView: View {
     
-    @EnvironmentObject var userManager: UserManager
-    
-    @State private var deleteAccountState = DeleteAccountState.warning
+    @Environment(\.dismiss) var dismiss
+    @Environment(\.openURL) var openURL
     
     var body: some View {
-        switch deleteAccountState {
-        case .warning:
-            DeleteAccountWarningView(deleteAccountState: $deleteAccountState)
-        case .password:
-            DeleteAccountPasswordView(deleteAccountState: $deleteAccountState)
-        case .deleting:
-            DeletingAccountView()
-        case .error:
-            EmptyView()
+        VStack {
+            Image(systemName: "trash")
+                .frame(height: 96)
+                .font(.system(size: 64))
+                .foregroundStyle(.red)
+                .padding(.top)
+                .accessibilityHidden(true)
+            
+            Text("Delete Account")
+                .multilineTextAlignment(.center)
+                .font(.title)
+                .fontWeight(.bold)
+            
+            Text("In order to delete your account and cancel your membership with SST Alumni Association, you will need to contact us at [alumni@sstaa.org](alumni@sstaa.org).")
+                .multilineTextAlignment(.center)
+            
+            Spacer()
+            
+            Button {
+                openURL(URL(string: "mailto:alumni@sstaa.org")!)
+            } label: {
+                Text("Email Us")
+                    .padding(8)
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.borderedProminent)
+            
+            Button {
+                dismiss()
+            } label: {
+                Text("Cancel")
+                    .padding(8)
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.bordered)
         }
+        .padding()
     }
 }
 

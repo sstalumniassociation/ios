@@ -23,7 +23,7 @@ struct UserProfileView: View {
                     } header: {
                         Text("Name")
                     } footer: {
-                        Text("To update this information, contact us at [app@sstaa.org](app@sstaa.org).")
+                        Text("To update this information, contact us at [alumni@sstaa.org](alumni@sstaa.org).")
                     }
                     
                     if let email = userManager.firebaseUser?.email {
@@ -52,7 +52,7 @@ struct UserProfileView: View {
                         Button(role: .destructive) {
                             isDeleteAccountSheetPresented = true
                         } label: {
-                            Text("Delete & Unlink My Account")
+                            Text("Delete My Account")
                         }
                         .sheet(isPresented: $isDeleteAccountSheetPresented) {
                             DeleteAccountView()
