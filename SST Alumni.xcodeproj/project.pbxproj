@@ -99,6 +99,7 @@
 		32ADD6C02ABCC9B4009E947A /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6BF2ABCC9B4009E947A /* OnboardingState.swift */; };
 		32ADD6C82ABCCAB4009E947A /* ConditionalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6C72ABCCAB4009E947A /* ConditionalLink.swift */; };
 		32ADD7362ABD892F009E947A /* DeleteAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD7352ABD892F009E947A /* DeleteAccountView.swift */; };
+		32D1BAF12D9C3D2B00C1B3A4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1BAF02D9C3D2B00C1B3A4 /* AppState.swift */; };
 		32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */; };
 		32F3B6472AB629D80075F5D7 /* SecurityAccessAdmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */; };
 		32F3B6492AB62A240075F5D7 /* SecurityAccessDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */; };
@@ -185,6 +186,7 @@
 		32ADD6BF2ABCC9B4009E947A /* OnboardingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingState.swift; sourceTree = "<group>"; };
 		32ADD6C72ABCCAB4009E947A /* ConditionalLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalLink.swift; sourceTree = "<group>"; };
 		32ADD7352ABD892F009E947A /* DeleteAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountView.swift; sourceTree = "<group>"; };
+		32D1BAF02D9C3D2B00C1B3A4 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessStatusView.swift; sourceTree = "<group>"; };
 		32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessAdmittedView.swift; sourceTree = "<group>"; };
 		32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessDeniedView.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				32ADD6C22ABCC9F1009E947A /* Onboarding */,
 				32ADD6C32ABCCA30009E947A /* SSTAARS */,
 				323D347C2AB97743001E1CBE /* SSTEmailValidationState.swift */,
+				32D1BAF02D9C3D2B00C1B3A4 /* AppState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -798,6 +801,7 @@
 				3278F7DA2AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift in Sources */,
 				3278F7D82AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift in Sources */,
 				32F3B6542AB6AEC40075F5D7 /* ConfettiUIView.swift in Sources */,
+				32D1BAF12D9C3D2B00C1B3A4 /* AppState.swift in Sources */,
 				324FB2642ABF0CF50088A9C6 /* SSTAARSManager+Persistence.swift in Sources */,
 				323D346E2AB8971F001E1CBE /* MegaphoneOnboardingItemView.swift in Sources */,
 			);
@@ -932,7 +936,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SST Alumni/SST Alumni.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"SST Alumni/Preview Content\"";
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				ENABLE_PREVIEWS = YES;
@@ -947,7 +951,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -968,7 +972,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SST Alumni/SST Alumni.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"SST Alumni/Preview Content\"";
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				ENABLE_PREVIEWS = YES;
@@ -983,7 +987,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

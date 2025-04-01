@@ -11,7 +11,7 @@ struct EventsView: View {
     var body: some View {
         NavigationStack {
             Text("")
-                .navigationTitle("Events & Bookings")
+                .navigationTitle("Events")
         }
     }
 }

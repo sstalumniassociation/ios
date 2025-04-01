@@ -11,6 +11,8 @@ struct ContentView: View {
     
     @StateObject var userManager = UserManager()
     
+    @State private var selectedTab: AppState = .home
+    
     var body: some View {
         if userManager.firebaseUser != nil {
             if userManager.emailVerificationState != .verified {
@@ -18,26 +20,30 @@ struct ContentView: View {
                     .environmentObject(userManager)
             } else {
                 if let user = userManager.user {
-                    TabView {
-                        HomeView(user: user)
-                            .tabItem {
-                                Label("Home", systemImage: "house.fill")
-                            }
+                    TabView(selection: $selectedTab) {
+                        Tab("Home",
+                            systemImage: "house.fill",
+                            value: AppState.home) {
+                            HomeView(user: user)
+                        }
                         
-                        AlumniServicesView()
-                            .tabItem {
-                                Label("Services", systemImage: "sparkles")
-                            }
+                        Tab("Events",
+                            systemImage: "calendar",
+                            value: AppState.events) {
+                            EventsView()
+                        }
                         
-                        EventsView()
-                            .tabItem {
-                                Label("Events", systemImage: "calendar")
-                            }
+                        Tab("Services",
+                            systemImage: "sparkles",
+                            value: AppState.alumniServices) {
+                            AlumniServicesView()
+                        }
                         
-                        UserProfileView()
-                            .tabItem {
-                                Label("Profile", systemImage: "person.crop.circle.fill")
-                            }
+                        Tab("Profile",
+                            systemImage: "person.crop.circle.fill",
+                            value: AppState.profile) {
+                            UserProfileView()
+                        }
                     }
                     .environmentObject(userManager)
                 } else {

@@ -44,14 +44,21 @@ struct OnboardingView: View {
             
             VStack(alignment: .leading) {
                 TabView(selection: $onboardingSelection) {
-                    WelcomeOnboardingItemView()
-                        .tag(OnboardingState.welcome)
+                    Tab(value: .welcome) {
+                        WelcomeOnboardingItemView()
+                    }
                     
-                    SecurityPassOnboardingItemView(selection: onboardingSelection)
+                    Tab(value: OnboardingState.security) {
+                        SecurityPassOnboardingItemView(selection: onboardingSelection)
+                    }
                     
-                    MegaphoneOnboardingItemView(selection: onboardingSelection)
+                    Tab(value: OnboardingState.announcements) {
+                        MegaphoneOnboardingItemView(selection: onboardingSelection)
+                    }
                     
-                    BookVenueOnboardingItemView(selection: onboardingSelection)
+                    Tab(value: OnboardingState.loanVenues) {
+                        BookVenueOnboardingItemView(selection: onboardingSelection)
+                    }
                 }
                 .tabViewStyle(.page)
                 
