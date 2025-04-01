@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DeleteAccountView: View {
     
-    @EnvironmentObject var userManager: UserManager
+    @Environment(UserManager.self) var userManager
     
     var body: some View {
         VStack {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     
-    @EnvironmentObject var userManager: UserManager
+    @Environment(UserManager.self) var userManager
     
     @State private var onboardingSelection = OnboardingState.welcome
     @State private var isAuthenticationPresented = false

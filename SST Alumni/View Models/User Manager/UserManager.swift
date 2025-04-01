@@ -9,18 +9,21 @@ import Foundation
 import FirebaseAuth
 import Alamofire
 import SwiftUI
+import Observation
+import FirebaseCore
 
-class UserManager: ObservableObject {
-    @Published var user: UserData? {
+@Observable
+class UserManager {
+    var user: UserData? {
         didSet {
             writeData()
         }
     }
-    @Published var firebaseUser: User?
+    var firebaseUser: User?
     
-    @Published var emailVerificationState = EmailVerificationState.needsVerification
+    var emailVerificationState = EmailVerificationState.needsVerification
     
-    @Published var authenticationState = AuthenticationState.emailInput {
+    var authenticationState = AuthenticationState.emailInput {
         didSet {
             Task {
                 switch authenticationState {
@@ -41,6 +44,8 @@ class UserManager: ObservableObject {
     let auth: Auth
     
     init() {
+        FirebaseApp.configure()
+        
         self.auth = Auth.auth()
         
         firebaseUser = auth.currentUser

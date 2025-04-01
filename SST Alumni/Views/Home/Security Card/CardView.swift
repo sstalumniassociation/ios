@@ -11,46 +11,57 @@ struct CardView: View {
     
     var namespace: Namespace.ID
     
-    var user: UserData
+    var user: UserData?
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text(user.name)
-                .font(.title)
-                .fontWeight(.bold)
-                .fontWidth(.expanded)
-                .matchedGeometryEffect(id: "name", in: namespace)
-            
-            Text(user.memberId)
-                .monospaced()
-                .matchedGeometryEffect(id: "membershipnumber", in: namespace)
-            
-            Spacer()
-            HStack(alignment: .bottom) {
-                VStack(alignment: .leading) {
-                    Text("Class of \(String(user.graduationYear))")
-                        .fontWeight(.semibold)
-                        .matchedGeometryEffect(id: "batchyear", in: namespace)
-                    Text("\(user.memberType.description)")
-                        .fontWeight(.regular)
-                }
+            if let user {
+                Text(user.name)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .fontWidth(.expanded)
+                    .matchedGeometryEffect(id: "name", in: namespace)
+                
+                Text(user.memberId)
+                    .monospaced()
+                    .matchedGeometryEffect(id: "membershipnumber", in: namespace)
+                
                 Spacer()
-                Image(.logoWhite)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 48)
-                    .matchedGeometryEffect(id: "sstaalogo", in: namespace)
+                HStack(alignment: .bottom) {
+                    VStack(alignment: .leading) {
+                        Text("Class of \(String(user.graduationYear))")
+                            .fontWeight(.semibold)
+                            .matchedGeometryEffect(id: "batchyear", in: namespace)
+                        Text("\(user.memberType.description)")
+                            .fontWeight(.regular)
+                    }
+                    Spacer()
+                    Image(.logoWhite)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 48)
+                        .matchedGeometryEffect(id: "sstaalogo", in: namespace)
+                }
+            } else {
+                Text("Unable to fetch user data. Try again later.")
             }
         }
         .foregroundStyle(.white)
         .padding(21)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .background {
-            RoundedRectangle(cornerRadius: 16)
-                .fill(LinearGradient(colors: user.memberType.gradientColors,
-                                     startPoint: .topLeading,
-                                     endPoint: .bottomTrailing))
-                .matchedGeometryEffect(id: "gradientbackground", in: namespace)
-                .shadow(color: user.memberType.gradientColors.first!.opacity(0.5), radius: 10)
+            if let user {
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(LinearGradient(colors: user.memberType.gradientColors,
+                                         startPoint: .topLeading,
+                                         endPoint: .bottomTrailing))
+                    .matchedGeometryEffect(id: "gradientbackground", in: namespace)
+                    .shadow(color: user.memberType.gradientColors.first!.opacity(0.5), radius: 10)
+            } else {
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(.gray.opacity(0.2))
+                    .matchedGeometryEffect(id: "gradientbackground", in: namespace)
+            }
         }
         .aspectRatio(1.8, contentMode: .fit)
     }

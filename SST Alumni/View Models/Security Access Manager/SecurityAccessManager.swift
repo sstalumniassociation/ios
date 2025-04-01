@@ -9,6 +9,8 @@ import Foundation
 
 class SecurityAccessManager: ObservableObject {
     
+    static let isEnabled = false
+    
     @Published var authorizationRequestDate = Date.now
     @Published var isTimedOut = false
     

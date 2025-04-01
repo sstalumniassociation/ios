@@ -9,9 +9,11 @@ import SwiftUI
 
 struct AuthenticationView: View {
     
-    @EnvironmentObject var userManager: UserManager
+    @Environment(UserManager.self) var userManager
     
     var body: some View {
+        @Bindable var userManager = userManager
+        
         VStack {
             switch userManager.authenticationState {
             case .emailInput, .lookingUpEmail:

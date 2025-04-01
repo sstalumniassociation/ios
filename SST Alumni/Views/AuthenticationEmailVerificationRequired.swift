@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AuthenticationEmailVerificationRequired: View {
     
-    @EnvironmentObject var userManager: UserManager
+    @Environment(UserManager.self) var userManager
     
     var body: some View {
         VStack {

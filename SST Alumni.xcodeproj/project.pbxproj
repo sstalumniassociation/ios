@@ -100,6 +100,8 @@
 		32ADD6C82ABCCAB4009E947A /* ConditionalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6C72ABCCAB4009E947A /* ConditionalLink.swift */; };
 		32ADD7362ABD892F009E947A /* DeleteAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD7352ABD892F009E947A /* DeleteAccountView.swift */; };
 		32D1BAF12D9C3D2B00C1B3A4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1BAF02D9C3D2B00C1B3A4 /* AppState.swift */; };
+		32D1BAF32D9C3F1B00C1B3A4 /* ConfettiBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1BAF22D9C3F1B00C1B3A4 /* ConfettiBackgroundView.swift */; };
+		32D1BAF52D9C41DB00C1B3A4 /* SecurityAccessWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1BAF42D9C41DB00C1B3A4 /* SecurityAccessWrapper.swift */; };
 		32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */; };
 		32F3B6472AB629D80075F5D7 /* SecurityAccessAdmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */; };
 		32F3B6492AB62A240075F5D7 /* SecurityAccessDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */; };
@@ -187,6 +189,8 @@
 		32ADD6C72ABCCAB4009E947A /* ConditionalLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalLink.swift; sourceTree = "<group>"; };
 		32ADD7352ABD892F009E947A /* DeleteAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountView.swift; sourceTree = "<group>"; };
 		32D1BAF02D9C3D2B00C1B3A4 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		32D1BAF22D9C3F1B00C1B3A4 /* ConfettiBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiBackgroundView.swift; sourceTree = "<group>"; };
+		32D1BAF42D9C41DB00C1B3A4 /* SecurityAccessWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessWrapper.swift; sourceTree = "<group>"; };
 		32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessStatusView.swift; sourceTree = "<group>"; };
 		32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessAdmittedView.swift; sourceTree = "<group>"; };
 		32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessDeniedView.swift; sourceTree = "<group>"; };
@@ -348,6 +352,8 @@
 			isa = PBXGroup;
 			children = (
 				32410F532AB4BFAC00A9184B /* HomeView.swift */,
+				32D1BAF42D9C41DB00C1B3A4 /* SecurityAccessWrapper.swift */,
+				32D1BAF22D9C3F1B00C1B3A4 /* ConfettiBackgroundView.swift */,
 				324FB26B2ABF69C30088A9C6 /* News */,
 				32F3B64B2AB62A660075F5D7 /* Security Card */,
 			);
@@ -730,6 +736,7 @@
 				32410FB82AB60D1C00A9184B /* BiometricAuthenticationState.swift in Sources */,
 				32410F642AB4D7AB00A9184B /* SSTAARSEventView.swift in Sources */,
 				323D346C2AB895D9001E1CBE /* WelcomeOnboardingItemView.swift in Sources */,
+				32D1BAF32D9C3F1B00C1B3A4 /* ConfettiBackgroundView.swift in Sources */,
 				32410FB52AB60C2A00A9184B /* LocationValidationManager.swift in Sources */,
 				32F3B66E2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift in Sources */,
 				323D34842AB99272001E1CBE /* AcknowledgementsView.swift in Sources */,
@@ -737,6 +744,7 @@
 				324FB26D2ABF6E1F0088A9C6 /* NewsManager+Persistence.swift in Sources */,
 				323D34722AB89982001E1CBE /* BookVenueOnboardingItemView.swift in Sources */,
 				32F3B66A2AB717090075F5D7 /* SSTAARSEventConfirmationView.swift in Sources */,
+				32D1BAF52D9C41DB00C1B3A4 /* SecurityAccessWrapper.swift in Sources */,
 				323D34822AB991BB001E1CBE /* UserProfileView.swift in Sources */,
 				32F3B6642AB711910075F5D7 /* SSTAARSManager.swift in Sources */,
 				32ADD6922ABB5EFE009E947A /* AuthenticationUnregisteredView.swift in Sources */,

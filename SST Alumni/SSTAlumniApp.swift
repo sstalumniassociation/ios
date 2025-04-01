@@ -16,7 +16,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         let providerFactory = SSTAAAppCheckProviderFactory()
         
         AppCheck.setAppCheckProviderFactory(providerFactory)
-        FirebaseApp.configure()
+        
         return true
     }
 }
@@ -26,9 +26,12 @@ struct SSTAlumniApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
+    @State private var userManager = UserManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(userManager)
         }
     }
 }

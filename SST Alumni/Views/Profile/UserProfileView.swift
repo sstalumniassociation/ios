@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserProfileView: View {
     
-    @EnvironmentObject var userManager: UserManager
+    @Environment(UserManager.self) var userManager
     
     @State private var isDeleteAccountSheetPresented = false
     

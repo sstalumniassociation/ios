@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject var userManager = UserManager()
+    @Environment(UserManager.self) var userManager
     
     @State private var selectedTab: AppState = .home
     
@@ -17,14 +17,13 @@ struct ContentView: View {
         if userManager.firebaseUser != nil {
             if userManager.emailVerificationState != .verified {
                 AuthenticationEmailVerificationRequired()
-                    .environmentObject(userManager)
             } else {
-                if let user = userManager.user {
+                if userManager.user != nil {
                     TabView(selection: $selectedTab) {
                         Tab("Home",
                             systemImage: "house.fill",
                             value: AppState.home) {
-                            HomeView(user: user)
+                            HomeView(appState: $selectedTab)
                         }
                         
                         Tab("Events",
@@ -45,7 +44,6 @@ struct ContentView: View {
                             UserProfileView()
                         }
                     }
-                    .environmentObject(userManager)
                 } else {
                     AuthenticationLoadingView(systemName: "arrow.down.circle",
                                               title: "Syncing User Data…")
@@ -53,7 +51,6 @@ struct ContentView: View {
             }
         } else {
             OnboardingView()
-                .environmentObject(userManager)
         }
     }
 }
