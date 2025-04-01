@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ScreenCaptureRedaction
+import ConfettiKit
 
 struct ConfettiBackgroundView: View {
     

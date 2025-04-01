@@ -6,10 +6,11 @@
 //
 //
 
+#if canImport(UIKit)
 import UIKit
 import QuartzCore
 
-class ConfettiUIView: UIView {
+public class ConfettiUIView: UIView {
     
     var emitter: CAEmitterLayer!
     public var colors: [UIColor]!
@@ -82,3 +83,4 @@ class ConfettiUIView: UIView {
         return self.active
     }
 }
+#endif

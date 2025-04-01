@@ -5,14 +5,20 @@
 //  Created by Jia Chen Yee on 23/10/22.
 //
 
+#if canImport(SwiftUI) && canImport(UIKit)
 import Foundation
 import SwiftUI
 
-struct ConfettiView: UIViewRepresentable {
+@available(iOS 15, *)
+public struct ConfettiView: UIViewRepresentable {
     
     var size: CGSize
     
-    func makeUIView(context: Context) -> some UIView {
+    public init(size: CGSize) {
+        self.size = size
+    }
+    
+    public func makeUIView(context: Context) -> some UIView {
         let confettiView = ConfettiUIView(frame: .init(origin: .zero, size: size))
         
         confettiView.intensity = 1
@@ -24,7 +30,8 @@ struct ConfettiView: UIViewRepresentable {
         return confettiView
     }
     
-    func updateUIView(_ uiView: UIViewType, context: Context) {
+    public func updateUIView(_ uiView: UIViewType, context: Context) {
         
     }
 }
+#endif

@@ -35,6 +35,7 @@
 		32410F9E2AB58B0300A9184B /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 32410F9D2AB58B0300A9184B /* FirebaseRemoteConfigSwift */; };
 		32410FA02AB58B0300A9184B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 32410F9F2AB58B0300A9184B /* FirebaseStorage */; };
 		32410FA22AB58B0300A9184B /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 32410FA12AB58B0300A9184B /* FirebaseStorageCombine-Community */; };
+		32D1BC802D9C45CE00C1B3A4 /* ConfettiKit in Frameworks */ = {isa = PBXBuildFile; productRef = 32D1BC7F2D9C45CE00C1B3A4 /* ConfettiKit */; };
 		32F3B65D2AB6B6030075F5D7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 32F3B65C2AB6B6030075F5D7 /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 				32410F9E2AB58B0300A9184B /* FirebaseRemoteConfigSwift in Frameworks */,
 				32410F902AB58B0300A9184B /* FirebaseInAppMessaging-Beta in Frameworks */,
 				32410F822AB58B0300A9184B /* FirebaseDatabaseSwift in Frameworks */,
+				32D1BC802D9C45CE00C1B3A4 /* ConfettiKit in Frameworks */,
 				32410F8C2AB58B0300A9184B /* FirebaseFunctions in Frameworks */,
 				32410FA22AB58B0300A9184B /* FirebaseStorageCombine-Community in Frameworks */,
 				32410F9C2AB58B0300A9184B /* FirebaseRemoteConfig in Frameworks */,
@@ -152,6 +154,7 @@
 				32410FA12AB58B0300A9184B /* FirebaseStorageCombine-Community */,
 				32F3B65C2AB6B6030075F5D7 /* Alamofire */,
 				323D347F2AB97EA1001E1CBE /* ScreenCaptureRedaction */,
+				32D1BC7F2D9C45CE00C1B3A4 /* ConfettiKit */,
 			);
 			productName = "SST Alumni";
 			productReference = 32410F3E2AB4B9C900A9184B /* SST Alumni.app */;
@@ -185,6 +188,7 @@
 				32410F6C2AB58B0300A9184B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				32F3B65B2AB6B6030075F5D7 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				323D347E2AB97EA1001E1CBE /* XCRemoteSwiftPackageReference "ScreenCaptureRedaction" */,
+				32D1BC7E2D9C45CE00C1B3A4 /* XCLocalSwiftPackageReference "ConfettiKit" */,
 			);
 			productRefGroup = 32410F3F2AB4B9C900A9184B /* Products */;
 			projectDirPath = "";
@@ -452,6 +456,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		32D1BC7E2D9C45CE00C1B3A4 /* XCLocalSwiftPackageReference "ConfettiKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ConfettiKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		323D347E2AB97EA1001E1CBE /* XCRemoteSwiftPackageReference "ScreenCaptureRedaction" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -619,6 +630,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 32410F6C2AB58B0300A9184B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		32D1BC7F2D9C45CE00C1B3A4 /* ConfettiKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ConfettiKit;
 		};
 		32F3B65C2AB6B6030075F5D7 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
