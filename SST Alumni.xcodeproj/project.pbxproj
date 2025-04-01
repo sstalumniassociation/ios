@@ -3,36 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		323D346A2AB88BAA001E1CBE /* OnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34692AB88BAA001E1CBE /* OnboardingItemView.swift */; };
-		323D346C2AB895D9001E1CBE /* WelcomeOnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D346B2AB895D9001E1CBE /* WelcomeOnboardingItemView.swift */; };
-		323D346E2AB8971F001E1CBE /* MegaphoneOnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D346D2AB8971F001E1CBE /* MegaphoneOnboardingItemView.swift */; };
-		323D34702AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D346F2AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift */; };
-		323D34722AB89982001E1CBE /* BookVenueOnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34712AB89982001E1CBE /* BookVenueOnboardingItemView.swift */; };
-		323D34772AB95EAA001E1CBE /* SSTEmailRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34762AB95EAA001E1CBE /* SSTEmailRegex.swift */; };
-		323D347D2AB97743001E1CBE /* SSTEmailValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D347C2AB97743001E1CBE /* SSTEmailValidationState.swift */; };
 		323D34802AB97EA1001E1CBE /* ScreenCaptureRedaction in Frameworks */ = {isa = PBXBuildFile; productRef = 323D347F2AB97EA1001E1CBE /* ScreenCaptureRedaction */; };
-		323D34822AB991BB001E1CBE /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34812AB991BB001E1CBE /* UserProfileView.swift */; };
-		323D34842AB99272001E1CBE /* AcknowledgementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D34832AB99272001E1CBE /* AcknowledgementsView.swift */; };
-		32410F422AB4B9C900A9184B /* SSTAlumniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F412AB4B9C900A9184B /* SSTAlumniApp.swift */; };
-		32410F442AB4B9C900A9184B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F432AB4B9C900A9184B /* ContentView.swift */; };
-		32410F462AB4B9CA00A9184B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32410F452AB4B9CA00A9184B /* Assets.xcassets */; };
-		32410F492AB4B9CA00A9184B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32410F482AB4B9CA00A9184B /* Preview Assets.xcassets */; };
-		32410F502AB4B9DD00A9184B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F4F2AB4B9DD00A9184B /* CardView.swift */; };
-		32410F522AB4BA7E00A9184B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F512AB4BA7E00A9184B /* UserData.swift */; };
-		32410F542AB4BFAC00A9184B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F532AB4BFAC00A9184B /* HomeView.swift */; };
-		32410F562AB4C3F500A9184B /* AlumniServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F552AB4C3F500A9184B /* AlumniServicesView.swift */; };
-		32410F582AB4C42F00A9184B /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F572AB4C42F00A9184B /* EventsView.swift */; };
-		32410F5A2AB4C48A00A9184B /* AlumniServicesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F592AB4C48A00A9184B /* AlumniServicesRowView.swift */; };
-		32410F5C2AB4C9E700A9184B /* SSTAARSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F5B2AB4C9E700A9184B /* SSTAARSView.swift */; };
-		32410F602AB4D0F200A9184B /* CardExpandedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F5F2AB4D0F200A9184B /* CardExpandedView.swift */; };
-		32410F642AB4D7AB00A9184B /* SSTAARSEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F632AB4D7AB00A9184B /* SSTAARSEventView.swift */; };
-		32410F662AB568D400A9184B /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F652AB568D400A9184B /* NewsArticle.swift */; };
-		32410F692AB5695E00A9184B /* NewsArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F682AB5695E00A9184B /* NewsArticleView.swift */; };
-		32410F6B2AB569FB00A9184B /* NewsArticleSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410F6A2AB569FB00A9184B /* NewsArticleSectionView.swift */; };
 		32410F6E2AB58B0300A9184B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 32410F6D2AB58B0300A9184B /* FirebaseAnalytics */; };
 		32410F702AB58B0300A9184B /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 32410F6F2AB58B0300A9184B /* FirebaseAnalyticsOnDeviceConversion */; };
 		32410F722AB58B0300A9184B /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 32410F712AB58B0300A9184B /* FirebaseAnalyticsSwift */; };
@@ -60,157 +35,16 @@
 		32410F9E2AB58B0300A9184B /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 32410F9D2AB58B0300A9184B /* FirebaseRemoteConfigSwift */; };
 		32410FA02AB58B0300A9184B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 32410F9F2AB58B0300A9184B /* FirebaseStorage */; };
 		32410FA22AB58B0300A9184B /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 32410FA12AB58B0300A9184B /* FirebaseStorageCombine-Community */; };
-		32410FA42AB58B6200A9184B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32410FA32AB58B6200A9184B /* GoogleService-Info.plist */; };
-		32410FA62AB5EBBA00A9184B /* MemberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FA52AB5EBBA00A9184B /* MemberType.swift */; };
-		32410FA92AB5F51B00A9184B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FA82AB5F51B00A9184B /* UserManager.swift */; };
-		32410FAC2AB6002E00A9184B /* SecurityAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FAB2AB6002E00A9184B /* SecurityAccessManager.swift */; };
-		32410FAE2AB6004400A9184B /* SecurityAccessState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FAD2AB6004400A9184B /* SecurityAccessState.swift */; };
-		32410FB02AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FAF2AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift */; };
-		32410FB32AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FB22AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift */; };
-		32410FB52AB60C2A00A9184B /* LocationValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FB42AB60C2A00A9184B /* LocationValidationManager.swift */; };
-		32410FB82AB60D1C00A9184B /* BiometricAuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FB72AB60D1C00A9184B /* BiometricAuthenticationState.swift */; };
-		32410FBA2AB60D2C00A9184B /* LocationValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32410FB92AB60D2C00A9184B /* LocationValidationState.swift */; };
-		324FB2642ABF0CF50088A9C6 /* SSTAARSManager+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB2632ABF0CF50088A9C6 /* SSTAARSManager+Persistence.swift */; };
-		324FB2672ABF65AC0088A9C6 /* UserManager+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB2662ABF65AC0088A9C6 /* UserManager+Persistence.swift */; };
-		324FB26A2ABF689E0088A9C6 /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB2692ABF689E0088A9C6 /* NewsManager.swift */; };
-		324FB26D2ABF6E1F0088A9C6 /* NewsManager+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB26C2ABF6E1F0088A9C6 /* NewsManager+Persistence.swift */; };
-		324FB26F2AC010F30088A9C6 /* AuthenticationForgetPasswordSentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FB26E2AC010F30088A9C6 /* AuthenticationForgetPasswordSentView.swift */; };
-		3278F7D62AC055BA00C936D1 /* MarkdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D52AC055BA00C936D1 /* MarkdownText.swift */; };
-		3278F7D82AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */; };
-		3278F7DA2AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D92AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift */; };
-		3278F7E02AC0BBAE00C936D1 /* HexagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7DF2AC0BBAE00C936D1 /* HexagonView.swift */; };
-		32ADD67D2AB9FC00009E947A /* AuthenticationEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */; };
-		32ADD67F2ABA0C1F009E947A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */; };
-		32ADD6812ABA0D45009E947A /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6802ABA0D45009E947A /* AuthenticationState.swift */; };
-		32ADD6832ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6822ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift */; };
-		32ADD6862ABA9F50009E947A /* AuthenticationLogInPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6852ABA9F50009E947A /* AuthenticationLogInPasswordView.swift */; };
-		32ADD6882ABACF30009E947A /* AuthErrorDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6872ABACF30009E947A /* AuthErrorDescription.swift */; };
-		32ADD68A2ABACF4B009E947A /* AuthErrorDescription+FirebaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6892ABACF4B009E947A /* AuthErrorDescription+FirebaseErrors.swift */; };
-		32ADD68C2ABAD238009E947A /* AuthenticationErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD68B2ABAD238009E947A /* AuthenticationErrorView.swift */; };
-		32ADD68E2ABADA9D009E947A /* ErrorFlameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD68D2ABADA9D009E947A /* ErrorFlameView.swift */; };
-		32ADD6902ABB5E5D009E947A /* AuthenticationLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD68F2ABB5E5D009E947A /* AuthenticationLoadingView.swift */; };
-		32ADD6922ABB5EFE009E947A /* AuthenticationUnregisteredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6912ABB5EFE009E947A /* AuthenticationUnregisteredView.swift */; };
-		32ADD6942ABC2BE7009E947A /* UserManager+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6932ABC2BE7009E947A /* UserManager+Requests.swift */; };
-		32ADD6962ABC3285009E947A /* OnboardingHTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6952ABC3285009E947A /* OnboardingHTTPError.swift */; };
-		32ADD6982ABC380D009E947A /* UserManager+RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6972ABC380D009E947A /* UserManager+RegisterUser.swift */; };
-		32ADD69A2ABC3C5F009E947A /* UserManager+LookUpUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6992ABC3C5F009E947A /* UserManager+LookUpUser.swift */; };
-		32ADD69C2ABC3C80009E947A /* UserManager+LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD69B2ABC3C80009E947A /* UserManager+LogIn.swift */; };
-		32ADD6BB2ABCC5EF009E947A /* AuthenticationEmailVerificationRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6BA2ABCC5EF009E947A /* AuthenticationEmailVerificationRequired.swift */; };
-		32ADD6C02ABCC9B4009E947A /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6BF2ABCC9B4009E947A /* OnboardingState.swift */; };
-		32ADD6C82ABCCAB4009E947A /* ConditionalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6C72ABCCAB4009E947A /* ConditionalLink.swift */; };
-		32ADD7362ABD892F009E947A /* DeleteAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD7352ABD892F009E947A /* DeleteAccountView.swift */; };
-		32D1BAF12D9C3D2B00C1B3A4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1BAF02D9C3D2B00C1B3A4 /* AppState.swift */; };
-		32D1BAF32D9C3F1B00C1B3A4 /* ConfettiBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1BAF22D9C3F1B00C1B3A4 /* ConfettiBackgroundView.swift */; };
-		32D1BAF52D9C41DB00C1B3A4 /* SecurityAccessWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1BAF42D9C41DB00C1B3A4 /* SecurityAccessWrapper.swift */; };
-		32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */; };
-		32F3B6472AB629D80075F5D7 /* SecurityAccessAdmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */; };
-		32F3B6492AB62A240075F5D7 /* SecurityAccessDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */; };
-		32F3B64F2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B64E2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift */; };
-		32F3B6542AB6AEC40075F5D7 /* ConfettiUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6522AB6AEC40075F5D7 /* ConfettiUIView.swift */; };
-		32F3B6552AB6AEC40075F5D7 /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6532AB6AEC40075F5D7 /* ConfettiView.swift */; };
-		32F3B65A2AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6592AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift */; };
 		32F3B65D2AB6B6030075F5D7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 32F3B65C2AB6B6030075F5D7 /* Alamofire */; };
-		32F3B6612AB6BD530075F5D7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6602AB6BD530075F5D7 /* OnboardingView.swift */; };
-		32F3B6642AB711910075F5D7 /* SSTAARSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6632AB711910075F5D7 /* SSTAARSManager.swift */; };
-		32F3B6662AB711A10075F5D7 /* Constants+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6652AB711A10075F5D7 /* Constants+URL.swift */; };
-		32F3B6682AB713730075F5D7 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6672AB713730075F5D7 /* Event.swift */; };
-		32F3B66A2AB717090075F5D7 /* SSTAARSEventConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6692AB717090075F5D7 /* SSTAARSEventConfirmationView.swift */; };
-		32F3B66C2AB74DD30075F5D7 /* EventAttendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B66B2AB74DD30075F5D7 /* EventAttendee.swift */; };
-		32F3B66E2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B66D2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift */; };
-		32F3B6702AB751540075F5D7 /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B66F2AB751540075F5D7 /* QRCodeScannerView.swift */; };
-		32F3B6742AB816400075F5D7 /* AttendeeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6732AB816400075F5D7 /* AttendeeRowView.swift */; };
-		32F3B6762AB81D9A0075F5D7 /* AttendeeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B6752AB81D9A0075F5D7 /* AttendeeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		323D34692AB88BAA001E1CBE /* OnboardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItemView.swift; sourceTree = "<group>"; };
-		323D346B2AB895D9001E1CBE /* WelcomeOnboardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeOnboardingItemView.swift; sourceTree = "<group>"; };
-		323D346D2AB8971F001E1CBE /* MegaphoneOnboardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaphoneOnboardingItemView.swift; sourceTree = "<group>"; };
-		323D346F2AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityPassOnboardingItemView.swift; sourceTree = "<group>"; };
-		323D34712AB89982001E1CBE /* BookVenueOnboardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVenueOnboardingItemView.swift; sourceTree = "<group>"; };
-		323D34762AB95EAA001E1CBE /* SSTEmailRegex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTEmailRegex.swift; sourceTree = "<group>"; };
-		323D347C2AB97743001E1CBE /* SSTEmailValidationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTEmailValidationState.swift; sourceTree = "<group>"; };
-		323D34812AB991BB001E1CBE /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
-		323D34832AB99272001E1CBE /* AcknowledgementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsView.swift; sourceTree = "<group>"; };
 		32410F3E2AB4B9C900A9184B /* SST Alumni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SST Alumni.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		32410F412AB4B9C900A9184B /* SSTAlumniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAlumniApp.swift; sourceTree = "<group>"; };
-		32410F432AB4B9C900A9184B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		32410F452AB4B9CA00A9184B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		32410F482AB4B9CA00A9184B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		32410F4F2AB4B9DD00A9184B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		32410F512AB4BA7E00A9184B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		32410F532AB4BFAC00A9184B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		32410F552AB4C3F500A9184B /* AlumniServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlumniServicesView.swift; sourceTree = "<group>"; };
-		32410F572AB4C42F00A9184B /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
-		32410F592AB4C48A00A9184B /* AlumniServicesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlumniServicesRowView.swift; sourceTree = "<group>"; };
-		32410F5B2AB4C9E700A9184B /* SSTAARSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAARSView.swift; sourceTree = "<group>"; };
-		32410F5F2AB4D0F200A9184B /* CardExpandedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardExpandedView.swift; sourceTree = "<group>"; };
-		32410F632AB4D7AB00A9184B /* SSTAARSEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAARSEventView.swift; sourceTree = "<group>"; };
-		32410F652AB568D400A9184B /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
-		32410F682AB5695E00A9184B /* NewsArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleView.swift; sourceTree = "<group>"; };
-		32410F6A2AB569FB00A9184B /* NewsArticleSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleSectionView.swift; sourceTree = "<group>"; };
-		32410FA32AB58B6200A9184B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		32410FA52AB5EBBA00A9184B /* MemberType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberType.swift; sourceTree = "<group>"; };
-		32410FA82AB5F51B00A9184B /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		32410FAB2AB6002E00A9184B /* SecurityAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessManager.swift; sourceTree = "<group>"; };
-		32410FAD2AB6004400A9184B /* SecurityAccessState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessState.swift; sourceTree = "<group>"; };
-		32410FAF2AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecurityAccessManager+LocalAuthentication.swift"; sourceTree = "<group>"; };
-		32410FB22AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+CLLocationCoordinate2D.swift"; sourceTree = "<group>"; };
-		32410FB42AB60C2A00A9184B /* LocationValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationValidationManager.swift; sourceTree = "<group>"; };
-		32410FB72AB60D1C00A9184B /* BiometricAuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthenticationState.swift; sourceTree = "<group>"; };
-		32410FB92AB60D2C00A9184B /* LocationValidationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationValidationState.swift; sourceTree = "<group>"; };
-		324FB2632ABF0CF50088A9C6 /* SSTAARSManager+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SSTAARSManager+Persistence.swift"; sourceTree = "<group>"; };
-		324FB2662ABF65AC0088A9C6 /* UserManager+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserManager+Persistence.swift"; sourceTree = "<group>"; };
-		324FB2692ABF689E0088A9C6 /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
-		324FB26C2ABF6E1F0088A9C6 /* NewsManager+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsManager+Persistence.swift"; sourceTree = "<group>"; };
-		324FB26E2AC010F30088A9C6 /* AuthenticationForgetPasswordSentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationForgetPasswordSentView.swift; sourceTree = "<group>"; };
-		3278F7D52AC055BA00C936D1 /* MarkdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownText.swift; sourceTree = "<group>"; };
-		3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorDescription+GetFirebaseError.swift"; sourceTree = "<group>"; };
-		3278F7D92AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorDescription+OnboardingErrors.swift"; sourceTree = "<group>"; };
-		3278F7DF2AC0BBAE00C936D1 /* HexagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonView.swift; sourceTree = "<group>"; };
-		32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEmailView.swift; sourceTree = "<group>"; };
-		32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
-		32ADD6802ABA0D45009E947A /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
-		32ADD6822ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRegisterPasswordView.swift; sourceTree = "<group>"; };
-		32ADD6852ABA9F50009E947A /* AuthenticationLogInPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLogInPasswordView.swift; sourceTree = "<group>"; };
-		32ADD6872ABACF30009E947A /* AuthErrorDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrorDescription.swift; sourceTree = "<group>"; };
-		32ADD6892ABACF4B009E947A /* AuthErrorDescription+FirebaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorDescription+FirebaseErrors.swift"; sourceTree = "<group>"; };
-		32ADD68B2ABAD238009E947A /* AuthenticationErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorView.swift; sourceTree = "<group>"; };
-		32ADD68D2ABADA9D009E947A /* ErrorFlameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorFlameView.swift; sourceTree = "<group>"; };
-		32ADD68F2ABB5E5D009E947A /* AuthenticationLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLoadingView.swift; sourceTree = "<group>"; };
-		32ADD6912ABB5EFE009E947A /* AuthenticationUnregisteredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUnregisteredView.swift; sourceTree = "<group>"; };
-		32ADD6932ABC2BE7009E947A /* UserManager+Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserManager+Requests.swift"; sourceTree = "<group>"; };
-		32ADD6952ABC3285009E947A /* OnboardingHTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingHTTPError.swift; sourceTree = "<group>"; };
-		32ADD6972ABC380D009E947A /* UserManager+RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserManager+RegisterUser.swift"; sourceTree = "<group>"; };
-		32ADD6992ABC3C5F009E947A /* UserManager+LookUpUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserManager+LookUpUser.swift"; sourceTree = "<group>"; };
-		32ADD69B2ABC3C80009E947A /* UserManager+LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserManager+LogIn.swift"; sourceTree = "<group>"; };
-		32ADD6BA2ABCC5EF009E947A /* AuthenticationEmailVerificationRequired.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEmailVerificationRequired.swift; sourceTree = "<group>"; };
-		32ADD6BF2ABCC9B4009E947A /* OnboardingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingState.swift; sourceTree = "<group>"; };
-		32ADD6C72ABCCAB4009E947A /* ConditionalLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalLink.swift; sourceTree = "<group>"; };
-		32ADD7352ABD892F009E947A /* DeleteAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountView.swift; sourceTree = "<group>"; };
-		32D1BAF02D9C3D2B00C1B3A4 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		32D1BAF22D9C3F1B00C1B3A4 /* ConfettiBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiBackgroundView.swift; sourceTree = "<group>"; };
-		32D1BAF42D9C41DB00C1B3A4 /* SecurityAccessWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessWrapper.swift; sourceTree = "<group>"; };
-		32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessStatusView.swift; sourceTree = "<group>"; };
-		32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessAdmittedView.swift; sourceTree = "<group>"; };
-		32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityAccessDeniedView.swift; sourceTree = "<group>"; };
-		32F3B64E2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAAAnimatedLogo.swift; sourceTree = "<group>"; };
-		32F3B6522AB6AEC40075F5D7 /* ConfettiUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfettiUIView.swift; sourceTree = "<group>"; };
-		32F3B6532AB6AEC40075F5D7 /* ConfettiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
-		32F3B6572AB6B3A50075F5D7 /* SST Alumni.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SST Alumni.entitlements"; sourceTree = "<group>"; };
-		32F3B6592AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAAAppCheckProviderFactory.swift; sourceTree = "<group>"; };
-		32F3B6602AB6BD530075F5D7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		32F3B6622AB6E6E10075F5D7 /* SST-Alumni-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SST-Alumni-Info.plist"; sourceTree = SOURCE_ROOT; };
-		32F3B6632AB711910075F5D7 /* SSTAARSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAARSManager.swift; sourceTree = "<group>"; };
-		32F3B6652AB711A10075F5D7 /* Constants+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+URL.swift"; sourceTree = "<group>"; };
-		32F3B6672AB713730075F5D7 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		32F3B6692AB717090075F5D7 /* SSTAARSEventConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAARSEventConfirmationView.swift; sourceTree = "<group>"; };
-		32F3B66B2AB74DD30075F5D7 /* EventAttendee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendee.swift; sourceTree = "<group>"; };
-		32F3B66D2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTAARSEventConfirmationSuccessView.swift; sourceTree = "<group>"; };
-		32F3B66F2AB751540075F5D7 /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
-		32F3B6732AB816400075F5D7 /* AttendeeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeRowView.swift; sourceTree = "<group>"; };
-		32F3B6752AB81D9A0075F5D7 /* AttendeeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		32D1BC292D9C444400C1B3A4 /* SST Alumni */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "SST Alumni"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		32410F3B2AB4B9C900A9184B /* Frameworks */ = {
@@ -252,24 +86,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		323D34732AB89AB1001E1CBE /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				32F3B6602AB6BD530075F5D7 /* OnboardingView.swift */,
-				323D34712AB89982001E1CBE /* BookVenueOnboardingItemView.swift */,
-				323D346F2AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift */,
-				323D346D2AB8971F001E1CBE /* MegaphoneOnboardingItemView.swift */,
-				323D34692AB88BAA001E1CBE /* OnboardingItemView.swift */,
-				323D346B2AB895D9001E1CBE /* WelcomeOnboardingItemView.swift */,
-				32ADD6842ABA28EA009E947A /* Authentication */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
 		32410F352AB4B9C900A9184B = {
 			isa = PBXGroup;
 			children = (
-				32410F402AB4B9C900A9184B /* SST Alumni */,
+				32D1BC292D9C444400C1B3A4 /* SST Alumni */,
 				32410F3F2AB4B9C900A9184B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -280,325 +100,6 @@
 				32410F3E2AB4B9C900A9184B /* SST Alumni.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		32410F402AB4B9C900A9184B /* SST Alumni */ = {
-			isa = PBXGroup;
-			children = (
-				32F3B6622AB6E6E10075F5D7 /* SST-Alumni-Info.plist */,
-				32F3B6572AB6B3A50075F5D7 /* SST Alumni.entitlements */,
-				32410F412AB4B9C900A9184B /* SSTAlumniApp.swift */,
-				32F3B6582AB6B3FF0075F5D7 /* App Check */,
-				32410FB12AB6050200A9184B /* Constants */,
-				32410F612AB4D74100A9184B /* Views */,
-				32410F672AB5694900A9184B /* Models */,
-				32410F452AB4B9CA00A9184B /* Assets.xcassets */,
-				32410FAA2AB5FFEA00A9184B /* View Models */,
-				32410FA32AB58B6200A9184B /* GoogleService-Info.plist */,
-				3278F7D42AC055AE00C936D1 /* Helper Views */,
-				32410F472AB4B9CA00A9184B /* Preview Content */,
-			);
-			path = "SST Alumni";
-			sourceTree = "<group>";
-		};
-		32410F472AB4B9CA00A9184B /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				32410F482AB4B9CA00A9184B /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		32410F612AB4D74100A9184B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				32410F432AB4B9C900A9184B /* ContentView.swift */,
-				32ADD6BA2ABCC5EF009E947A /* AuthenticationEmailVerificationRequired.swift */,
-				323D34732AB89AB1001E1CBE /* Onboarding */,
-				32410FA72AB5F41800A9184B /* Home */,
-				32ADD6BC2ABCC958009E947A /* Alumni Services */,
-				32ADD6BD2ABCC964009E947A /* Profile */,
-				32ADD6BE2ABCC982009E947A /* Events */,
-				32410F622AB4D74800A9184B /* SSTAARS */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		32410F622AB4D74800A9184B /* SSTAARS */ = {
-			isa = PBXGroup;
-			children = (
-				32410F5B2AB4C9E700A9184B /* SSTAARSView.swift */,
-				32F3B6722AB760940075F5D7 /* Event View */,
-				32F3B6712AB7608A0075F5D7 /* Invite Confirmation View */,
-			);
-			path = SSTAARS;
-			sourceTree = "<group>";
-		};
-		32410F672AB5694900A9184B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				32ADD6C52ABCCA48009E947A /* User */,
-				32ADD6C62ABCCA4E009E947A /* News */,
-				32ADD6C42ABCCA3E009E947A /* Security Card */,
-				32ADD6C22ABCC9F1009E947A /* Onboarding */,
-				32ADD6C32ABCCA30009E947A /* SSTAARS */,
-				323D347C2AB97743001E1CBE /* SSTEmailValidationState.swift */,
-				32D1BAF02D9C3D2B00C1B3A4 /* AppState.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		32410FA72AB5F41800A9184B /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				32410F532AB4BFAC00A9184B /* HomeView.swift */,
-				32D1BAF42D9C41DB00C1B3A4 /* SecurityAccessWrapper.swift */,
-				32D1BAF22D9C3F1B00C1B3A4 /* ConfettiBackgroundView.swift */,
-				324FB26B2ABF69C30088A9C6 /* News */,
-				32F3B64B2AB62A660075F5D7 /* Security Card */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		32410FAA2AB5FFEA00A9184B /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-				324FB2682ABF68970088A9C6 /* News Manager */,
-				32ADD69D2ABC51AA009E947A /* User Manager */,
-				324FB2652ABF0CF90088A9C6 /* SSTAARS */,
-				32410FB62AB60C3800A9184B /* Security Access Manager */,
-			);
-			path = "View Models";
-			sourceTree = "<group>";
-		};
-		32410FB12AB6050200A9184B /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				32410FB22AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift */,
-				32F3B6652AB711A10075F5D7 /* Constants+URL.swift */,
-				323D34762AB95EAA001E1CBE /* SSTEmailRegex.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		32410FB62AB60C3800A9184B /* Security Access Manager */ = {
-			isa = PBXGroup;
-			children = (
-				32410FAB2AB6002E00A9184B /* SecurityAccessManager.swift */,
-				32410FAF2AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift */,
-				32410FB42AB60C2A00A9184B /* LocationValidationManager.swift */,
-			);
-			path = "Security Access Manager";
-			sourceTree = "<group>";
-		};
-		324FB2652ABF0CF90088A9C6 /* SSTAARS */ = {
-			isa = PBXGroup;
-			children = (
-				32F3B6632AB711910075F5D7 /* SSTAARSManager.swift */,
-				324FB2632ABF0CF50088A9C6 /* SSTAARSManager+Persistence.swift */,
-			);
-			path = SSTAARS;
-			sourceTree = "<group>";
-		};
-		324FB2682ABF68970088A9C6 /* News Manager */ = {
-			isa = PBXGroup;
-			children = (
-				324FB2692ABF689E0088A9C6 /* NewsManager.swift */,
-				324FB26C2ABF6E1F0088A9C6 /* NewsManager+Persistence.swift */,
-			);
-			path = "News Manager";
-			sourceTree = "<group>";
-		};
-		324FB26B2ABF69C30088A9C6 /* News */ = {
-			isa = PBXGroup;
-			children = (
-				32410F6A2AB569FB00A9184B /* NewsArticleSectionView.swift */,
-				32410F682AB5695E00A9184B /* NewsArticleView.swift */,
-			);
-			path = News;
-			sourceTree = "<group>";
-		};
-		3278F7D42AC055AE00C936D1 /* Helper Views */ = {
-			isa = PBXGroup;
-			children = (
-				3278F7D52AC055BA00C936D1 /* MarkdownText.swift */,
-			);
-			path = "Helper Views";
-			sourceTree = "<group>";
-		};
-		32ADD6842ABA28EA009E947A /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */,
-				32ADD68B2ABAD238009E947A /* AuthenticationErrorView.swift */,
-				32ADD68D2ABADA9D009E947A /* ErrorFlameView.swift */,
-				324FB26E2AC010F30088A9C6 /* AuthenticationForgetPasswordSentView.swift */,
-				32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */,
-				32ADD6852ABA9F50009E947A /* AuthenticationLogInPasswordView.swift */,
-				32ADD68F2ABB5E5D009E947A /* AuthenticationLoadingView.swift */,
-				32ADD6912ABB5EFE009E947A /* AuthenticationUnregisteredView.swift */,
-				32ADD6822ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift */,
-			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
-		32ADD69D2ABC51AA009E947A /* User Manager */ = {
-			isa = PBXGroup;
-			children = (
-				32410FA82AB5F51B00A9184B /* UserManager.swift */,
-				324FB2662ABF65AC0088A9C6 /* UserManager+Persistence.swift */,
-				32ADD69B2ABC3C80009E947A /* UserManager+LogIn.swift */,
-				32ADD6992ABC3C5F009E947A /* UserManager+LookUpUser.swift */,
-				32ADD6972ABC380D009E947A /* UserManager+RegisterUser.swift */,
-				32ADD6932ABC2BE7009E947A /* UserManager+Requests.swift */,
-			);
-			path = "User Manager";
-			sourceTree = "<group>";
-		};
-		32ADD6BC2ABCC958009E947A /* Alumni Services */ = {
-			isa = PBXGroup;
-			children = (
-				32410F552AB4C3F500A9184B /* AlumniServicesView.swift */,
-				32410F592AB4C48A00A9184B /* AlumniServicesRowView.swift */,
-				32ADD6C72ABCCAB4009E947A /* ConditionalLink.swift */,
-			);
-			path = "Alumni Services";
-			sourceTree = "<group>";
-		};
-		32ADD6BD2ABCC964009E947A /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				323D34812AB991BB001E1CBE /* UserProfileView.swift */,
-				32ADD7352ABD892F009E947A /* DeleteAccountView.swift */,
-				323D34832AB99272001E1CBE /* AcknowledgementsView.swift */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		32ADD6BE2ABCC982009E947A /* Events */ = {
-			isa = PBXGroup;
-			children = (
-				32410F572AB4C42F00A9184B /* EventsView.swift */,
-			);
-			path = Events;
-			sourceTree = "<group>";
-		};
-		32ADD6C12ABCC9D1009E947A /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				32ADD6802ABA0D45009E947A /* AuthenticationState.swift */,
-				32ADD6872ABACF30009E947A /* AuthErrorDescription.swift */,
-				3278F7D92AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift */,
-				32ADD6892ABACF4B009E947A /* AuthErrorDescription+FirebaseErrors.swift */,
-				3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */,
-			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
-		32ADD6C22ABCC9F1009E947A /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				32ADD6BF2ABCC9B4009E947A /* OnboardingState.swift */,
-				32ADD6952ABC3285009E947A /* OnboardingHTTPError.swift */,
-				32ADD6C12ABCC9D1009E947A /* Authentication */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		32ADD6C32ABCCA30009E947A /* SSTAARS */ = {
-			isa = PBXGroup;
-			children = (
-				32F3B6672AB713730075F5D7 /* Event.swift */,
-				32F3B66B2AB74DD30075F5D7 /* EventAttendee.swift */,
-			);
-			path = SSTAARS;
-			sourceTree = "<group>";
-		};
-		32ADD6C42ABCCA3E009E947A /* Security Card */ = {
-			isa = PBXGroup;
-			children = (
-				32410FAD2AB6004400A9184B /* SecurityAccessState.swift */,
-				32410FB92AB60D2C00A9184B /* LocationValidationState.swift */,
-				32410FB72AB60D1C00A9184B /* BiometricAuthenticationState.swift */,
-			);
-			path = "Security Card";
-			sourceTree = "<group>";
-		};
-		32ADD6C52ABCCA48009E947A /* User */ = {
-			isa = PBXGroup;
-			children = (
-				32410F512AB4BA7E00A9184B /* UserData.swift */,
-				32410FA52AB5EBBA00A9184B /* MemberType.swift */,
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
-		32ADD6C62ABCCA4E009E947A /* News */ = {
-			isa = PBXGroup;
-			children = (
-				32410F652AB568D400A9184B /* NewsArticle.swift */,
-			);
-			path = News;
-			sourceTree = "<group>";
-		};
-		32F3B64A2AB62A600075F5D7 /* SecurityAccessStatusView */ = {
-			isa = PBXGroup;
-			children = (
-				32F3B6442AB629360075F5D7 /* SecurityAccessStatusView.swift */,
-				3278F7DF2AC0BBAE00C936D1 /* HexagonView.swift */,
-				32F3B6482AB62A240075F5D7 /* SecurityAccessDeniedView.swift */,
-				32F3B6462AB629D80075F5D7 /* SecurityAccessAdmittedView.swift */,
-			);
-			path = SecurityAccessStatusView;
-			sourceTree = "<group>";
-		};
-		32F3B64B2AB62A660075F5D7 /* Security Card */ = {
-			isa = PBXGroup;
-			children = (
-				32410F4F2AB4B9DD00A9184B /* CardView.swift */,
-				32410F5F2AB4D0F200A9184B /* CardExpandedView.swift */,
-				32F3B64E2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift */,
-				32F3B6562AB6B0D10075F5D7 /* Confetti */,
-				32F3B64A2AB62A600075F5D7 /* SecurityAccessStatusView */,
-			);
-			path = "Security Card";
-			sourceTree = "<group>";
-		};
-		32F3B6562AB6B0D10075F5D7 /* Confetti */ = {
-			isa = PBXGroup;
-			children = (
-				32F3B6522AB6AEC40075F5D7 /* ConfettiUIView.swift */,
-				32F3B6532AB6AEC40075F5D7 /* ConfettiView.swift */,
-			);
-			path = Confetti;
-			sourceTree = "<group>";
-		};
-		32F3B6582AB6B3FF0075F5D7 /* App Check */ = {
-			isa = PBXGroup;
-			children = (
-				32F3B6592AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift */,
-			);
-			path = "App Check";
-			sourceTree = "<group>";
-		};
-		32F3B6712AB7608A0075F5D7 /* Invite Confirmation View */ = {
-			isa = PBXGroup;
-			children = (
-				32F3B6692AB717090075F5D7 /* SSTAARSEventConfirmationView.swift */,
-				32F3B66D2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift */,
-			);
-			path = "Invite Confirmation View";
-			sourceTree = "<group>";
-		};
-		32F3B6722AB760940075F5D7 /* Event View */ = {
-			isa = PBXGroup;
-			children = (
-				32410F632AB4D7AB00A9184B /* SSTAARSEventView.swift */,
-				32F3B6752AB81D9A0075F5D7 /* AttendeeDetailView.swift */,
-				32F3B6732AB816400075F5D7 /* AttendeeRowView.swift */,
-				32F3B66F2AB751540075F5D7 /* QRCodeScannerView.swift */,
-			);
-			path = "Event View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -616,6 +117,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				32D1BC292D9C444400C1B3A4 /* SST Alumni */,
 			);
 			name = "SST Alumni";
 			packageProductDependencies = (
@@ -696,9 +200,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32410F492AB4B9CA00A9184B /* Preview Assets.xcassets in Resources */,
-				32410F462AB4B9CA00A9184B /* Assets.xcassets in Resources */,
-				32410FA42AB58B6200A9184B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,87 +232,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32410FBA2AB60D2C00A9184B /* LocationValidationState.swift in Sources */,
-				32F3B6762AB81D9A0075F5D7 /* AttendeeDetailView.swift in Sources */,
-				32410FB82AB60D1C00A9184B /* BiometricAuthenticationState.swift in Sources */,
-				32410F642AB4D7AB00A9184B /* SSTAARSEventView.swift in Sources */,
-				323D346C2AB895D9001E1CBE /* WelcomeOnboardingItemView.swift in Sources */,
-				32D1BAF32D9C3F1B00C1B3A4 /* ConfettiBackgroundView.swift in Sources */,
-				32410FB52AB60C2A00A9184B /* LocationValidationManager.swift in Sources */,
-				32F3B66E2AB74E240075F5D7 /* SSTAARSEventConfirmationSuccessView.swift in Sources */,
-				323D34842AB99272001E1CBE /* AcknowledgementsView.swift in Sources */,
-				32ADD6C02ABCC9B4009E947A /* OnboardingState.swift in Sources */,
-				324FB26D2ABF6E1F0088A9C6 /* NewsManager+Persistence.swift in Sources */,
-				323D34722AB89982001E1CBE /* BookVenueOnboardingItemView.swift in Sources */,
-				32F3B66A2AB717090075F5D7 /* SSTAARSEventConfirmationView.swift in Sources */,
-				32D1BAF52D9C41DB00C1B3A4 /* SecurityAccessWrapper.swift in Sources */,
-				323D34822AB991BB001E1CBE /* UserProfileView.swift in Sources */,
-				32F3B6642AB711910075F5D7 /* SSTAARSManager.swift in Sources */,
-				32ADD6922ABB5EFE009E947A /* AuthenticationUnregisteredView.swift in Sources */,
-				32ADD6C82ABCCAB4009E947A /* ConditionalLink.swift in Sources */,
-				32410F662AB568D400A9184B /* NewsArticle.swift in Sources */,
-				323D34772AB95EAA001E1CBE /* SSTEmailRegex.swift in Sources */,
-				32410F522AB4BA7E00A9184B /* UserData.swift in Sources */,
-				32410F582AB4C42F00A9184B /* EventsView.swift in Sources */,
-				32410F602AB4D0F200A9184B /* CardExpandedView.swift in Sources */,
-				32410FAE2AB6004400A9184B /* SecurityAccessState.swift in Sources */,
-				32410F442AB4B9C900A9184B /* ContentView.swift in Sources */,
-				3278F7E02AC0BBAE00C936D1 /* HexagonView.swift in Sources */,
-				3278F7D62AC055BA00C936D1 /* MarkdownText.swift in Sources */,
-				32ADD6962ABC3285009E947A /* OnboardingHTTPError.swift in Sources */,
-				32F3B6452AB629360075F5D7 /* SecurityAccessStatusView.swift in Sources */,
-				32410FA92AB5F51B00A9184B /* UserManager.swift in Sources */,
-				324FB26F2AC010F30088A9C6 /* AuthenticationForgetPasswordSentView.swift in Sources */,
-				32ADD6832ABA1CB6009E947A /* AuthenticationRegisterPasswordView.swift in Sources */,
-				32ADD6902ABB5E5D009E947A /* AuthenticationLoadingView.swift in Sources */,
-				32F3B6612AB6BD530075F5D7 /* OnboardingView.swift in Sources */,
-				324FB26A2ABF689E0088A9C6 /* NewsManager.swift in Sources */,
-				32F3B6702AB751540075F5D7 /* QRCodeScannerView.swift in Sources */,
-				32F3B65A2AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift in Sources */,
-				32410F6B2AB569FB00A9184B /* NewsArticleSectionView.swift in Sources */,
-				32410F692AB5695E00A9184B /* NewsArticleView.swift in Sources */,
-				32ADD6862ABA9F50009E947A /* AuthenticationLogInPasswordView.swift in Sources */,
-				32ADD69C2ABC3C80009E947A /* UserManager+LogIn.swift in Sources */,
-				32410F5A2AB4C48A00A9184B /* AlumniServicesRowView.swift in Sources */,
-				32F3B6682AB713730075F5D7 /* Event.swift in Sources */,
-				32ADD6982ABC380D009E947A /* UserManager+RegisterUser.swift in Sources */,
-				32410F502AB4B9DD00A9184B /* CardView.swift in Sources */,
-				32ADD7362ABD892F009E947A /* DeleteAccountView.swift in Sources */,
-				323D347D2AB97743001E1CBE /* SSTEmailValidationState.swift in Sources */,
-				32410F542AB4BFAC00A9184B /* HomeView.swift in Sources */,
-				324FB2672ABF65AC0088A9C6 /* UserManager+Persistence.swift in Sources */,
-				32ADD69A2ABC3C5F009E947A /* UserManager+LookUpUser.swift in Sources */,
-				32ADD67F2ABA0C1F009E947A /* AuthenticationView.swift in Sources */,
-				323D34702AB898BE001E1CBE /* SecurityPassOnboardingItemView.swift in Sources */,
-				32F3B6662AB711A10075F5D7 /* Constants+URL.swift in Sources */,
-				32F3B6552AB6AEC40075F5D7 /* ConfettiView.swift in Sources */,
-				32F3B6472AB629D80075F5D7 /* SecurityAccessAdmittedView.swift in Sources */,
-				32410FA62AB5EBBA00A9184B /* MemberType.swift in Sources */,
-				32ADD6882ABACF30009E947A /* AuthErrorDescription.swift in Sources */,
-				32ADD68C2ABAD238009E947A /* AuthenticationErrorView.swift in Sources */,
-				32410F5C2AB4C9E700A9184B /* SSTAARSView.swift in Sources */,
-				32410FAC2AB6002E00A9184B /* SecurityAccessManager.swift in Sources */,
-				32F3B66C2AB74DD30075F5D7 /* EventAttendee.swift in Sources */,
-				32ADD68E2ABADA9D009E947A /* ErrorFlameView.swift in Sources */,
-				32F3B64F2AB6A8EB0075F5D7 /* SSTAAAnimatedLogo.swift in Sources */,
-				32ADD6BB2ABCC5EF009E947A /* AuthenticationEmailVerificationRequired.swift in Sources */,
-				32ADD68A2ABACF4B009E947A /* AuthErrorDescription+FirebaseErrors.swift in Sources */,
-				32ADD6942ABC2BE7009E947A /* UserManager+Requests.swift in Sources */,
-				32410FB02AB6008B00A9184B /* SecurityAccessManager+LocalAuthentication.swift in Sources */,
-				32ADD67D2AB9FC00009E947A /* AuthenticationEmailView.swift in Sources */,
-				32410F562AB4C3F500A9184B /* AlumniServicesView.swift in Sources */,
-				323D346A2AB88BAA001E1CBE /* OnboardingItemView.swift in Sources */,
-				32F3B6492AB62A240075F5D7 /* SecurityAccessDeniedView.swift in Sources */,
-				32ADD6812ABA0D45009E947A /* AuthenticationState.swift in Sources */,
-				32410F422AB4B9C900A9184B /* SSTAlumniApp.swift in Sources */,
-				32F3B6742AB816400075F5D7 /* AttendeeRowView.swift in Sources */,
-				32410FB32AB6050B00A9184B /* Constants+CLLocationCoordinate2D.swift in Sources */,
-				3278F7DA2AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift in Sources */,
-				3278F7D82AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift in Sources */,
-				32F3B6542AB6AEC40075F5D7 /* ConfettiUIView.swift in Sources */,
-				32D1BAF12D9C3D2B00C1B3A4 /* AppState.swift in Sources */,
-				324FB2642ABF0CF50088A9C6 /* SSTAARSManager+Persistence.swift in Sources */,
-				323D346E2AB8971F001E1CBE /* MegaphoneOnboardingItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -950,7 +370,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SST-Alumni-Info.plist";
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Scan QR codes";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Face ID is required to access the virtual security access card.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Security card can only be accessed while on campus.";
@@ -986,7 +406,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SST-Alumni-Info.plist";
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Scan QR codes";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Face ID is required to access the virtual security access card.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Security card can only be accessed while on campus.";
