@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LogoKit
 
 struct CardExpandedView: View {
     
@@ -32,7 +33,7 @@ struct CardExpandedView: View {
                 }
                 Spacer()
                 
-                SSTAAAnimatedLogo(isAnimating: securityAccessManager.securityAccessState == .admitted)
+                Logo(style: .animatedWhite, redactWhenScreenCaptured: true)
                     .matchedGeometryEffect(id: "sstaalogo", in: namespace)
             }
             

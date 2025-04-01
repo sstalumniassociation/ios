@@ -1,0 +1,15 @@
+{
+  "originHash" : "133825f2ddc80ac50bcb1f754c7a05d6145c7f7321381a8877d3ec6392896ba4",
+  "pins" : [
+    {
+      "identity" : "screencaptureredaction",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jiachenyee/ScreenCaptureRedaction",
+      "state" : {
+        "revision" : "0ec5d21872778de55f32cd873a159cff56ec304f",
+        "version" : "1.1.1"
+      }
+    }
+  ],
+  "version" : 3
+}

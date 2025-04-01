@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LogoKit
 
 struct CardView: View {
     
@@ -36,10 +37,8 @@ struct CardView: View {
                             .fontWeight(.regular)
                     }
                     Spacer()
-                    Image(.logoWhite)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 48)
+                    
+                    Logo(style: .shimmering(user.memberType.gradientColors.first!), redactWhenScreenCaptured: true)
                         .matchedGeometryEffect(id: "sstaalogo", in: namespace)
                 }
             } else {
