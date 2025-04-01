@@ -51,6 +51,7 @@ struct ErrorFlameView: View {
             .padding([.horizontal, .bottom], -32)
             .padding(.bottom, -21)
         }
+        .ignoresSafeArea(.container, edges: .bottom)
         .onAppear {
             withAnimation(.easeInOut(duration: 3).repeatForever()) {
                 rotation = -20

@@ -14,5 +14,5 @@ extension URL {
     static let cfServer = URL(string: "https://sstaa.hotchocolate.app/api/")!
     #endif
     
-    static let sstaaSignUp = URL(string: "https://sst.edu.sg/")!
+    static let sstaaSignUp = URL(string: "https://go.sstaa.org/register")!
 }

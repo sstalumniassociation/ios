@@ -54,7 +54,7 @@ extension AuthErrorDescription {
     
     static let requiresRecentLogin = AuthErrorDescription(icon: "lock",
                                                      title: "Login Required",
-                                                     description: "Looks like you changed your password recently.")
+                                                     description: "This operation is sensitive and requires recent authentication.")
     
     static let providerAlreadyLinked = AuthErrorDescription(icon: "link",
                                                        title: "Login Method Already Linked",

@@ -11,7 +11,7 @@ import FirebaseAuth
 
 extension UserManager {
     func logIn(email: String, password: String) async {
-        switch await signIn(withEmail: email, password: password) {
+        switch await firebaseSignIn(withEmail: email, password: password) {
         case .success(let result):
             let user = result.user
             
@@ -55,8 +55,8 @@ extension UserManager {
         }
     }
     
-    fileprivate func signIn(withEmail email: String,
-                            password: String) async -> Result<AuthDataResult, OnboardingHTTPError> {
+    func firebaseSignIn(withEmail email: String,
+                        password: String) async -> Result<AuthDataResult, OnboardingHTTPError> {
         do {
             return .success(try await auth.signIn(withEmail: email, password: password))
         } catch {

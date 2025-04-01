@@ -79,6 +79,7 @@
 		3278F7D82AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */; };
 		3278F7DA2AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7D92AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift */; };
 		3278F7E02AC0BBAE00C936D1 /* HexagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7DF2AC0BBAE00C936D1 /* HexagonView.swift */; };
+		3278F7ED2AC13F6F00C936D1 /* EmailVerificationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F7EC2AC13F6F00C936D1 /* EmailVerificationState.swift */; };
 		32ADD67D2AB9FC00009E947A /* AuthenticationEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */; };
 		32ADD67F2ABA0C1F009E947A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */; };
 		32ADD6812ABA0D45009E947A /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD6802ABA0D45009E947A /* AuthenticationState.swift */; };
@@ -165,6 +166,7 @@
 		3278F7D72AC0572800C936D1 /* AuthErrorDescription+GetFirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorDescription+GetFirebaseError.swift"; sourceTree = "<group>"; };
 		3278F7D92AC058BF00C936D1 /* AuthErrorDescription+OnboardingErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthErrorDescription+OnboardingErrors.swift"; sourceTree = "<group>"; };
 		3278F7DF2AC0BBAE00C936D1 /* HexagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonView.swift; sourceTree = "<group>"; };
+		3278F7EC2AC13F6F00C936D1 /* EmailVerificationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerificationState.swift; sourceTree = "<group>"; };
 		32ADD67C2AB9FC00009E947A /* AuthenticationEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEmailView.swift; sourceTree = "<group>"; };
 		32ADD67E2ABA0C1F009E947A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		32ADD6802ABA0D45009E947A /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
@@ -417,6 +419,14 @@
 			path = "Helper Views";
 			sourceTree = "<group>";
 		};
+		3278F7E92AC13D5E00C936D1 /* Delete Account */ = {
+			isa = PBXGroup;
+			children = (
+				32ADD7352ABD892F009E947A /* DeleteAccountView.swift */,
+			);
+			path = "Delete Account";
+			sourceTree = "<group>";
+		};
 		32ADD6842ABA28EA009E947A /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,8 +470,8 @@
 			isa = PBXGroup;
 			children = (
 				323D34812AB991BB001E1CBE /* UserProfileView.swift */,
-				32ADD7352ABD892F009E947A /* DeleteAccountView.swift */,
 				323D34832AB99272001E1CBE /* AcknowledgementsView.swift */,
+				3278F7E92AC13D5E00C936D1 /* Delete Account */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -491,6 +501,7 @@
 			children = (
 				32ADD6BF2ABCC9B4009E947A /* OnboardingState.swift */,
 				32ADD6952ABC3285009E947A /* OnboardingHTTPError.swift */,
+				3278F7EC2AC13F6F00C936D1 /* EmailVerificationState.swift */,
 				32ADD6C12ABCC9D1009E947A /* Authentication */,
 			);
 			path = Onboarding;
@@ -755,6 +766,7 @@
 				32ADD6902ABB5E5D009E947A /* AuthenticationLoadingView.swift in Sources */,
 				32F3B6612AB6BD530075F5D7 /* OnboardingView.swift in Sources */,
 				324FB26A2ABF689E0088A9C6 /* NewsManager.swift in Sources */,
+				3278F7ED2AC13F6F00C936D1 /* EmailVerificationState.swift in Sources */,
 				32F3B6702AB751540075F5D7 /* QRCodeScannerView.swift in Sources */,
 				32F3B65A2AB6B40E0075F5D7 /* SSTAAAppCheckProviderFactory.swift in Sources */,
 				32410F6B2AB569FB00A9184B /* NewsArticleSectionView.swift in Sources */,
