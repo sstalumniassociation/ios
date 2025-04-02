@@ -38,7 +38,7 @@ struct CardView: View {
                     }
                     Spacer()
                     
-                    Logo(style: .shimmering(user.memberType.gradientColors.first!), redactWhenScreenCaptured: true)
+                    Logo(style: .shimmering(user.memberType.gradientColors.first!))
                         .matchedGeometryEffect(id: "sstaalogo", in: namespace)
                 }
             } else {
