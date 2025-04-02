@@ -9,7 +9,7 @@ import Foundation
 
 extension URL {
     #if DEBUG
-    static let cfServer = URL(string: "https://sstaa.hotchocolate.app/api/")!
+    static let cfServer = URL(string: "https://api-member.sstaa.org/")!
     #else
     static let cfServer = URL(string: "https://sstaa.hotchocolate.app/api/")!
     #endif

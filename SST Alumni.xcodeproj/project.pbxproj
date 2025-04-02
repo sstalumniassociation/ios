@@ -37,6 +37,8 @@
 		32410FA22AB58B0300A9184B /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 32410FA12AB58B0300A9184B /* FirebaseStorageCombine-Community */; };
 		32D1BC802D9C45CE00C1B3A4 /* ConfettiKit in Frameworks */ = {isa = PBXBuildFile; productRef = 32D1BC7F2D9C45CE00C1B3A4 /* ConfettiKit */; };
 		32D5F6022D9C527C00B131E4 /* LogoKit in Frameworks */ = {isa = PBXBuildFile; productRef = 32D5F6012D9C527C00B131E4 /* LogoKit */; };
+		32D5F60D2D9CF84F00B131E4 /* CacheAsyncImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 32D5F60C2D9CF84F00B131E4 /* CacheAsyncImageKit */; };
+		32D5F6102D9CF89D00B131E4 /* CacheAsyncImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 32D5F60F2D9CF89D00B131E4 /* CacheAsyncImageKit */; };
 		32F3B65D2AB6B6030075F5D7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 32F3B65C2AB6B6030075F5D7 /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +69,9 @@
 				32D5F6022D9C527C00B131E4 /* LogoKit in Frameworks */,
 				32410F742AB58B0300A9184B /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				32410F7A2AB58B0300A9184B /* FirebaseAuth in Frameworks */,
+				32D5F6102D9CF89D00B131E4 /* CacheAsyncImageKit in Frameworks */,
 				32410F7E2AB58B0300A9184B /* FirebaseCrashlytics in Frameworks */,
+				32D5F60D2D9CF84F00B131E4 /* CacheAsyncImageKit in Frameworks */,
 				32410F9E2AB58B0300A9184B /* FirebaseRemoteConfigSwift in Frameworks */,
 				32410F902AB58B0300A9184B /* FirebaseInAppMessaging-Beta in Frameworks */,
 				32410F822AB58B0300A9184B /* FirebaseDatabaseSwift in Frameworks */,
@@ -158,6 +162,8 @@
 				323D347F2AB97EA1001E1CBE /* ScreenCaptureRedaction */,
 				32D1BC7F2D9C45CE00C1B3A4 /* ConfettiKit */,
 				32D5F6012D9C527C00B131E4 /* LogoKit */,
+				32D5F60C2D9CF84F00B131E4 /* CacheAsyncImageKit */,
+				32D5F60F2D9CF89D00B131E4 /* CacheAsyncImageKit */,
 			);
 			productName = "SST Alumni";
 			productReference = 32410F3E2AB4B9C900A9184B /* SST Alumni.app */;
@@ -193,6 +199,7 @@
 				323D347E2AB97EA1001E1CBE /* XCRemoteSwiftPackageReference "ScreenCaptureRedaction" */,
 				32D1BC7E2D9C45CE00C1B3A4 /* XCLocalSwiftPackageReference "ConfettiKit" */,
 				32D5F6002D9C527C00B131E4 /* XCLocalSwiftPackageReference "LogoKit" */,
+				32D5F60E2D9CF89D00B131E4 /* XCLocalSwiftPackageReference "CacheAsyncImageKit" */,
 			);
 			productRefGroup = 32410F3F2AB4B9C900A9184B /* Products */;
 			projectDirPath = "";
@@ -469,6 +476,10 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = LogoKit;
 		};
+		32D5F60E2D9CF89D00B131E4 /* XCLocalSwiftPackageReference "CacheAsyncImageKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = CacheAsyncImageKit;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -646,6 +657,14 @@
 		32D5F6012D9C527C00B131E4 /* LogoKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LogoKit;
+		};
+		32D5F60C2D9CF84F00B131E4 /* CacheAsyncImageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CacheAsyncImageKit;
+		};
+		32D5F60F2D9CF89D00B131E4 /* CacheAsyncImageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CacheAsyncImageKit;
 		};
 		32F3B65C2AB6B6030075F5D7 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
