@@ -29,6 +29,10 @@ public struct CacheAsyncImage<Content: View, Placeholder: View, ErrorView: View>
         self.content = content
         self.placeholder = placeholder
         self.errorView = errorView
+        
+        if let image = cache.hit(for: url) {
+            result = .success(image)
+        }
     }
     
     public init(url: URL,
@@ -39,6 +43,10 @@ public struct CacheAsyncImage<Content: View, Placeholder: View, ErrorView: View>
         self.placeholder = placeholder
         self.errorView = {
             CacheDefaultErrorView(error: $0)
+        }
+        
+        if let image = cache.hit(for: url) {
+            result = .success(image)
         }
     }
     

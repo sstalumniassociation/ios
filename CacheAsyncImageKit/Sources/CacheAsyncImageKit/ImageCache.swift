@@ -17,6 +17,10 @@ class ImageCache: Sendable {
     
     @MainActor static let shared = ImageCache()
     
+    func hit(for url: URL) -> Image? {
+        images[url]
+    }
+    
     func image(for url: URL) async -> Result<Image, ImageCacheError> {
         if let image = images[url] {
             return .success(image)
