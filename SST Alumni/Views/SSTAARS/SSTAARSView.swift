@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SSTAARSView: View {
     
-    @StateObject var sstaarsManager = SSTAARSManager()
+    @State var sstaarsManager = SSTAARSManager()
     @State private var accessCodeAlertPresented = false
     @State private var isEventConfirmationViewPresented = false
     
@@ -69,7 +69,7 @@ struct SSTAARSView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationDestination(for: Event.self) { event in
-                SSTAARSEventView(path: $path, sstaarsManager: sstaarsManager, event: event)
+                SSTAARSEventView(path: $path, event: event)
             }
         }
         .alert("SSTAARS Access Code", isPresented: $accessCodeAlertPresented) {
@@ -91,9 +91,10 @@ struct SSTAARSView: View {
             Text("Enter the event’s access code.")
         }
         .sheet(isPresented: $isEventConfirmationViewPresented) {
-            SSTAARSEventConfirmationView(path: $path, sstaarsManager: sstaarsManager)
+            SSTAARSEventConfirmationView(path: $path)
                 .presentationDetents([.medium, .large])
         }
+        .environment(sstaarsManager)
     }
 }
 

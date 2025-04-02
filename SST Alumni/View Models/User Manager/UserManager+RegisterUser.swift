@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import FirebaseAuth
+@preconcurrency import FirebaseAuth
 
 extension UserManager {
     func registerUser(email: String, password: String, cloudflareId: String) async {
@@ -14,14 +14,10 @@ extension UserManager {
                                              password: password,
                                              cloudflareId: cloudflareId) {
         case .success(let user):
-            await MainActor.run {
-                self.user = user
-                authenticationState = .authenticated
-            }
+            self.user = user
+            authenticationState = .authenticated
         case .failure(let error):
-            await MainActor.run {
-                authenticationState = .error(.from(error))
-            }
+            authenticationState = .error(.from(error))
         }
     }
     

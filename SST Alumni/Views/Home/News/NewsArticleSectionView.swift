@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NewsArticleSectionView: View {
     
-    @StateObject var newsManager = NewsManager()
+    @State private var newsManager = NewsManager()
     
     var body: some View {
         HStack {

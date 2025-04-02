@@ -6,12 +6,12 @@
 //
 
 import Foundation
-import FirebaseAuth
-import Alamofire
+@preconcurrency import FirebaseAuth
 import SwiftUI
 import Observation
 import FirebaseCore
 
+@MainActor
 @Observable
 class UserManager {
     var user: UserData? {

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+@preconcurrency import FirebaseAuth
 
 extension UserManager {
     func sendRequest(to endpoint: String,

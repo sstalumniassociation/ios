@@ -7,9 +7,14 @@
 
 import Foundation
 import FirebaseAuth
+import Observation
+import OSLog
 
-class NewsManager: ObservableObject {
-    @Published var articles: [NewsArticle] = [] {
+@MainActor
+@Observable
+class NewsManager {
+    
+    var articles: [NewsArticle] = [] {
         didSet {
             writeToCache()
         }
@@ -25,21 +30,21 @@ class NewsManager: ObservableObject {
                 return
             }
             
-            var request = URLRequest(url: .cfServer.appendingPathComponent("news"))
+            var request = URLRequest(url: .cfServer.appendingPathComponent("Article"))
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             
-            let (data, _) = try await URLSession.shared.data(for: request)
+            let (data, response) = try await URLSession.shared.data(for: request)
+            
+            print(response)
             
             let decoder = JSONDecoder()
-            let articles = try decoder.decode([NewsArticle].self, from: data)
+            let decodedArticles = try decoder.decode([NewsArticle].self, from: data)
             
-            await MainActor.run {
-                self.articles = articles
-            }
+            self.articles = decodedArticles
         } catch {
-            print(error)
-            print(error.localizedDescription)
+            Self.logger.warning("Failed to load articles")
+            Self.logger.error("\(error.localizedDescription)")
         }
     }
 }

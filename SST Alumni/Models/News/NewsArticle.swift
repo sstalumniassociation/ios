@@ -8,6 +8,8 @@
 import Foundation
 
 struct NewsArticle: Codable, Identifiable {
+    var id: String
+    
     var title: String
     var description: String
     
@@ -18,6 +20,7 @@ struct NewsArticle: Codable, Identifiable {
     var ctaURL: URL
     
     enum CodingKeys: String, CodingKey {
+        case id
         case title
         case description
         case heroImageAlt
@@ -26,9 +29,5 @@ struct NewsArticle: Codable, Identifiable {
         case ctaURL = "ctaUrl"
     }
     
-    static let sample = NewsArticle(title: "SST Homecoming 2024", description: "Registration is now open! See you on 24 January 2024, Wednesday!", ctaTitle: "Learn More & Register", ctaURL: URL(string: "https://sst.edu.sg")!)
-    
-    var id: String {
-        title + description
-    }
+    static let sample = NewsArticle(id: "test", title: "SST Homecoming 2024", description: "Registration is now open! See you on 24 January 2024, Wednesday!", ctaTitle: "Learn More & Register", ctaURL: URL(string: "https://sst.edu.sg")!)
 }

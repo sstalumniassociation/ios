@@ -44,7 +44,7 @@ import Foundation
 ///                                                            +-----------------------------+
 ///
 /// ```
-enum AuthenticationState: Equatable {
+indirect enum AuthenticationState: Equatable {
     case emailInput
     
     case lookingUpEmail(String)

@@ -11,7 +11,7 @@ struct SSTAARSEventConfirmationView: View {
     
     @Binding var path: NavigationPath
     
-    @ObservedObject var sstaarsManager: SSTAARSManager
+    @Environment(SSTAARSManager.self) var sstaarsManager
     
     var body: some View {
         VStack {
@@ -50,6 +50,8 @@ struct SSTAARSEventConfirmationView: View {
                 }
                 .multilineTextAlignment(.center)
             case .success(let event):
+                @Bindable var sstaarsManager = sstaarsManager
+                
                 SSTAARSEventConfirmationSuccessView(path: $path, allEvents: $sstaarsManager.events, event: event)
             }
         }

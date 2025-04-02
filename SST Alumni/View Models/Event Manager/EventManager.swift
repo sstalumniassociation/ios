@@ -9,6 +9,7 @@ import Foundation
 import FirebaseAuth
 import Observation
 
+@MainActor
 @Observable
 class EventManager {
     var events: [Event] = [] {

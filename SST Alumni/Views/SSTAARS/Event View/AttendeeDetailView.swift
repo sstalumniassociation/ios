@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AttendeeDetailView: View {
     
-    @ObservedObject var sstaarsManager: SSTAARSManager
+    @Environment(SSTAARSManager.self) private var sstaarsManager
     
     var attendee: EventAttendee
     

@@ -11,7 +11,7 @@ struct SSTAARSEventView: View {
     
     @Binding var path: NavigationPath
     
-    @ObservedObject var sstaarsManager: SSTAARSManager
+    @Environment(SSTAARSManager.self) var sstaarsManager
     
     var event: Event
     
@@ -76,7 +76,7 @@ struct SSTAARSEventView: View {
             Section("Attendees") {
                 ForEach(event.attendees) { attendee in
                     if searchText.isEmpty || attendee.name.lowercased().contains(searchText.lowercased()) {
-                        AttendeeRowView(sstaarsManager: sstaarsManager, attendee: attendee)
+                        AttendeeRowView(attendee: attendee)
                             .accessibilityHint("View Attendee Information")
                     }
                 }
@@ -109,7 +109,7 @@ struct SSTAARSEventView: View {
             Button("OK") {}
         }
         .navigationDestination(for: EventAttendee.self) { attendee in
-            AttendeeDetailView(sstaarsManager: sstaarsManager, attendee: attendee)
+            AttendeeDetailView(attendee: attendee)
         }
         .onAppear {
             sstaarsManager.attachListener(to: event)

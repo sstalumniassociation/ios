@@ -9,20 +9,23 @@ import Foundation
 import FirebaseDatabase
 import FirebaseDatabaseSwift
 import FirebaseAuth
+import Observation
 
-class SSTAARSManager: ObservableObject {
+@MainActor
+@Observable
+class SSTAARSManager {
     
-    @Published var events: [Event] = [] {
+    var events: [Event] = [] {
         didSet {
             writeData()
         }
     }
     
-    @Published var observedEvent: Event?
+    var observedEvent: Event?
     
-    @Published var eventImportState = EventImportState.none
+    var eventImportState = EventImportState.none
     
-    @Published var attendeeCheckInInfo: [String: Double] = [:]
+    var attendeeCheckInInfo: [String: Double] = [:]
     
     var ref: DatabaseReference!
     
@@ -33,9 +36,7 @@ class SSTAARSManager: ObservableObject {
     }
     
     func retrieveEvent(for id: String) async {
-        await MainActor.run {
-            eventImportState = .verifying
-        }
+        eventImportState = .verifying
         
         var request = URLRequest(url: .cfServer.appendingPathComponent("event/\(id)"))
         
@@ -53,27 +54,22 @@ class SSTAARSManager: ObservableObject {
                 let decoder = JSONDecoder()
                 let event = try decoder.decode(Event.self, from: data)
                 
-                await MainActor.run {
-                    eventImportState = .success(event)
-                }
+                eventImportState = .success(event)
             case 400...499:
                 print("Client error \(response.statusCode)")
-                await MainActor.run {
-                    eventImportState = .notFound
-                }
+                
+                eventImportState = .notFound
             case 500...599:
                 print("Server error \(response.statusCode)")
-                await MainActor.run {
-                    eventImportState = .serverError
-                }
+                
+                eventImportState = .serverError
             default: break
             }
             
         } catch {
             print(error.localizedDescription)
-            await MainActor.run {
-                eventImportState = .notFound
-            }
+            
+            eventImportState = .notFound
         }
     }
     
@@ -94,12 +90,10 @@ class SSTAARSManager: ObservableObject {
                 let decoder = JSONDecoder()
                 let event = try decoder.decode(Event.self, from: data)
                 
-                await MainActor.run {
-                    guard let index = events.firstIndex(where: {
-                        $0.id == id
-                    }) else { return }
-                    events[index] = event
-                }
+                guard let index = events.firstIndex(where: {
+                    $0.id == id
+                }) else { return }
+                events[index] = event
             case 400...499:
                 print("Client error \(response.statusCode)")
             case 500...599:
@@ -109,9 +103,7 @@ class SSTAARSManager: ObservableObject {
             
         } catch {
             print(error.localizedDescription)
-            await MainActor.run {
-                eventImportState = .notFound
-            }
+            eventImportState = .notFound
         }
     }
     
@@ -121,11 +113,7 @@ class SSTAARSManager: ObservableObject {
         ref.child(event.id).observe(.value) { snapshot in
             guard let value = snapshot.value as? [String: Double] else { return }
             
-            Task {
-                await MainActor.run {
-                    self.attendeeCheckInInfo = value
-                }
-            }
+            self.attendeeCheckInInfo = value
         }
     }
     

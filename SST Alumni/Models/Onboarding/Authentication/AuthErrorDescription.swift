@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AuthErrorDescription: Equatable {
+struct AuthErrorDescription: Equatable, Sendable {
     static func == (lhs: AuthErrorDescription, rhs: AuthErrorDescription) -> Bool {
         lhs.title == rhs.title && lhs.description == rhs.description
     }
@@ -19,7 +19,6 @@ class AuthErrorDescription: Equatable {
     
     var recoverToState: AuthenticationState?
     
-    required
     init(icon: String, title: String, description: String, recoverToState: AuthenticationState? = nil) {
         self.icon = icon
         self.title = title

@@ -50,7 +50,9 @@ struct CardExpandedView: View {
         .padding()
         .onAppear {
             isConfettiAnimating = false
-            securityAccessManager.performCheck()
+        }
+        .task {
+            await securityAccessManager.performCheck()
         }
         .onChange(of: securityAccessManager.securityAccessState) { newValue in
             if newValue == .admitted {

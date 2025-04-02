@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-import FirebaseAuth
+@preconcurrency import FirebaseAuth
 
 extension UserManager {
     func logIn(email: String, password: String) async {
@@ -55,6 +55,7 @@ extension UserManager {
         }
     }
     
+    @MainActor
     fileprivate func signIn(withEmail email: String,
                             password: String) async -> Result<AuthDataResult, OnboardingHTTPError> {
         do {
