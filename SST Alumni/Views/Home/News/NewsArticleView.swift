@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CacheAsyncImageKit
 
 struct NewsArticleView: View {
     
@@ -18,7 +19,7 @@ struct NewsArticleView: View {
                     .fill(.clear)
                     .aspectRatio(2/1, contentMode: .fit)
                     .background {
-                        AsyncImage(url: heroImage) { image in
+                        CacheAsyncImage(url: heroImage) { image in
                             image
                                 .resizable()
                                 .scaledToFill()
