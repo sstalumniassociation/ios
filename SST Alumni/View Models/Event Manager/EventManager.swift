@@ -39,11 +39,10 @@ class EventManager {
             
             await MainActor.run {
                 self.events = events
-                print(events)
+                Self.logger.info("\(events.description)")
             }
         } catch {
-            print(error)
-            print(error.localizedDescription)
+            Self.logger.fault("\(error.localizedDescription)")
         }
     }
 }

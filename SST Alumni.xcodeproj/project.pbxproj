@@ -40,7 +40,6 @@
 		32D5F60D2D9CF84F00B131E4 /* CacheAsyncImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 32D5F60C2D9CF84F00B131E4 /* CacheAsyncImageKit */; };
 		32D5F6102D9CF89D00B131E4 /* CacheAsyncImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 32D5F60F2D9CF89D00B131E4 /* CacheAsyncImageKit */; };
 		32D5F6132D9D09F300B131E4 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 32D5F6122D9D09F300B131E4 /* CodeScanner */; };
-		32F3B65D2AB6B6030075F5D7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 32F3B65C2AB6B6030075F5D7 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +56,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				32410F802AB58B0300A9184B /* FirebaseDatabase in Frameworks */,
-				32F3B65D2AB6B6030075F5D7 /* Alamofire in Frameworks */,
 				32410F8E2AB58B0300A9184B /* FirebaseFunctionsCombine-Community in Frameworks */,
 				32410F862AB58B0300A9184B /* FirebaseFirestore in Frameworks */,
 				32410F722AB58B0300A9184B /* FirebaseAnalyticsSwift in Frameworks */,
@@ -160,7 +158,6 @@
 				32410F9D2AB58B0300A9184B /* FirebaseRemoteConfigSwift */,
 				32410F9F2AB58B0300A9184B /* FirebaseStorage */,
 				32410FA12AB58B0300A9184B /* FirebaseStorageCombine-Community */,
-				32F3B65C2AB6B6030075F5D7 /* Alamofire */,
 				323D347F2AB97EA1001E1CBE /* ScreenCaptureRedaction */,
 				32D1BC7F2D9C45CE00C1B3A4 /* ConfettiKit */,
 				32D5F6012D9C527C00B131E4 /* LogoKit */,
@@ -198,7 +195,6 @@
 			mainGroup = 32410F352AB4B9C900A9184B;
 			packageReferences = (
 				32410F6C2AB58B0300A9184B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				32F3B65B2AB6B6030075F5D7 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				323D347E2AB97EA1001E1CBE /* XCRemoteSwiftPackageReference "ScreenCaptureRedaction" */,
 				32D1BC7E2D9C45CE00C1B3A4 /* XCLocalSwiftPackageReference "ConfettiKit" */,
 				32D5F6002D9C527C00B131E4 /* XCLocalSwiftPackageReference "LogoKit" */,
@@ -511,14 +507,6 @@
 				minimumVersion = 2.5.2;
 			};
 		};
-		32F3B65B2AB6B6030075F5D7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.8.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -682,11 +670,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 32D5F6112D9D09F300B131E4 /* XCRemoteSwiftPackageReference "CodeScanner" */;
 			productName = CodeScanner;
-		};
-		32F3B65C2AB6B6030075F5D7 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 32F3B65B2AB6B6030075F5D7 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

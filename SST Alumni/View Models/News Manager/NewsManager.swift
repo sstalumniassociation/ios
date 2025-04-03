@@ -43,8 +43,7 @@ class NewsManager {
             
             self.articles = decodedArticles
         } catch {
-            Self.logger.warning("Failed to load articles")
-            Self.logger.error("\(error.localizedDescription)")
+            Self.logger.fault("\(error.localizedDescription)")
         }
     }
 }

@@ -44,6 +44,10 @@ enum MemberType: Codable, Equatable {
         }
     }
     
+    var accentColor: Color {
+        gradientColors.first!
+    }
+    
     enum CodingKeys: CodingKey {
         case exco
         case ordinary

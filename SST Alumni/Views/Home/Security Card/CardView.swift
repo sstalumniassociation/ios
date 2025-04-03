@@ -38,7 +38,7 @@ struct CardView: View {
                     }
                     Spacer()
                     
-                    Logo(style: .shimmering(user.memberType.gradientColors.first!))
+                    Logo(style: .shimmering(user.memberType.accentColor))
                         .matchedGeometryEffect(id: "sstaalogo", in: namespace)
                 }
             } else {
@@ -55,7 +55,7 @@ struct CardView: View {
                                          startPoint: .topLeading,
                                          endPoint: .bottomTrailing))
                     .matchedGeometryEffect(id: "gradientbackground", in: namespace)
-                    .shadow(color: user.memberType.gradientColors.first!.opacity(0.5), radius: 10)
+                    .shadow(color: user.memberType.accentColor.opacity(0.5), radius: 10)
             } else {
                 RoundedRectangle(cornerRadius: 16)
                     .fill(.gray.opacity(0.2))

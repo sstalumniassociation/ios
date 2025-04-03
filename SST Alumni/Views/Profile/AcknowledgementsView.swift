@@ -110,6 +110,20 @@ struct AcknowledgementsView: View {
                             .foregroundStyle(Color.accentColor)
                     }
                 }
+                
+                Link(destination: URL(string: "http://github.com/twostraws/CodeScanner")!) {
+                    Label {
+                        VStack(alignment: .leading) {
+                            Text("CodeScanner")
+                            Text("Licensed under the MIT License.")
+                                .foregroundStyle(.secondary)
+                        }
+                        .foregroundStyle(Color(uiColor: .label))
+                    } icon: {
+                        Image(systemName: "qrcode.viewfinder")
+                            .foregroundStyle(Color.accentColor)
+                    }
+                }
             } header: {
                 Label("Packages & Libraries", systemImage: "shippingbox.fill")
             }

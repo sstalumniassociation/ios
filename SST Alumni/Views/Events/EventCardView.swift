@@ -18,49 +18,39 @@ struct EventCardView: View {
     @State private var isCardHeld = false
     
     var body: some View {
-        ZStack(alignment: .bottom) {
-            CacheAsyncImage(url: event.badgeImage) { image in
-                image
-                    .resizable()
-                    .scaledToFill()
-            } placeholder: {
-                ProgressView()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(.thickMaterial)
+        Button {
+            isExpanded.toggle()
+        } label: {
+            ZStack(alignment: .bottom) {
+                CacheAsyncImage(url: event.badgeImage) { image in
+                    image
+                        .resizable()
+                        .scaledToFill()
+                } placeholder: {
+                    ProgressView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(.thickMaterial)
+                }
+                .frame(height: 300)
+                .clipShape(RoundedRectangle(cornerRadius: 16))
+                .overlay {
+                    LinearGradient(colors: [.clear, .black.opacity(0.6)], startPoint: .center, endPoint: .bottom)
+                }
+                .matchedTransitionSource(id: "event.image", in: namespace)
+                
+                VStack(alignment: .leading) {
+                    Text(event.startDateTime, style: .date)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Text(event.name)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .fontWidth(.expanded)
+                }
+                .padding()
             }
-            .frame(height: 300)
-            .clipShape(RoundedRectangle(cornerRadius: 16))
-            .overlay {
-                LinearGradient(colors: [.clear, .black.opacity(0.6)], startPoint: .center, endPoint: .bottom)
-            }
-            .matchedTransitionSource(id: "event.image", in: namespace)
-            
-            VStack(alignment: .leading) {
-                Text(event.startDateTime, style: .date)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                Text(event.name)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .fontWidth(.expanded)
-            }
-            .padding()
         }
-        .scaleEffect(isCardHeld ? 0.95 : 1)
-        .gesture(
-            DragGesture(minimumDistance: 0)
-                .onChanged { _ in
-                    withAnimation {
-                        isCardHeld = true
-                    }
-                }
-                .onEnded { _ in
-                    withAnimation {
-                        isCardHeld = false
-                    }
-                    isExpanded = true
-                }
-        )
+        .buttonStyle(EventButtonStyle())
         .sheet(isPresented: $isExpanded) {
             ZStack(alignment: .topLeading) {
                 ScrollView {
